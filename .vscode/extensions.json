@@ -1,0 +1,16 @@
+{
+	"recommendations": [
+		"bradlc.vscode-tailwindcss",
+		"csstools.postcss",
+		"davidanson.vscode-markdownlint",
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"foxundermoon.shell-format",
+		"github.vscode-pull-request-github",
+		"ms-playwright.playwright",
+		"ms-vscode.vscode-typescript-next",
+		"svelte.svelte-vscode",
+		"visualstudioexptteam.vscodeintellicode",
+		"zixuanchen.vitest-explorer"
+	]
+}
