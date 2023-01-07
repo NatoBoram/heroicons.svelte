@@ -20,6 +20,7 @@ specifiers:
   eslint-plugin-svelte3: ^4.0.0
   prettier: ^2.8.0
   prettier-plugin-svelte: ^2.8.1
+  prettier-plugin-tailwindcss: ^0.2.1
   react: ^18.2.0
   react-dom: ^18.2.0
   storybook: ^7.0.0-beta.20
@@ -50,6 +51,7 @@ devDependencies:
   eslint-plugin-svelte3: 4.0.0_6go7qzsvzihesfwmyvq3tnl5qq
   prettier: 2.8.2
   prettier-plugin-svelte: 2.9.0_74vfyr7qjo56zgjcvkwi6gyjxm
+  prettier-plugin-tailwindcss: 0.2.1_prettier@2.8.2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   storybook: 7.0.0-beta.20_biqbaboplfbrettd7655fr4n2y
@@ -6757,6 +6759,15 @@ packages:
     dependencies:
       prettier: 2.8.2
       svelte: 3.55.0
+    dev: true
+
+  /prettier-plugin-tailwindcss/0.2.1_prettier@2.8.2:
+    resolution: {integrity: sha512-aIO8IguumORyRsmT+E7JfJ3A9FEoyhqZR7Au7TBOege3VZkgMvHJMkufeYp4zjnDK2iq4ktkvGMNOQR9T8lisQ==}
+    engines: {node: '>=12.17.0'}
+    peerDependencies:
+      prettier: '>=2.2.0'
+    dependencies:
+      prettier: 2.8.2
     dev: true
 
   /prettier/2.8.2:
