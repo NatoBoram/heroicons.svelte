@@ -1,3 +1,4 @@
+/** @type {import("eslint").Linter.BaseConfig} */
 module.exports = {
 	root: true,
 	parser: '@typescript-eslint/parser',
@@ -10,7 +11,6 @@ module.exports = {
 		'plugin:storybook/recommended',
 	],
 	plugins: ['svelte3', '@typescript-eslint'],
-	ignorePatterns: ['*.cjs'],
 	overrides: [
 		{
 			files: ['*.svelte'],
@@ -18,12 +18,14 @@ module.exports = {
 		},
 	],
 	settings: {
-		'svelte3/typescript': () => require('typescript'),
+		'svelte3/typescript': true,
 	},
 	parserOptions: {
 		sourceType: 'module',
 		ecmaVersion: 2020,
 		project: './tsconfig.eslint.json',
+		tsconfigRootDir: __dirname,
+		extraFileExtensions: ['.svelte'],
 	},
 	env: {
 		browser: true,
