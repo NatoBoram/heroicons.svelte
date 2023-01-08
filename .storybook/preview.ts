@@ -1,6 +1,7 @@
+import type { Parameters } from '@storybook/types'
 import '../src/app.css'
 
-export const parameters = {
+const parameters: Parameters = {
 	actions: { argTypesRegex: '^on[A-Z].*' },
 	controls: {
 		matchers: {
@@ -9,3 +10,5 @@ export const parameters = {
 		},
 	},
 }
+
+export default parameters

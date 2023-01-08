@@ -1,5 +1,6 @@
-const path = require('path')
-module.exports = {
+import type { StorybookConfig } from '@storybook/types'
+
+const config: StorybookConfig = {
 	stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
 	addons: [
 		'@storybook/addon-links',
@@ -14,3 +15,5 @@ module.exports = {
 		autodocs: 'tag',
 	},
 }
+
+export default config
