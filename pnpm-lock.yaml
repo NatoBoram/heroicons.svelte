@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@playwright/test': ^1.28.1
+  '@storybook/addon-docs': ^7.0.0-beta.20
   '@storybook/addon-essentials': ^7.0.0-beta.20
   '@storybook/addon-interactions': ^7.0.0-beta.20
   '@storybook/addon-links': ^7.0.0-beta.20
@@ -39,6 +40,7 @@ specifiers:
 
 devDependencies:
   '@playwright/test': 1.29.2
+  '@storybook/addon-docs': 7.0.0-beta.20_biqbaboplfbrettd7655fr4n2y
   '@storybook/addon-essentials': 7.0.0-beta.20_biqbaboplfbrettd7655fr4n2y
   '@storybook/addon-interactions': 7.0.0-beta.20_biqbaboplfbrettd7655fr4n2y
   '@storybook/addon-links': 7.0.0-beta.20_biqbaboplfbrettd7655fr4n2y

@@ -1,0 +1,13 @@
+import type { Meta, StoryObj } from '@storybook/svelte'
+import { ChevronLeft as ChevronLeftSvelte } from '../../../lib/heroicons/24/solid'
+
+const meta = {
+	title: 'Solid',
+	component: ChevronLeftSvelte,
+	args: { class: 'w-6 h-6' },
+} satisfies Meta<ChevronLeftSvelte>
+
+export default meta
+type Story = StoryObj<typeof meta>
+
+export const ChevronLeft: Story = {}

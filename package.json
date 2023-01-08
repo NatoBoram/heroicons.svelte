@@ -20,6 +20,7 @@
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
+		"@storybook/addon-docs": "^7.0.0-beta.20",
 		"@storybook/addon-essentials": "^7.0.0-beta.20",
 		"@storybook/addon-interactions": "^7.0.0-beta.20",
 		"@storybook/addon-links": "^7.0.0-beta.20",

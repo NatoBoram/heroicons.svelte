@@ -1,0 +1,13 @@
+import type { Meta, StoryObj } from '@storybook/svelte'
+import { Check as CheckSvelte } from '../../../lib/heroicons/24/solid'
+
+const meta = {
+	title: 'Solid',
+	component: CheckSvelte,
+	args: { class: 'w-6 h-6' },
+} satisfies Meta<CheckSvelte>
+
+export default meta
+type Story = StoryObj<typeof meta>
+
+export const Check: Story = {}
