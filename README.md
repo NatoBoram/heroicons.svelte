@@ -1,5 +1,7 @@
 # Heroicons.Svelte
 
+[![Node.js CI](https://github.com/NatoBoram/heroicons.svelte/actions/workflows/node-js.yaml/badge.svg)](https://github.com/NatoBoram/heroicons.svelte/actions/workflows/node-js.yaml)
+
 Exports [Heroicons](https://github.com/tailwindlabs/heroicons) for usage with SvelteKit.
 
 ## Developing
