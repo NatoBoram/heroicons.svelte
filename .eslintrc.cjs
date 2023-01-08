@@ -4,6 +4,8 @@ module.exports = {
 	extends: [
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
+		'plugin:@typescript-eslint/recommended-requiring-type-checking',
+		'plugin:@typescript-eslint/strict',
 		'prettier',
 		'plugin:storybook/recommended',
 	],
@@ -21,6 +23,7 @@ module.exports = {
 	parserOptions: {
 		sourceType: 'module',
 		ecmaVersion: 2020,
+		project: './tsconfig.eslint.json',
 	},
 	env: {
 		browser: true,
