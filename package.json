@@ -1,6 +1,32 @@
 {
-	"name": "heroicons.svelte",
+	"name": "@natoboram/heroicons.svelte",
 	"version": "0.0.1",
+	"description": "Exports Heroicons for usage with SvelteKit.",
+	"keywords": [
+		"Heroicons",
+		"SvelteKit",
+		"TailwindCSS"
+	],
+	"homepage": "https://github.com/NatoBoram/heroicons.svelte",
+	"bugs": {
+		"url": "https://github.com/NatoBoram/heroicons.svelte/issues"
+	},
+	"license": "LGPL-3.0-or-later",
+	"author": {
+		"name": "Nato Boram",
+		"url": "https://github.com/NatoBoram"
+	},
+	"funding": [
+		{
+			"type": "patreon",
+			"url": "https://www.patreon.com/NatoBoram"
+		},
+		{
+			"type": "individual",
+			"url": "https://paypal.me/NatoBoram/5"
+		}
+	],
+	"repository": "github:NatoBoram/heroicons.svelte",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "svelte-kit sync && vite build",
@@ -55,6 +81,9 @@
 		"typescript": "^4.9.4",
 		"vite": "^4.0.4",
 		"vitest": "^0.25.8"
+	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com"
 	},
 	"type": "module"
 }
