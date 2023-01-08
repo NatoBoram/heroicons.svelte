@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import { BuildingOffice2 as BuildingOffice2Svelte } from '../../../lib/heroicons/24/outline'
 
 const meta = {
-	title: 'Outline',
+	title: 'Heroicons/Outline',
 	component: BuildingOffice2Svelte,
 	args: { class: 'w-6 h-6' },
 } satisfies Meta<BuildingOffice2Svelte>

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import { Bars3BottomRight as Bars3BottomRightSvelte } from '../../../lib/heroicons/24/outline'
 
 const meta = {
-	title: 'Outline',
+	title: 'Heroicons/Outline',
 	component: Bars3BottomRightSvelte,
 	args: { class: 'w-6 h-6' },
 } satisfies Meta<Bars3BottomRightSvelte>

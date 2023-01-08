@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import { Tag as TagSvelte } from '../../../lib/heroicons/24/solid'
 
 const meta = {
-	title: 'Solid',
+	title: 'Heroicons/Solid',
 	component: TagSvelte,
 	args: { class: 'w-6 h-6' },
 } satisfies Meta<TagSvelte>

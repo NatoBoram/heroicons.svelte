@@ -1,0 +1,1178 @@
+import { Meta, Title, IconGallery, IconItem } from '@storybook/addon-docs'
+import {
+	AcademicCap,
+	AdjustmentsHorizontal,
+	AdjustmentsVertical,
+	ArchiveBoxArrowDown,
+	ArchiveBoxXMark,
+	ArchiveBox,
+	ArrowDownCircle,
+	ArrowDownLeft,
+	ArrowDownOnSquareStack,
+	ArrowDownOnSquare,
+	ArrowDownRight,
+	ArrowDownTray,
+	ArrowDown,
+	ArrowLeftCircle,
+	ArrowLeftOnRectangle,
+	ArrowLeft,
+	ArrowLongDown,
+	ArrowLongLeft,
+	ArrowLongRight,
+	ArrowLongUp,
+	ArrowPathRoundedSquare,
+	ArrowPath,
+	ArrowRightCircle,
+	ArrowRightOnRectangle,
+	ArrowRight,
+	ArrowSmallDown,
+	ArrowSmallLeft,
+	ArrowSmallRight,
+	ArrowSmallUp,
+	ArrowTopRightOnSquare,
+	ArrowTrendingDown,
+	ArrowTrendingUp,
+	ArrowUpCircle,
+	ArrowUpLeft,
+	ArrowUpOnSquareStack,
+	ArrowUpOnSquare,
+	ArrowUpRight,
+	ArrowUpTray,
+	ArrowUp,
+	ArrowUturnDown,
+	ArrowUturnLeft,
+	ArrowUturnRight,
+	ArrowUturnUp,
+	ArrowsPointingIn,
+	ArrowsPointingOut,
+	ArrowsRightLeft,
+	ArrowsUpDown,
+	AtSymbol,
+	Backspace,
+	Backward,
+	Banknotes,
+	Bars2,
+	Bars3BottomLeft,
+	Bars3BottomRight,
+	Bars3CenterLeft,
+	Bars3,
+	Bars4,
+	BarsArrowDown,
+	BarsArrowUp,
+	Battery0,
+	Battery100,
+	Battery50,
+	Beaker,
+	BellAlert,
+	BellSlash,
+	BellSnooze,
+	Bell,
+	BoltSlash,
+	Bolt,
+	BookOpen,
+	BookmarkSlash,
+	BookmarkSquare,
+	Bookmark,
+	Briefcase,
+	BugAnt,
+	BuildingLibrary,
+	BuildingOffice2,
+	BuildingOffice,
+	BuildingStorefront,
+	Cake,
+	Calculator,
+	CalendarDays,
+	Calendar,
+	Camera,
+	ChartBarSquare,
+	ChartBar,
+	ChartPie,
+	ChatBubbleBottomCenterText,
+	ChatBubbleBottomCenter,
+	ChatBubbleLeftEllipsis,
+	ChatBubbleLeftRight,
+	ChatBubbleLeft,
+	ChatBubbleOvalLeftEllipsis,
+	ChatBubbleOvalLeft,
+	CheckBadge,
+	CheckCircle,
+	Check,
+	ChevronDoubleDown,
+	ChevronDoubleLeft,
+	ChevronDoubleRight,
+	ChevronDoubleUp,
+	ChevronDown,
+	ChevronLeft,
+	ChevronRight,
+	ChevronUpDown,
+	ChevronUp,
+	CircleStack,
+	ClipboardDocumentCheck,
+	ClipboardDocumentList,
+	ClipboardDocument,
+	Clipboard,
+	Clock,
+	CloudArrowDown,
+	CloudArrowUp,
+	Cloud,
+	CodeBracketSquare,
+	CodeBracket,
+	Cog6Tooth,
+	Cog8Tooth,
+	Cog,
+	CommandLine,
+	ComputerDesktop,
+	CpuChip,
+	CreditCard,
+	CubeTransparent,
+	Cube,
+	CurrencyBangladeshi,
+	CurrencyDollar,
+	CurrencyEuro,
+	CurrencyPound,
+	CurrencyRupee,
+	CurrencyYen,
+	CursorArrowRays,
+	CursorArrowRipple,
+	DevicePhoneMobile,
+	DeviceTablet,
+	DocumentArrowDown,
+	DocumentArrowUp,
+	DocumentChartBar,
+	DocumentCheck,
+	DocumentDuplicate,
+	DocumentMagnifyingGlass,
+	DocumentMinus,
+	DocumentPlus,
+	DocumentText,
+	Document,
+	EllipsisHorizontalCircle,
+	EllipsisHorizontal,
+	EllipsisVertical,
+	EnvelopeOpen,
+	Envelope,
+	ExclamationCircle,
+	ExclamationTriangle,
+	EyeDropper,
+	EyeSlash,
+	Eye,
+	FaceFrown,
+	FaceSmile,
+	Film,
+	FingerPrint,
+	Fire,
+	Flag,
+	FolderArrowDown,
+	FolderMinus,
+	FolderOpen,
+	FolderPlus,
+	Folder,
+	Forward,
+	Funnel,
+	Gif,
+	GiftTop,
+	Gift,
+	GlobeAlt,
+	GlobeAmericas,
+	GlobeAsiaAustralia,
+	GlobeEuropeAfrica,
+	HandRaised,
+	HandThumbDown,
+	HandThumbUp,
+	Hashtag,
+	Heart,
+	HomeModern,
+	Home,
+	Identification,
+	InboxArrowDown,
+	InboxStack,
+	Inbox,
+	InformationCircle,
+	Key,
+	Language,
+	Lifebuoy,
+	LightBulb,
+	Link,
+	ListBullet,
+	LockClosed,
+	LockOpen,
+	MagnifyingGlassCircle,
+	MagnifyingGlassMinus,
+	MagnifyingGlassPlus,
+	MagnifyingGlass,
+	MapPin,
+	Map,
+	Megaphone,
+	Microphone,
+	MinusCircle,
+	MinusSmall,
+	Minus,
+	Moon,
+	MusicalNote,
+	Newspaper,
+	NoSymbol,
+	PaintBrush,
+	PaperAirplane,
+	PaperClip,
+	PauseCircle,
+	Pause,
+	PencilSquare,
+	Pencil,
+	PhoneArrowDownLeft,
+	PhoneArrowUpRight,
+	PhoneXMark,
+	Phone,
+	Photo,
+	PlayCircle,
+	PlayPause,
+	Play,
+	PlusCircle,
+	PlusSmall,
+	Plus,
+	Power,
+	PresentationChartBar,
+	PresentationChartLine,
+	Printer,
+	PuzzlePiece,
+	QrCode,
+	QuestionMarkCircle,
+	QueueList,
+	Radio,
+	ReceiptPercent,
+	ReceiptRefund,
+	RectangleGroup,
+	RectangleStack,
+	RocketLaunch,
+	Rss,
+	Scale,
+	Scissors,
+	ServerStack,
+	Server,
+	Share,
+	ShieldCheck,
+	ShieldExclamation,
+	ShoppingBag,
+	ShoppingCart,
+	SignalSlash,
+	Signal,
+	Sparkles,
+	SpeakerWave,
+	SpeakerXMark,
+	Square2Stack,
+	Square3Stack3d,
+	Squares2x2,
+	SquaresPlus,
+	Star,
+	StopCircle,
+	Stop,
+	Sun,
+	Swatch,
+	TableCells,
+	Tag,
+	Ticket,
+	Trash,
+	Trophy,
+	Truck,
+	Tv,
+	UserCircle,
+	UserGroup,
+	UserMinus,
+	UserPlus,
+	User,
+	Users,
+	Variable,
+	VideoCameraSlash,
+	VideoCamera,
+	ViewColumns,
+	ViewfinderCircle,
+	Wallet,
+	Wifi,
+	Window,
+	WrenchScrewdriver,
+	Wrench,
+	XCircle,
+	XMark,
+} from '../lib/heroicons/24/solid'
+
+<Meta title="Heroicons/Solid" />
+
+# Solid
+
+<IconGallery>
+	<IconItem name="academic-cap">
+		<AcademicCap />
+	</IconItem>
+	<IconItem name="adjustments-horizontal">
+		<AdjustmentsHorizontal />
+	</IconItem>
+	<IconItem name="adjustments-vertical">
+		<AdjustmentsVertical />
+	</IconItem>
+	<IconItem name="archive-box-arrow-down">
+		<ArchiveBoxArrowDown />
+	</IconItem>
+	<IconItem name="archive-box-x-mark">
+		<ArchiveBoxXMark />
+	</IconItem>
+	<IconItem name="archive-box">
+		<ArchiveBox />
+	</IconItem>
+	<IconItem name="arrow-down-circle">
+		<ArrowDownCircle />
+	</IconItem>
+	<IconItem name="arrow-down-left">
+		<ArrowDownLeft />
+	</IconItem>
+	<IconItem name="arrow-down-on-square-stack">
+		<ArrowDownOnSquareStack />
+	</IconItem>
+	<IconItem name="arrow-down-on-square">
+		<ArrowDownOnSquare />
+	</IconItem>
+	<IconItem name="arrow-down-right">
+		<ArrowDownRight />
+	</IconItem>
+	<IconItem name="arrow-down-tray">
+		<ArrowDownTray />
+	</IconItem>
+	<IconItem name="arrow-down">
+		<ArrowDown />
+	</IconItem>
+	<IconItem name="arrow-left-circle">
+		<ArrowLeftCircle />
+	</IconItem>
+	<IconItem name="arrow-left-on-rectangle">
+		<ArrowLeftOnRectangle />
+	</IconItem>
+	<IconItem name="arrow-left">
+		<ArrowLeft />
+	</IconItem>
+	<IconItem name="arrow-long-down">
+		<ArrowLongDown />
+	</IconItem>
+	<IconItem name="arrow-long-left">
+		<ArrowLongLeft />
+	</IconItem>
+	<IconItem name="arrow-long-right">
+		<ArrowLongRight />
+	</IconItem>
+	<IconItem name="arrow-long-up">
+		<ArrowLongUp />
+	</IconItem>
+	<IconItem name="arrow-path-rounded-square">
+		<ArrowPathRoundedSquare />
+	</IconItem>
+	<IconItem name="arrow-path">
+		<ArrowPath />
+	</IconItem>
+	<IconItem name="arrow-right-circle">
+		<ArrowRightCircle />
+	</IconItem>
+	<IconItem name="arrow-right-on-rectangle">
+		<ArrowRightOnRectangle />
+	</IconItem>
+	<IconItem name="arrow-right">
+		<ArrowRight />
+	</IconItem>
+	<IconItem name="arrow-small-down">
+		<ArrowSmallDown />
+	</IconItem>
+	<IconItem name="arrow-small-left">
+		<ArrowSmallLeft />
+	</IconItem>
+	<IconItem name="arrow-small-right">
+		<ArrowSmallRight />
+	</IconItem>
+	<IconItem name="arrow-small-up">
+		<ArrowSmallUp />
+	</IconItem>
+	<IconItem name="arrow-top-right-on-square">
+		<ArrowTopRightOnSquare />
+	</IconItem>
+	<IconItem name="arrow-trending-down">
+		<ArrowTrendingDown />
+	</IconItem>
+	<IconItem name="arrow-trending-up">
+		<ArrowTrendingUp />
+	</IconItem>
+	<IconItem name="arrow-up-circle">
+		<ArrowUpCircle />
+	</IconItem>
+	<IconItem name="arrow-up-left">
+		<ArrowUpLeft />
+	</IconItem>
+	<IconItem name="arrow-up-on-square-stack">
+		<ArrowUpOnSquareStack />
+	</IconItem>
+	<IconItem name="arrow-up-on-square">
+		<ArrowUpOnSquare />
+	</IconItem>
+	<IconItem name="arrow-up-right">
+		<ArrowUpRight />
+	</IconItem>
+	<IconItem name="arrow-up-tray">
+		<ArrowUpTray />
+	</IconItem>
+	<IconItem name="arrow-up">
+		<ArrowUp />
+	</IconItem>
+	<IconItem name="arrow-uturn-down">
+		<ArrowUturnDown />
+	</IconItem>
+	<IconItem name="arrow-uturn-left">
+		<ArrowUturnLeft />
+	</IconItem>
+	<IconItem name="arrow-uturn-right">
+		<ArrowUturnRight />
+	</IconItem>
+	<IconItem name="arrow-uturn-up">
+		<ArrowUturnUp />
+	</IconItem>
+	<IconItem name="arrows-pointing-in">
+		<ArrowsPointingIn />
+	</IconItem>
+	<IconItem name="arrows-pointing-out">
+		<ArrowsPointingOut />
+	</IconItem>
+	<IconItem name="arrows-right-left">
+		<ArrowsRightLeft />
+	</IconItem>
+	<IconItem name="arrows-up-down">
+		<ArrowsUpDown />
+	</IconItem>
+	<IconItem name="at-symbol">
+		<AtSymbol />
+	</IconItem>
+	<IconItem name="backspace">
+		<Backspace />
+	</IconItem>
+	<IconItem name="backward">
+		<Backward />
+	</IconItem>
+	<IconItem name="banknotes">
+		<Banknotes />
+	</IconItem>
+	<IconItem name="bars-2">
+		<Bars2 />
+	</IconItem>
+	<IconItem name="bars-3-bottom-left">
+		<Bars3BottomLeft />
+	</IconItem>
+	<IconItem name="bars-3-bottom-right">
+		<Bars3BottomRight />
+	</IconItem>
+	<IconItem name="bars-3-center-left">
+		<Bars3CenterLeft />
+	</IconItem>
+	<IconItem name="bars-3">
+		<Bars3 />
+	</IconItem>
+	<IconItem name="bars-4">
+		<Bars4 />
+	</IconItem>
+	<IconItem name="bars-arrow-down">
+		<BarsArrowDown />
+	</IconItem>
+	<IconItem name="bars-arrow-up">
+		<BarsArrowUp />
+	</IconItem>
+	<IconItem name="battery-0">
+		<Battery0 />
+	</IconItem>
+	<IconItem name="battery-100">
+		<Battery100 />
+	</IconItem>
+	<IconItem name="battery-50">
+		<Battery50 />
+	</IconItem>
+	<IconItem name="beaker">
+		<Beaker />
+	</IconItem>
+	<IconItem name="bell-alert">
+		<BellAlert />
+	</IconItem>
+	<IconItem name="bell-slash">
+		<BellSlash />
+	</IconItem>
+	<IconItem name="bell-snooze">
+		<BellSnooze />
+	</IconItem>
+	<IconItem name="bell">
+		<Bell />
+	</IconItem>
+	<IconItem name="bolt-slash">
+		<BoltSlash />
+	</IconItem>
+	<IconItem name="bolt">
+		<Bolt />
+	</IconItem>
+	<IconItem name="book-open">
+		<BookOpen />
+	</IconItem>
+	<IconItem name="bookmark-slash">
+		<BookmarkSlash />
+	</IconItem>
+	<IconItem name="bookmark-square">
+		<BookmarkSquare />
+	</IconItem>
+	<IconItem name="bookmark">
+		<Bookmark />
+	</IconItem>
+	<IconItem name="briefcase">
+		<Briefcase />
+	</IconItem>
+	<IconItem name="bug-ant">
+		<BugAnt />
+	</IconItem>
+	<IconItem name="building-library">
+		<BuildingLibrary />
+	</IconItem>
+	<IconItem name="building-office-2">
+		<BuildingOffice2 />
+	</IconItem>
+	<IconItem name="building-office">
+		<BuildingOffice />
+	</IconItem>
+	<IconItem name="building-storefront">
+		<BuildingStorefront />
+	</IconItem>
+	<IconItem name="cake">
+		<Cake />
+	</IconItem>
+	<IconItem name="calculator">
+		<Calculator />
+	</IconItem>
+	<IconItem name="calendar-days">
+		<CalendarDays />
+	</IconItem>
+	<IconItem name="calendar">
+		<Calendar />
+	</IconItem>
+	<IconItem name="camera">
+		<Camera />
+	</IconItem>
+	<IconItem name="chart-bar-square">
+		<ChartBarSquare />
+	</IconItem>
+	<IconItem name="chart-bar">
+		<ChartBar />
+	</IconItem>
+	<IconItem name="chart-pie">
+		<ChartPie />
+	</IconItem>
+	<IconItem name="chat-bubble-bottom-center-text">
+		<ChatBubbleBottomCenterText />
+	</IconItem>
+	<IconItem name="chat-bubble-bottom-center">
+		<ChatBubbleBottomCenter />
+	</IconItem>
+	<IconItem name="chat-bubble-left-ellipsis">
+		<ChatBubbleLeftEllipsis />
+	</IconItem>
+	<IconItem name="chat-bubble-left-right">
+		<ChatBubbleLeftRight />
+	</IconItem>
+	<IconItem name="chat-bubble-left">
+		<ChatBubbleLeft />
+	</IconItem>
+	<IconItem name="chat-bubble-oval-left-ellipsis">
+		<ChatBubbleOvalLeftEllipsis />
+	</IconItem>
+	<IconItem name="chat-bubble-oval-left">
+		<ChatBubbleOvalLeft />
+	</IconItem>
+	<IconItem name="check-badge">
+		<CheckBadge />
+	</IconItem>
+	<IconItem name="check-circle">
+		<CheckCircle />
+	</IconItem>
+	<IconItem name="check">
+		<Check />
+	</IconItem>
+	<IconItem name="chevron-double-down">
+		<ChevronDoubleDown />
+	</IconItem>
+	<IconItem name="chevron-double-left">
+		<ChevronDoubleLeft />
+	</IconItem>
+	<IconItem name="chevron-double-right">
+		<ChevronDoubleRight />
+	</IconItem>
+	<IconItem name="chevron-double-up">
+		<ChevronDoubleUp />
+	</IconItem>
+	<IconItem name="chevron-down">
+		<ChevronDown />
+	</IconItem>
+	<IconItem name="chevron-left">
+		<ChevronLeft />
+	</IconItem>
+	<IconItem name="chevron-right">
+		<ChevronRight />
+	</IconItem>
+	<IconItem name="chevron-up-down">
+		<ChevronUpDown />
+	</IconItem>
+	<IconItem name="chevron-up">
+		<ChevronUp />
+	</IconItem>
+	<IconItem name="circle-stack">
+		<CircleStack />
+	</IconItem>
+	<IconItem name="clipboard-document-check">
+		<ClipboardDocumentCheck />
+	</IconItem>
+	<IconItem name="clipboard-document-list">
+		<ClipboardDocumentList />
+	</IconItem>
+	<IconItem name="clipboard-document">
+		<ClipboardDocument />
+	</IconItem>
+	<IconItem name="clipboard">
+		<Clipboard />
+	</IconItem>
+	<IconItem name="clock">
+		<Clock />
+	</IconItem>
+	<IconItem name="cloud-arrow-down">
+		<CloudArrowDown />
+	</IconItem>
+	<IconItem name="cloud-arrow-up">
+		<CloudArrowUp />
+	</IconItem>
+	<IconItem name="cloud">
+		<Cloud />
+	</IconItem>
+	<IconItem name="code-bracket-square">
+		<CodeBracketSquare />
+	</IconItem>
+	<IconItem name="code-bracket">
+		<CodeBracket />
+	</IconItem>
+	<IconItem name="cog-6-tooth">
+		<Cog6Tooth />
+	</IconItem>
+	<IconItem name="cog-8-tooth">
+		<Cog8Tooth />
+	</IconItem>
+	<IconItem name="cog">
+		<Cog />
+	</IconItem>
+	<IconItem name="command-line">
+		<CommandLine />
+	</IconItem>
+	<IconItem name="computer-desktop">
+		<ComputerDesktop />
+	</IconItem>
+	<IconItem name="cpu-chip">
+		<CpuChip />
+	</IconItem>
+	<IconItem name="credit-card">
+		<CreditCard />
+	</IconItem>
+	<IconItem name="cube-transparent">
+		<CubeTransparent />
+	</IconItem>
+	<IconItem name="cube">
+		<Cube />
+	</IconItem>
+	<IconItem name="currency-bangladeshi">
+		<CurrencyBangladeshi />
+	</IconItem>
+	<IconItem name="currency-dollar">
+		<CurrencyDollar />
+	</IconItem>
+	<IconItem name="currency-euro">
+		<CurrencyEuro />
+	</IconItem>
+	<IconItem name="currency-pound">
+		<CurrencyPound />
+	</IconItem>
+	<IconItem name="currency-rupee">
+		<CurrencyRupee />
+	</IconItem>
+	<IconItem name="currency-yen">
+		<CurrencyYen />
+	</IconItem>
+	<IconItem name="cursor-arrow-rays">
+		<CursorArrowRays />
+	</IconItem>
+	<IconItem name="cursor-arrow-ripple">
+		<CursorArrowRipple />
+	</IconItem>
+	<IconItem name="device-phone-mobile">
+		<DevicePhoneMobile />
+	</IconItem>
+	<IconItem name="device-tablet">
+		<DeviceTablet />
+	</IconItem>
+	<IconItem name="document-arrow-down">
+		<DocumentArrowDown />
+	</IconItem>
+	<IconItem name="document-arrow-up">
+		<DocumentArrowUp />
+	</IconItem>
+	<IconItem name="document-chart-bar">
+		<DocumentChartBar />
+	</IconItem>
+	<IconItem name="document-check">
+		<DocumentCheck />
+	</IconItem>
+	<IconItem name="document-duplicate">
+		<DocumentDuplicate />
+	</IconItem>
+	<IconItem name="document-magnifying-glass">
+		<DocumentMagnifyingGlass />
+	</IconItem>
+	<IconItem name="document-minus">
+		<DocumentMinus />
+	</IconItem>
+	<IconItem name="document-plus">
+		<DocumentPlus />
+	</IconItem>
+	<IconItem name="document-text">
+		<DocumentText />
+	</IconItem>
+	<IconItem name="document">
+		<Document />
+	</IconItem>
+	<IconItem name="ellipsis-horizontal-circle">
+		<EllipsisHorizontalCircle />
+	</IconItem>
+	<IconItem name="ellipsis-horizontal">
+		<EllipsisHorizontal />
+	</IconItem>
+	<IconItem name="ellipsis-vertical">
+		<EllipsisVertical />
+	</IconItem>
+	<IconItem name="envelope-open">
+		<EnvelopeOpen />
+	</IconItem>
+	<IconItem name="envelope">
+		<Envelope />
+	</IconItem>
+	<IconItem name="exclamation-circle">
+		<ExclamationCircle />
+	</IconItem>
+	<IconItem name="exclamation-triangle">
+		<ExclamationTriangle />
+	</IconItem>
+	<IconItem name="eye-dropper">
+		<EyeDropper />
+	</IconItem>
+	<IconItem name="eye-slash">
+		<EyeSlash />
+	</IconItem>
+	<IconItem name="eye">
+		<Eye />
+	</IconItem>
+	<IconItem name="face-frown">
+		<FaceFrown />
+	</IconItem>
+	<IconItem name="face-smile">
+		<FaceSmile />
+	</IconItem>
+	<IconItem name="film">
+		<Film />
+	</IconItem>
+	<IconItem name="finger-print">
+		<FingerPrint />
+	</IconItem>
+	<IconItem name="fire">
+		<Fire />
+	</IconItem>
+	<IconItem name="flag">
+		<Flag />
+	</IconItem>
+	<IconItem name="folder-arrow-down">
+		<FolderArrowDown />
+	</IconItem>
+	<IconItem name="folder-minus">
+		<FolderMinus />
+	</IconItem>
+	<IconItem name="folder-open">
+		<FolderOpen />
+	</IconItem>
+	<IconItem name="folder-plus">
+		<FolderPlus />
+	</IconItem>
+	<IconItem name="folder">
+		<Folder />
+	</IconItem>
+	<IconItem name="forward">
+		<Forward />
+	</IconItem>
+	<IconItem name="funnel">
+		<Funnel />
+	</IconItem>
+	<IconItem name="gif">
+		<Gif />
+	</IconItem>
+	<IconItem name="gift-top">
+		<GiftTop />
+	</IconItem>
+	<IconItem name="gift">
+		<Gift />
+	</IconItem>
+	<IconItem name="globe-alt">
+		<GlobeAlt />
+	</IconItem>
+	<IconItem name="globe-americas">
+		<GlobeAmericas />
+	</IconItem>
+	<IconItem name="globe-asia-australia">
+		<GlobeAsiaAustralia />
+	</IconItem>
+	<IconItem name="globe-europe-africa">
+		<GlobeEuropeAfrica />
+	</IconItem>
+	<IconItem name="hand-raised">
+		<HandRaised />
+	</IconItem>
+	<IconItem name="hand-thumb-down">
+		<HandThumbDown />
+	</IconItem>
+	<IconItem name="hand-thumb-up">
+		<HandThumbUp />
+	</IconItem>
+	<IconItem name="hashtag">
+		<Hashtag />
+	</IconItem>
+	<IconItem name="heart">
+		<Heart />
+	</IconItem>
+	<IconItem name="home-modern">
+		<HomeModern />
+	</IconItem>
+	<IconItem name="home">
+		<Home />
+	</IconItem>
+	<IconItem name="identification">
+		<Identification />
+	</IconItem>
+	<IconItem name="inbox-arrow-down">
+		<InboxArrowDown />
+	</IconItem>
+	<IconItem name="inbox-stack">
+		<InboxStack />
+	</IconItem>
+	<IconItem name="inbox">
+		<Inbox />
+	</IconItem>
+	<IconItem name="information-circle">
+		<InformationCircle />
+	</IconItem>
+	<IconItem name="key">
+		<Key />
+	</IconItem>
+	<IconItem name="language">
+		<Language />
+	</IconItem>
+	<IconItem name="lifebuoy">
+		<Lifebuoy />
+	</IconItem>
+	<IconItem name="light-bulb">
+		<LightBulb />
+	</IconItem>
+	<IconItem name="link">
+		<Link />
+	</IconItem>
+	<IconItem name="list-bullet">
+		<ListBullet />
+	</IconItem>
+	<IconItem name="lock-closed">
+		<LockClosed />
+	</IconItem>
+	<IconItem name="lock-open">
+		<LockOpen />
+	</IconItem>
+	<IconItem name="magnifying-glass-circle">
+		<MagnifyingGlassCircle />
+	</IconItem>
+	<IconItem name="magnifying-glass-minus">
+		<MagnifyingGlassMinus />
+	</IconItem>
+	<IconItem name="magnifying-glass-plus">
+		<MagnifyingGlassPlus />
+	</IconItem>
+	<IconItem name="magnifying-glass">
+		<MagnifyingGlass />
+	</IconItem>
+	<IconItem name="map-pin">
+		<MapPin />
+	</IconItem>
+	<IconItem name="map">
+		<Map />
+	</IconItem>
+	<IconItem name="megaphone">
+		<Megaphone />
+	</IconItem>
+	<IconItem name="microphone">
+		<Microphone />
+	</IconItem>
+	<IconItem name="minus-circle">
+		<MinusCircle />
+	</IconItem>
+	<IconItem name="minus-small">
+		<MinusSmall />
+	</IconItem>
+	<IconItem name="minus">
+		<Minus />
+	</IconItem>
+	<IconItem name="moon">
+		<Moon />
+	</IconItem>
+	<IconItem name="musical-note">
+		<MusicalNote />
+	</IconItem>
+	<IconItem name="newspaper">
+		<Newspaper />
+	</IconItem>
+	<IconItem name="no-symbol">
+		<NoSymbol />
+	</IconItem>
+	<IconItem name="paint-brush">
+		<PaintBrush />
+	</IconItem>
+	<IconItem name="paper-airplane">
+		<PaperAirplane />
+	</IconItem>
+	<IconItem name="paper-clip">
+		<PaperClip />
+	</IconItem>
+	<IconItem name="pause-circle">
+		<PauseCircle />
+	</IconItem>
+	<IconItem name="pause">
+		<Pause />
+	</IconItem>
+	<IconItem name="pencil-square">
+		<PencilSquare />
+	</IconItem>
+	<IconItem name="pencil">
+		<Pencil />
+	</IconItem>
+	<IconItem name="phone-arrow-down-left">
+		<PhoneArrowDownLeft />
+	</IconItem>
+	<IconItem name="phone-arrow-up-right">
+		<PhoneArrowUpRight />
+	</IconItem>
+	<IconItem name="phone-x-mark">
+		<PhoneXMark />
+	</IconItem>
+	<IconItem name="phone">
+		<Phone />
+	</IconItem>
+	<IconItem name="photo">
+		<Photo />
+	</IconItem>
+	<IconItem name="play-circle">
+		<PlayCircle />
+	</IconItem>
+	<IconItem name="play-pause">
+		<PlayPause />
+	</IconItem>
+	<IconItem name="play">
+		<Play />
+	</IconItem>
+	<IconItem name="plus-circle">
+		<PlusCircle />
+	</IconItem>
+	<IconItem name="plus-small">
+		<PlusSmall />
+	</IconItem>
+	<IconItem name="plus">
+		<Plus />
+	</IconItem>
+	<IconItem name="power">
+		<Power />
+	</IconItem>
+	<IconItem name="presentation-chart-bar">
+		<PresentationChartBar />
+	</IconItem>
+	<IconItem name="presentation-chart-line">
+		<PresentationChartLine />
+	</IconItem>
+	<IconItem name="printer">
+		<Printer />
+	</IconItem>
+	<IconItem name="puzzle-piece">
+		<PuzzlePiece />
+	</IconItem>
+	<IconItem name="qr-code">
+		<QrCode />
+	</IconItem>
+	<IconItem name="question-mark-circle">
+		<QuestionMarkCircle />
+	</IconItem>
+	<IconItem name="queue-list">
+		<QueueList />
+	</IconItem>
+	<IconItem name="radio">
+		<Radio />
+	</IconItem>
+	<IconItem name="receipt-percent">
+		<ReceiptPercent />
+	</IconItem>
+	<IconItem name="receipt-refund">
+		<ReceiptRefund />
+	</IconItem>
+	<IconItem name="rectangle-group">
+		<RectangleGroup />
+	</IconItem>
+	<IconItem name="rectangle-stack">
+		<RectangleStack />
+	</IconItem>
+	<IconItem name="rocket-launch">
+		<RocketLaunch />
+	</IconItem>
+	<IconItem name="rss">
+		<Rss />
+	</IconItem>
+	<IconItem name="scale">
+		<Scale />
+	</IconItem>
+	<IconItem name="scissors">
+		<Scissors />
+	</IconItem>
+	<IconItem name="server-stack">
+		<ServerStack />
+	</IconItem>
+	<IconItem name="server">
+		<Server />
+	</IconItem>
+	<IconItem name="share">
+		<Share />
+	</IconItem>
+	<IconItem name="shield-check">
+		<ShieldCheck />
+	</IconItem>
+	<IconItem name="shield-exclamation">
+		<ShieldExclamation />
+	</IconItem>
+	<IconItem name="shopping-bag">
+		<ShoppingBag />
+	</IconItem>
+	<IconItem name="shopping-cart">
+		<ShoppingCart />
+	</IconItem>
+	<IconItem name="signal-slash">
+		<SignalSlash />
+	</IconItem>
+	<IconItem name="signal">
+		<Signal />
+	</IconItem>
+	<IconItem name="sparkles">
+		<Sparkles />
+	</IconItem>
+	<IconItem name="speaker-wave">
+		<SpeakerWave />
+	</IconItem>
+	<IconItem name="speaker-x-mark">
+		<SpeakerXMark />
+	</IconItem>
+	<IconItem name="square-2-stack">
+		<Square2Stack />
+	</IconItem>
+	<IconItem name="square-3-stack-3d">
+		<Square3Stack3d />
+	</IconItem>
+	<IconItem name="squares-2x2">
+		<Squares2x2 />
+	</IconItem>
+	<IconItem name="squares-plus">
+		<SquaresPlus />
+	</IconItem>
+	<IconItem name="star">
+		<Star />
+	</IconItem>
+	<IconItem name="stop-circle">
+		<StopCircle />
+	</IconItem>
+	<IconItem name="stop">
+		<Stop />
+	</IconItem>
+	<IconItem name="sun">
+		<Sun />
+	</IconItem>
+	<IconItem name="swatch">
+		<Swatch />
+	</IconItem>
+	<IconItem name="table-cells">
+		<TableCells />
+	</IconItem>
+	<IconItem name="tag">
+		<Tag />
+	</IconItem>
+	<IconItem name="ticket">
+		<Ticket />
+	</IconItem>
+	<IconItem name="trash">
+		<Trash />
+	</IconItem>
+	<IconItem name="trophy">
+		<Trophy />
+	</IconItem>
+	<IconItem name="truck">
+		<Truck />
+	</IconItem>
+	<IconItem name="tv">
+		<Tv />
+	</IconItem>
+	<IconItem name="user-circle">
+		<UserCircle />
+	</IconItem>
+	<IconItem name="user-group">
+		<UserGroup />
+	</IconItem>
+	<IconItem name="user-minus">
+		<UserMinus />
+	</IconItem>
+	<IconItem name="user-plus">
+		<UserPlus />
+	</IconItem>
+	<IconItem name="user">
+		<User />
+	</IconItem>
+	<IconItem name="users">
+		<Users />
+	</IconItem>
+	<IconItem name="variable">
+		<Variable />
+	</IconItem>
+	<IconItem name="video-camera-slash">
+		<VideoCameraSlash />
+	</IconItem>
+	<IconItem name="video-camera">
+		<VideoCamera />
+	</IconItem>
+	<IconItem name="view-columns">
+		<ViewColumns />
+	</IconItem>
+	<IconItem name="viewfinder-circle">
+		<ViewfinderCircle />
+	</IconItem>
+	<IconItem name="wallet">
+		<Wallet />
+	</IconItem>
+	<IconItem name="wifi">
+		<Wifi />
+	</IconItem>
+	<IconItem name="window">
+		<Window />
+	</IconItem>
+	<IconItem name="wrench-screwdriver">
+		<WrenchScrewdriver />
+	</IconItem>
+	<IconItem name="wrench">
+		<Wrench />
+	</IconItem>
+	<IconItem name="x-circle">
+		<XCircle />
+	</IconItem>
+	<IconItem name="x-mark">
+		<XMark />
+	</IconItem>
+</IconGallery>

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import { Printer as PrinterSvelte } from '../../../lib/heroicons/24/solid'
 
 const meta = {
-	title: 'Solid',
+	title: 'Heroicons/Solid',
 	component: PrinterSvelte,
 	args: { class: 'w-6 h-6' },
 } satisfies Meta<PrinterSvelte>

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import { Tv as TvSvelte } from '../../../lib/heroicons/24/solid'
 
 const meta = {
-	title: 'Solid',
+	title: 'Heroicons/Solid',
 	component: TvSvelte,
 	args: { class: 'w-6 h-6' },
 } satisfies Meta<TvSvelte>

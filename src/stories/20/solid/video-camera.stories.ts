@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import { VideoCamera as VideoCameraSvelte } from '../../../lib/heroicons/20/solid'
 
 const meta = {
-	title: 'Mini',
+	title: 'Heroicons/Mini',
 	component: VideoCameraSvelte,
 	args: { class: 'w-5 h-5' },
 } satisfies Meta<VideoCameraSvelte>

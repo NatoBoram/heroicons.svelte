@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import { Link as LinkSvelte } from '../../../lib/heroicons/24/outline'
 
 const meta = {
-	title: 'Outline',
+	title: 'Heroicons/Outline',
 	component: LinkSvelte,
 	args: { class: 'w-6 h-6' },
 } satisfies Meta<LinkSvelte>

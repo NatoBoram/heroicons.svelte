@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import { FolderMinus as FolderMinusSvelte } from '../../../lib/heroicons/24/solid'
 
 const meta = {
-	title: 'Solid',
+	title: 'Heroicons/Solid',
 	component: FolderMinusSvelte,
 	args: { class: 'w-6 h-6' },
 } satisfies Meta<FolderMinusSvelte>

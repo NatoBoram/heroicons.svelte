@@ -1,5 +1,5 @@
 {
-	"[css][html][javascript][json][jsonc][markdown][postcss][scss][svelte][typescript][xml][yaml]": {
+	"[css][html][javascript][json][jsonc][markdown][mdx][postcss][scss][svelte][typescript][xml][yaml]": {
 		"editor.minimap.maxColumn": 100,
 		"editor.rulers": [100]
 	},

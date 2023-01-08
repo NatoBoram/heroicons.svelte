@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import { Trophy as TrophySvelte } from '../../../lib/heroicons/20/solid'
 
 const meta = {
-	title: 'Mini',
+	title: 'Heroicons/Mini',
 	component: TrophySvelte,
 	args: { class: 'w-5 h-5' },
 } satisfies Meta<TrophySvelte>

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import { ReceiptPercent as ReceiptPercentSvelte } from '../../../lib/heroicons/24/solid'
 
 const meta = {
-	title: 'Solid',
+	title: 'Heroicons/Solid',
 	component: ReceiptPercentSvelte,
 	args: { class: 'w-6 h-6' },
 } satisfies Meta<ReceiptPercentSvelte>

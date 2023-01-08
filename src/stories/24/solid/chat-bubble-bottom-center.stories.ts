@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import { ChatBubbleBottomCenter as ChatBubbleBottomCenterSvelte } from '../../../lib/heroicons/24/solid'
 
 const meta = {
-	title: 'Solid',
+	title: 'Heroicons/Solid',
 	component: ChatBubbleBottomCenterSvelte,
 	args: { class: 'w-6 h-6' },
 } satisfies Meta<ChatBubbleBottomCenterSvelte>

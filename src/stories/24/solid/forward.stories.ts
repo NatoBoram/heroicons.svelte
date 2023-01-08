@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import { Forward as ForwardSvelte } from '../../../lib/heroicons/24/solid'
 
 const meta = {
-	title: 'Solid',
+	title: 'Heroicons/Solid',
 	component: ForwardSvelte,
 	args: { class: 'w-6 h-6' },
 } satisfies Meta<ForwardSvelte>

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import { ArrowRight as ArrowRightSvelte } from '../../../lib/heroicons/20/solid'
 
 const meta = {
-	title: 'Mini',
+	title: 'Heroicons/Mini',
 	component: ArrowRightSvelte,
 	args: { class: 'w-5 h-5' },
 } satisfies Meta<ArrowRightSvelte>

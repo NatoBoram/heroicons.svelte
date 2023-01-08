@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import { Cake as CakeSvelte } from '../../../lib/heroicons/20/solid'
 
 const meta = {
-	title: 'Mini',
+	title: 'Heroicons/Mini',
 	component: CakeSvelte,
 	args: { class: 'w-5 h-5' },
 } satisfies Meta<CakeSvelte>

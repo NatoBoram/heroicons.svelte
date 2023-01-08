@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import { PlusCircle as PlusCircleSvelte } from '../../../lib/heroicons/24/solid'
 
 const meta = {
-	title: 'Solid',
+	title: 'Heroicons/Solid',
 	component: PlusCircleSvelte,
 	args: { class: 'w-6 h-6' },
 } satisfies Meta<PlusCircleSvelte>

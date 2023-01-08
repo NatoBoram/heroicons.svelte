@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import { Wallet as WalletSvelte } from '../../../lib/heroicons/24/solid'
 
 const meta = {
-	title: 'Solid',
+	title: 'Heroicons/Solid',
 	component: WalletSvelte,
 	args: { class: 'w-6 h-6' },
 } satisfies Meta<WalletSvelte>

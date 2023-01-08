@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import { CommandLine as CommandLineSvelte } from '../../../lib/heroicons/24/outline'
 
 const meta = {
-	title: 'Outline',
+	title: 'Heroicons/Outline',
 	component: CommandLineSvelte,
 	args: { class: 'w-6 h-6' },
 } satisfies Meta<CommandLineSvelte>

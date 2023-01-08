@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import { CurrencyDollar as CurrencyDollarSvelte } from '../../../lib/heroicons/24/solid'
 
 const meta = {
-	title: 'Solid',
+	title: 'Heroicons/Solid',
 	component: CurrencyDollarSvelte,
 	args: { class: 'w-6 h-6' },
 } satisfies Meta<CurrencyDollarSvelte>

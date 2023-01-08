@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import { Cog6Tooth as Cog6ToothSvelte } from '../../../lib/heroicons/24/solid'
 
 const meta = {
-	title: 'Solid',
+	title: 'Heroicons/Solid',
 	component: Cog6ToothSvelte,
 	args: { class: 'w-6 h-6' },
 } satisfies Meta<Cog6ToothSvelte>

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import { Folder as FolderSvelte } from '../../../lib/heroicons/24/outline'
 
 const meta = {
-	title: 'Outline',
+	title: 'Heroicons/Outline',
 	component: FolderSvelte,
 	args: { class: 'w-6 h-6' },
 } satisfies Meta<FolderSvelte>

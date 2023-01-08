@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import { UserGroup as UserGroupSvelte } from '../../../lib/heroicons/20/solid'
 
 const meta = {
-	title: 'Mini',
+	title: 'Heroicons/Mini',
 	component: UserGroupSvelte,
 	args: { class: 'w-5 h-5' },
 } satisfies Meta<UserGroupSvelte>

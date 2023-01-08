@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import { Clipboard as ClipboardSvelte } from '../../../lib/heroicons/24/outline'
 
 const meta = {
-	title: 'Outline',
+	title: 'Heroicons/Outline',
 	component: ClipboardSvelte,
 	args: { class: 'w-6 h-6' },
 } satisfies Meta<ClipboardSvelte>
