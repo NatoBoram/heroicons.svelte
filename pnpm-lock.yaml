@@ -22,6 +22,7 @@ specifiers:
   eslint-config-prettier: ^8.6.0
   eslint-plugin-storybook: ^0.6.8
   eslint-plugin-svelte3: ^4.0.0
+  heroicons: ^2.0.13
   postcss: ^8.4.21
   prettier: ^2.8.2
   prettier-plugin-svelte: ^2.9.0
@@ -60,6 +61,7 @@ devDependencies:
   eslint-config-prettier: 8.6.0_eslint@8.31.0
   eslint-plugin-storybook: 0.6.8_iukboom6ndih5an6iafl45j2fe
   eslint-plugin-svelte3: 4.0.0_6go7qzsvzihesfwmyvq3tnl5qq
+  heroicons: 2.0.13
   postcss: 8.4.21
   prettier: 2.8.2
   prettier-plugin-svelte: 2.9.0_74vfyr7qjo56zgjcvkwi6gyjxm
@@ -5663,6 +5665,10 @@ packages:
     engines: {node: '>= 0.4.0'}
     dependencies:
       function-bind: 1.1.1
+    dev: true
+
+  /heroicons/2.0.13:
+    resolution: {integrity: sha512-INL+CaS5eJ8+kkXc6kz+i/4m6AWYESGpyorDIZDPH281vZWjV/W6coGmXVZdvyYVLIbPx0id4fPbWvCj//MW5A==}
     dev: true
 
   /hosted-git-info/2.8.9:

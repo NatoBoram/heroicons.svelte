@@ -66,6 +66,7 @@
 		"eslint-config-prettier": "^8.6.0",
 		"eslint-plugin-storybook": "^0.6.8",
 		"eslint-plugin-svelte3": "^4.0.0",
+		"heroicons": "^2.0.13",
 		"postcss": "^8.4.21",
 		"prettier": "^2.8.2",
 		"prettier-plugin-svelte": "^2.9.0",
