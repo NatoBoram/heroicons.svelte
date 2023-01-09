@@ -1,10 +1,10 @@
 {
 	"name": "@natoboram/heroicons.svelte",
 	"version": "0.0.1",
-	"description": "Exports Heroicons for usage with SvelteKit.",
+	"description": "Exports Heroicons for usage with Svelte.",
 	"keywords": [
 		"Heroicons",
-		"SvelteKit",
+		"Svelte",
 		"TailwindCSS"
 	],
 	"homepage": "https://github.com/NatoBoram/heroicons.svelte",
