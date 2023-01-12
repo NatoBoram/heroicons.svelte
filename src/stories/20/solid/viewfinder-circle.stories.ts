@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { ViewfinderCircle as ViewfinderCircleSvelte } from '../../../lib/heroicons/20/solid'
+import { ViewfinderCircle as ViewfinderCircleSvelte } from '../../../lib/20/solid'
 
 const meta = {
 	title: 'Heroicons/Mini',

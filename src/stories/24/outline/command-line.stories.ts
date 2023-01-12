@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { CommandLine as CommandLineSvelte } from '../../../lib/heroicons/24/outline'
+import { CommandLine as CommandLineSvelte } from '../../../lib/24/outline'
 
 const meta = {
 	title: 'Heroicons/Outline',

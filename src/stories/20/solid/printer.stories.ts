@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Printer as PrinterSvelte } from '../../../lib/heroicons/20/solid'
+import { Printer as PrinterSvelte } from '../../../lib/20/solid'
 
 const meta = {
 	title: 'Heroicons/Mini',

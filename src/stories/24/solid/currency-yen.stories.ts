@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { CurrencyYen as CurrencyYenSvelte } from '../../../lib/heroicons/24/solid'
+import { CurrencyYen as CurrencyYenSvelte } from '../../../lib/24/solid'
 
 const meta = {
 	title: 'Heroicons/Solid',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { ChartPie as ChartPieSvelte } from '../../../lib/heroicons/24/outline'
+import { ChartPie as ChartPieSvelte } from '../../../lib/24/outline'
 
 const meta = {
 	title: 'Heroicons/Outline',

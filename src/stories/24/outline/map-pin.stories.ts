@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { MapPin as MapPinSvelte } from '../../../lib/heroicons/24/outline'
+import { MapPin as MapPinSvelte } from '../../../lib/24/outline'
 
 const meta = {
 	title: 'Heroicons/Outline',

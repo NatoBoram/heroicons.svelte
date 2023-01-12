@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Cog8Tooth as Cog8ToothSvelte } from '../../../lib/heroicons/24/outline'
+import { Cog8Tooth as Cog8ToothSvelte } from '../../../lib/24/outline'
 
 const meta = {
 	title: 'Heroicons/Outline',

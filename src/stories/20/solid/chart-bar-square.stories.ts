@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { ChartBarSquare as ChartBarSquareSvelte } from '../../../lib/heroicons/20/solid'
+import { ChartBarSquare as ChartBarSquareSvelte } from '../../../lib/20/solid'
 
 const meta = {
 	title: 'Heroicons/Mini',

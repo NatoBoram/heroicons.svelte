@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { PuzzlePiece as PuzzlePieceSvelte } from '../../../lib/heroicons/24/outline'
+import { PuzzlePiece as PuzzlePieceSvelte } from '../../../lib/24/outline'
 
 const meta = {
 	title: 'Heroicons/Outline',

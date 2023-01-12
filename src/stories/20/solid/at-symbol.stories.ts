@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { AtSymbol as AtSymbolSvelte } from '../../../lib/heroicons/20/solid'
+import { AtSymbol as AtSymbolSvelte } from '../../../lib/20/solid'
 
 const meta = {
 	title: 'Heroicons/Mini',

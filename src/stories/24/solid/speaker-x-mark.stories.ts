@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { SpeakerXMark as SpeakerXMarkSvelte } from '../../../lib/heroicons/24/solid'
+import { SpeakerXMark as SpeakerXMarkSvelte } from '../../../lib/24/solid'
 
 const meta = {
 	title: 'Heroicons/Solid',

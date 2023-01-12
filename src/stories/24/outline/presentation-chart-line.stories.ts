@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { PresentationChartLine as PresentationChartLineSvelte } from '../../../lib/heroicons/24/outline'
+import { PresentationChartLine as PresentationChartLineSvelte } from '../../../lib/24/outline'
 
 const meta = {
 	title: 'Heroicons/Outline',

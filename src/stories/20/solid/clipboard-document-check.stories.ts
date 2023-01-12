@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { ClipboardDocumentCheck as ClipboardDocumentCheckSvelte } from '../../../lib/heroicons/20/solid'
+import { ClipboardDocumentCheck as ClipboardDocumentCheckSvelte } from '../../../lib/20/solid'
 
 const meta = {
 	title: 'Heroicons/Mini',

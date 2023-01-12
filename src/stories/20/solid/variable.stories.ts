@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Variable as VariableSvelte } from '../../../lib/heroicons/20/solid'
+import { Variable as VariableSvelte } from '../../../lib/20/solid'
 
 const meta = {
 	title: 'Heroicons/Mini',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { PaintBrush as PaintBrushSvelte } from '../../../lib/heroicons/24/solid'
+import { PaintBrush as PaintBrushSvelte } from '../../../lib/24/solid'
 
 const meta = {
 	title: 'Heroicons/Solid',

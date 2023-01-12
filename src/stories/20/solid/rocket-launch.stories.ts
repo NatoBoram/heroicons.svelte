@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { RocketLaunch as RocketLaunchSvelte } from '../../../lib/heroicons/20/solid'
+import { RocketLaunch as RocketLaunchSvelte } from '../../../lib/20/solid'
 
 const meta = {
 	title: 'Heroicons/Mini',

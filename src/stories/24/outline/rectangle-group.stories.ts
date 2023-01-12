@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { RectangleGroup as RectangleGroupSvelte } from '../../../lib/heroicons/24/outline'
+import { RectangleGroup as RectangleGroupSvelte } from '../../../lib/24/outline'
 
 const meta = {
 	title: 'Heroicons/Outline',

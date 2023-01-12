@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { ChevronDoubleLeft as ChevronDoubleLeftSvelte } from '../../../lib/heroicons/24/solid'
+import { ChevronDoubleLeft as ChevronDoubleLeftSvelte } from '../../../lib/24/solid'
 
 const meta = {
 	title: 'Heroicons/Solid',

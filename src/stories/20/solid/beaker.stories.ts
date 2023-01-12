@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Beaker as BeakerSvelte } from '../../../lib/heroicons/20/solid'
+import { Beaker as BeakerSvelte } from '../../../lib/20/solid'
 
 const meta = {
 	title: 'Heroicons/Mini',

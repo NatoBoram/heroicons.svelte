@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { ArchiveBox as ArchiveBoxSvelte } from '../../../lib/heroicons/24/outline'
+import { ArchiveBox as ArchiveBoxSvelte } from '../../../lib/24/outline'
 
 const meta = {
 	title: 'Heroicons/Outline',

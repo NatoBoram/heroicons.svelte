@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { QueueList as QueueListSvelte } from '../../../lib/heroicons/24/outline'
+import { QueueList as QueueListSvelte } from '../../../lib/24/outline'
 
 const meta = {
 	title: 'Heroicons/Outline',

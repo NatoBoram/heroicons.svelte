@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Play as PlaySvelte } from '../../../lib/heroicons/24/outline'
+import { Play as PlaySvelte } from '../../../lib/24/outline'
 
 const meta = {
 	title: 'Heroicons/Outline',

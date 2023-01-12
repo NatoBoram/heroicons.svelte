@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Sparkles as SparklesSvelte } from '../../../lib/heroicons/24/outline'
+import { Sparkles as SparklesSvelte } from '../../../lib/24/outline'
 
 const meta = {
 	title: 'Heroicons/Outline',
