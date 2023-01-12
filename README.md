@@ -4,21 +4,13 @@
 
 Exports [Heroicons](https://github.com/tailwindlabs/heroicons) for usage with [Svelte](https://github.com/sveltejs/svelte).
 
-## Installation
-
-In the project's `.npmrc`, add this line:
-
-```properties
-@NatoBoram:registry=https://npm.pkg.github.com
-```
+## Usage
 
 Install `@natoboram/heroicons.svelte`:
 
 ```bash
 pnpm add -D @natoboram/heroicons.svelte
 ```
-
-## Usage
 
 Each icons can be imported individually as a Svelte component.
 

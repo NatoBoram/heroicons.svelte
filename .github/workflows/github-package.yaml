@@ -21,7 +21,7 @@ jobs:
         with:
           cache: pnpm
           node-version: 19
-          registry-url: https://npm.pkg.github.com/
+          registry-url: https://registry.npmjs.org/
       - run: pnpm install
       - run: pnpm run package
       - run: pnpm publish ./package
