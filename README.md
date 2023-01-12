@@ -1,6 +1,6 @@
 # Heroicons.Svelte
 
-[![Node.js CI](https://github.com/NatoBoram/heroicons.svelte/actions/workflows/node-js.yaml/badge.svg)](https://github.com/NatoBoram/heroicons.svelte/actions/workflows/node-js.yaml)
+[![Node.js CI](https://github.com/NatoBoram/heroicons.svelte/actions/workflows/node-js.yaml/badge.svg)](https://github.com/NatoBoram/heroicons.svelte/actions/workflows/node-js.yaml) [![Heroicons](https://img.shields.io/github/package-json/dependency-version/NatoBoram/heroicons.svelte/dev/heroicons?color=8b5cf6)](https://github.com/tailwindlabs/heroicons)
 
 Exports [Heroicons](https://github.com/tailwindlabs/heroicons) for usage with [Svelte](https://github.com/sveltejs/svelte).
 
