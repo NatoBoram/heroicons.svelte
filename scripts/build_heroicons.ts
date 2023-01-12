@@ -17,8 +17,7 @@ const srcStories = join('src', 'stories')
 const srcStories20 = join('src', 'stories', '20')
 const srcStories24 = join('src', 'stories', '24')
 
-// Copy heroicons
-console.log('Copying Heroicons...')
+console.log(`🚚 Copying Heroicons to \`${srcLib20}\` and \`${srcLib24}\`...`)
 await Promise.all([await rm(srcLib20, rmOptions), await rm(srcLib24, rmOptions)])
 await Promise.all([
 	cp(nodeModulesHeroicons20, srcLib20, rmOptions),
@@ -67,6 +66,7 @@ ${(await readFile(path, 'utf8')).replace('<svg', '<svg class={className} ')}`
 	)
 }
 
+console.log('🍷 Turning `.svg` into `.svelte`...')
 await Promise.all([
 	sveltify(srcLib20Solid, 'w-5 h-5'),
 	sveltify(srcLib24Outline, 'w-6 h-6'),
@@ -79,6 +79,7 @@ async function indexify(dir: string) {
 	await writeFile(join(dir, 'index.ts'), `${exports.join('\n')}\n`)
 }
 
+console.log(`📇 Adding indexes to \`${srcLib20}\` and \`${srcLib24}\`...`)
 await Promise.all([indexify(srcLib20), indexify(srcLib24)])
 
 async function storify(size: number, variant: string, title: string, className: string) {
@@ -136,13 +137,16 @@ ${svelteFiles
 	)
 }
 
+console.log(`📕 Creating stories...`)
 await Promise.all([rm(srcStories20, rmOptions), rm(srcStories24, rmOptions)])
-
 await Promise.all([
 	storify(20, 'solid', 'Mini', 'w-5 h-5'),
 	storify(24, 'outline', 'Outline', 'w-6 h-6'),
 	storify(24, 'solid', 'Solid', 'w-6 h-6'),
 ])
 
+console.log(`🎨 Formatting...`)
 execSync('pnpm format')
+
+console.log(`📦 Packaging...`)
 execSync('pnpm package')
