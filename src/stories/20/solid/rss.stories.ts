@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Rss as RssSvelte } from '../../../lib/heroicons/20/solid'
+import { Rss as RssSvelte } from '../../../lib/20/solid'
 
 const meta = {
 	title: 'Heroicons/Mini',

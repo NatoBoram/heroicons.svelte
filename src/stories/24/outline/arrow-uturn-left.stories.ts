@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { ArrowUturnLeft as ArrowUturnLeftSvelte } from '../../../lib/heroicons/24/outline'
+import { ArrowUturnLeft as ArrowUturnLeftSvelte } from '../../../lib/24/outline'
 
 const meta = {
 	title: 'Heroicons/Outline',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { InboxStack as InboxStackSvelte } from '../../../lib/heroicons/24/outline'
+import { InboxStack as InboxStackSvelte } from '../../../lib/24/outline'
 
 const meta = {
 	title: 'Heroicons/Outline',

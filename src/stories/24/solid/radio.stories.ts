@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Radio as RadioSvelte } from '../../../lib/heroicons/24/solid'
+import { Radio as RadioSvelte } from '../../../lib/24/solid'
 
 const meta = {
 	title: 'Heroicons/Solid',

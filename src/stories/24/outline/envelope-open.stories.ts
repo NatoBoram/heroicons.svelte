@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { EnvelopeOpen as EnvelopeOpenSvelte } from '../../../lib/heroicons/24/outline'
+import { EnvelopeOpen as EnvelopeOpenSvelte } from '../../../lib/24/outline'
 
 const meta = {
 	title: 'Heroicons/Outline',

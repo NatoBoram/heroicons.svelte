@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { StopCircle as StopCircleSvelte } from '../../../lib/heroicons/24/outline'
+import { StopCircle as StopCircleSvelte } from '../../../lib/24/outline'
 
 const meta = {
 	title: 'Heroicons/Outline',

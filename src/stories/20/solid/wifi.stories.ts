@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Wifi as WifiSvelte } from '../../../lib/heroicons/20/solid'
+import { Wifi as WifiSvelte } from '../../../lib/20/solid'
 
 const meta = {
 	title: 'Heroicons/Mini',

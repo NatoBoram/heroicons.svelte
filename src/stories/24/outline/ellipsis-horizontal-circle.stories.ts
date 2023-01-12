@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { EllipsisHorizontalCircle as EllipsisHorizontalCircleSvelte } from '../../../lib/heroicons/24/outline'
+import { EllipsisHorizontalCircle as EllipsisHorizontalCircleSvelte } from '../../../lib/24/outline'
 
 const meta = {
 	title: 'Heroicons/Outline',

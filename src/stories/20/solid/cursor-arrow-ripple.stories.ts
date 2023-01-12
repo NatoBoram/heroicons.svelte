@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { CursorArrowRipple as CursorArrowRippleSvelte } from '../../../lib/heroicons/20/solid'
+import { CursorArrowRipple as CursorArrowRippleSvelte } from '../../../lib/20/solid'
 
 const meta = {
 	title: 'Heroicons/Mini',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Signal as SignalSvelte } from '../../../lib/heroicons/24/solid'
+import { Signal as SignalSvelte } from '../../../lib/24/solid'
 
 const meta = {
 	title: 'Heroicons/Solid',

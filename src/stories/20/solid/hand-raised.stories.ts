@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { HandRaised as HandRaisedSvelte } from '../../../lib/heroicons/20/solid'
+import { HandRaised as HandRaisedSvelte } from '../../../lib/20/solid'
 
 const meta = {
 	title: 'Heroicons/Mini',

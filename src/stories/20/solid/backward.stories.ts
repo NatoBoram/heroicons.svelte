@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Backward as BackwardSvelte } from '../../../lib/heroicons/20/solid'
+import { Backward as BackwardSvelte } from '../../../lib/20/solid'
 
 const meta = {
 	title: 'Heroicons/Mini',

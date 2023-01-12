@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Pause as PauseSvelte } from '../../../lib/heroicons/24/outline'
+import { Pause as PauseSvelte } from '../../../lib/24/outline'
 
 const meta = {
 	title: 'Heroicons/Outline',

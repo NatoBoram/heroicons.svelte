@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Photo as PhotoSvelte } from '../../../lib/heroicons/20/solid'
+import { Photo as PhotoSvelte } from '../../../lib/20/solid'
 
 const meta = {
 	title: 'Heroicons/Mini',

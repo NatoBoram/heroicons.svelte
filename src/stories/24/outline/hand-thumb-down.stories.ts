@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { HandThumbDown as HandThumbDownSvelte } from '../../../lib/heroicons/24/outline'
+import { HandThumbDown as HandThumbDownSvelte } from '../../../lib/24/outline'
 
 const meta = {
 	title: 'Heroicons/Outline',

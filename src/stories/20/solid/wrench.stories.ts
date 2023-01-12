@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Wrench as WrenchSvelte } from '../../../lib/heroicons/20/solid'
+import { Wrench as WrenchSvelte } from '../../../lib/20/solid'
 
 const meta = {
 	title: 'Heroicons/Mini',

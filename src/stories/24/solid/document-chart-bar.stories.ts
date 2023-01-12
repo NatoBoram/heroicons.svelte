@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { DocumentChartBar as DocumentChartBarSvelte } from '../../../lib/heroicons/24/solid'
+import { DocumentChartBar as DocumentChartBarSvelte } from '../../../lib/24/solid'
 
 const meta = {
 	title: 'Heroicons/Solid',

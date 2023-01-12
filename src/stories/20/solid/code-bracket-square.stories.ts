@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { CodeBracketSquare as CodeBracketSquareSvelte } from '../../../lib/heroicons/20/solid'
+import { CodeBracketSquare as CodeBracketSquareSvelte } from '../../../lib/20/solid'
 
 const meta = {
 	title: 'Heroicons/Mini',

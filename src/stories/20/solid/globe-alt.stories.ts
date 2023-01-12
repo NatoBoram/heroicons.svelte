@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { GlobeAlt as GlobeAltSvelte } from '../../../lib/heroicons/20/solid'
+import { GlobeAlt as GlobeAltSvelte } from '../../../lib/20/solid'
 
 const meta = {
 	title: 'Heroicons/Mini',

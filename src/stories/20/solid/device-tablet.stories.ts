@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { DeviceTablet as DeviceTabletSvelte } from '../../../lib/heroicons/20/solid'
+import { DeviceTablet as DeviceTabletSvelte } from '../../../lib/20/solid'
 
 const meta = {
 	title: 'Heroicons/Mini',

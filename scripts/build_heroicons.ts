@@ -2,12 +2,27 @@ import { cp, mkdir, readFile, readdir, rm, writeFile } from 'fs/promises'
 import { execSync } from 'node:child_process'
 import { join } from 'path'
 
+const rmOptions = { recursive: true, force: true }
+
+// Paths
+const nodeModulesHeroicons20 = join('node_modules', 'heroicons', '20')
+const nodeModulesHeroicons24 = join('node_modules', 'heroicons', '24')
+const srcLib = join('src', 'lib')
+const srcLib20 = join('src', 'lib', '20')
+const srcLib24 = join('src', 'lib', '24')
+const srcLib20Solid = join('src', 'lib', '20', 'solid')
+const srcLib24Outline = join('src', 'lib', '24', 'outline')
+const srcLib24Solid = join('src', 'lib', '24', 'solid')
+const srcStories = join('src', 'stories')
+const srcStories20 = join('src', 'stories', '20')
+const srcStories24 = join('src', 'stories', '24')
+
 // Copy heroicons
-await rm('src/lib/heroicons', { recursive: true })
-await mkdir('src/lib/heroicons')
+console.log('Copying Heroicons...')
+await Promise.all([await rm(srcLib20, rmOptions), await rm(srcLib24, rmOptions)])
 await Promise.all([
-	cp('node_modules/heroicons/20', 'src/lib/heroicons/20', { recursive: true }),
-	cp('node_modules/heroicons/24', 'src/lib/heroicons/24', { recursive: true }),
+	cp(nodeModulesHeroicons20, srcLib20, rmOptions),
+	cp(nodeModulesHeroicons24, srcLib24, rmOptions),
 ])
 
 function modulify(file: string): string {
@@ -36,34 +51,39 @@ async function sveltify(dir: string, className: string) {
 </script>
 
 ${(await readFile(path, 'utf8')).replace('<svg', '<svg class={className} ')}`
-
 		await Promise.all([writeFile(`${path.replace('.svg', '')}.svelte`, svg), rm(path)])
 	}
 
 	// Index
 	const svelteFiles = await readdir(dir)
 	const imports = svelteFiles.map(file => `import ${modulify(file)} from './${file}'`).join('\n')
-	const exports = `export { ${svelteFiles.map(modulify).join(', ')} }`
-	await writeFile(join(dir, 'index.ts'), `${imports}\n${exports}`)
+	const exports = `export {
+	${svelteFiles.map(modulify).join(',\n\t')},
+}`
+	await writeFile(
+		join(dir, 'index.ts'),
+		`${imports}\n${exports}
+`,
+	)
 }
 
 await Promise.all([
-	sveltify('src/lib/heroicons/20/solid', 'w-5 h-5'),
-	sveltify('src/lib/heroicons/24/outline', 'w-6 h-6'),
-	sveltify('src/lib/heroicons/24/solid', 'w-6 h-6'),
+	sveltify(srcLib20Solid, 'w-5 h-5'),
+	sveltify(srcLib24Outline, 'w-6 h-6'),
+	sveltify(srcLib24Solid, 'w-6 h-6'),
 ])
 
 async function indexify(dir: string) {
 	const folders = await readdir(dir)
 	const exports = folders.map(folder => `export * as ${modulify(folder)} from './${folder}'`)
-	await writeFile(join(dir, 'index.ts'), exports.join('\n'))
+	await writeFile(join(dir, 'index.ts'), `${exports.join('\n')}\n`)
 }
 
-await Promise.all([indexify('src/lib/heroicons/20'), indexify('src/lib/heroicons/24')])
+await Promise.all([indexify(srcLib20), indexify(srcLib24)])
 
 async function storify(size: number, variant: string, title: string, className: string) {
-	const svelteDir = join('src', 'lib', 'heroicons', size.toString(), variant)
-	const storiesDir = join('src', 'stories', size.toString(), variant)
+	const svelteDir = join(srcLib, size.toString(), variant)
+	const storiesDir = join(srcStories, size.toString(), variant)
 	await mkdir(storiesDir, { recursive: true })
 
 	// Build SVG story
@@ -75,7 +95,7 @@ async function storify(size: number, variant: string, title: string, className: 
 		await writeFile(
 			join(storiesDir, `${file.replace('.svelte', '')}.stories.ts`),
 			`import type { Meta, StoryObj } from '@storybook/svelte'
-import { ${modulified} as ${modulifiedSvelte} } from '../../../lib/heroicons/${size}/${variant}'
+import { ${modulified} as ${modulifiedSvelte} } from '../../../lib/${size}/${variant}'
 
 const meta = {
 	title: 'Heroicons/${title}',
@@ -86,17 +106,18 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const ${modulified}: Story = {}`,
+export const ${modulified}: Story = {}
+`,
 		)
 	}
 
 	// Build Icon Gallery story
 	await writeFile(
-		join('src', 'stories', `${title}.mdx`),
+		join(srcStories, `${title}.mdx`),
 		`import { Meta, Title, IconGallery, IconItem } from '@storybook/addon-docs'
-import { ${svelteFiles
-			.map(modulify)
-			.join(', ')} } from '../lib/heroicons/${size.toString()}/${variant}'
+import {
+	${svelteFiles.map(modulify).join(',\n\t')},
+} from '../lib/${size.toString()}/${variant}'
 
 <Meta title="Heroicons/${title}" />
 
@@ -110,14 +131,12 @@ ${svelteFiles
 	</IconItem>`,
 	)
 	.join('\n')}
-</IconGallery>`,
+</IconGallery>
+`,
 	)
 }
 
-await Promise.all([
-	rm(join('src', 'stories', '20'), { recursive: true, force: true }),
-	rm(join('src', 'stories', '24'), { recursive: true, force: true }),
-])
+await Promise.all([rm(srcStories20, rmOptions), rm(srcStories24, rmOptions)])
 
 await Promise.all([
 	storify(20, 'solid', 'Mini', 'w-5 h-5'),

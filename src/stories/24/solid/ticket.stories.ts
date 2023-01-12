@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Ticket as TicketSvelte } from '../../../lib/heroicons/24/solid'
+import { Ticket as TicketSvelte } from '../../../lib/24/solid'
 
 const meta = {
 	title: 'Heroicons/Solid',
