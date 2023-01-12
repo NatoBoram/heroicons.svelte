@@ -17,20 +17,20 @@ Each icons can be imported individually as a Svelte component.
 ```svelte
 <script lang="ts">
 	// Import the component directly
-	import AcademicCap from '@natoboram/heroicons.svelte/heroicons/20/solid/academic-cap.svelte'
-	import AdjustmentsHorizontal from '@natoboram/heroicons.svelte/heroicons/24/outline/adjustments-horizontal.svelte'
-	import AdjustmentsVertical from '@natoboram/heroicons.svelte/heroicons/24/solid/adjustments-vertical.svelte'
+	import AcademicCap from '@natoboram/heroicons.svelte/20/solid/academic-cap.svelte'
+	import AdjustmentsHorizontal from '@natoboram/heroicons.svelte/24/outline/adjustments-horizontal.svelte'
+	import AdjustmentsVertical from '@natoboram/heroicons.svelte/24/solid/adjustments-vertical.svelte'
 
 	// Import the component from its size and icon type
-	import { ArchiveBoxArrowDown } from '@natoboram/heroicons.svelte/heroicons/20/solid'
-	import { ArchiveBoxXMark } from '@natoboram/heroicons.svelte/heroicons/24/outline'
-	import { ArchiveBox } from '@natoboram/heroicons.svelte/heroicons/24/solid'
+	import { ArchiveBoxArrowDown } from '@natoboram/heroicons.svelte/20/solid'
+	import { ArchiveBoxXMark } from '@natoboram/heroicons.svelte/24/outline'
+	import { ArchiveBox } from '@natoboram/heroicons.svelte/24/solid'
 
 	// Import the icon type from its size
-	import { Solid as Solid20 } from '@natoboram/heroicons.svelte/heroicons/20'
-	import { Outline as Outline24, Solid as Solid24 } from '@natoboram/heroicons.svelte/heroicons/24'
+	import { Solid as Solid20 } from '@natoboram/heroicons.svelte/20'
+	import { Outline as Outline24, Solid as Solid24 } from '@natoboram/heroicons.svelte/24'
 
-	// Import the name of the icon type, which is the same as the import above
+	// Import the name of the icon type, which is effectively the same as the import above
 	import { Mini, Outline, Solid } from '@natoboram/heroicons.svelte'
 
 	// Import `Heroicons`, which imports everything
@@ -50,16 +50,16 @@ Each icons can be imported individually as a Svelte component.
 <!-- Import the icon type from its size -->
 <Solid20.ArrowDownCircle />
 <Outline24.ArrowDownLeft />
-<Solid24.ArrowDownOnSquareStack />
+<Solid24.ArrowDownOnSquareStack class="h-6 w-6" />
 
-<!-- Import the name of the icon type, which is the same as the import above -->
-<Mini.ArrowDownOnSquare />
+<!-- Import the name of the icon type, which is effectively the same as the import above -->
+<Mini.ArrowDownOnSquare class="h-5 w-5" />
 <Outline.ArrowDownRight />
 <Solid.ArrowDownTray />
 
 <!-- Import `Heroicons`, which imports everything -->
 <Heroicons.Mini.ArrowDown />
-<Heroicons.Outline.ArrowLeftCircle />
+<Heroicons.Outline.ArrowLeftCircle class="h-6 w-6" />
 <Heroicons.Solid.ArrowLeftOnRectangle />
 ```
 

@@ -21,9 +21,19 @@ jobs:
         with:
           cache: pnpm
           node-version: 19
-          registry-url: https://registry.npmjs.org/
-      - run: pnpm install
+      - run: pnpm install --frozen-lockfile
       - run: pnpm run package
-      - run: pnpm publish ./package
+
+      - uses: actions/setup-node@v3
+        with:
+          registry-url: https://npm.pkg.github.com
+      - run: pnpm publish --access public ./package
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - uses: actions/setup-node@v3
+        with:
+          registry-url: https://registry.npmjs.org
+      - run: pnpm publish --access public ./package
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}

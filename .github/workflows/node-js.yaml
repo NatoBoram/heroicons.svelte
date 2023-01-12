@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 19
           cache: pnpm
-      - run: pnpm install
+      - run: pnpm install --frozen-lockfile
       - run: pnpm run build-storybook
       - run: pnpm run check
       - run: pnpm run lint
