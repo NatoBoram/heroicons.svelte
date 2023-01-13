@@ -1,0 +1,17 @@
+<script lang="ts">
+	import type { Hst } from '@histoire/plugin-svelte'
+	import { DocumentMagnifyingGlass } from '../../../lib/24/solid'
+
+	export let Hst: Hst
+	let className = 'w-6 h-6'
+</script>
+
+<Hst.Story title="Solid/DocumentMagnifyingGlass" icon="heroicons:document-magnifying-glass">
+	<svelte:fragment slot="controls">
+		<Hst.Text bind:value={className} title="Class" />
+	</svelte:fragment>
+
+	<Hst.Variant title="DocumentMagnifyingGlass" icon="heroicons:document-magnifying-glass">
+		<DocumentMagnifyingGlass class={className} />
+	</Hst.Variant>
+</Hst.Story>

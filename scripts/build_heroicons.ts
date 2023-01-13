@@ -91,54 +91,66 @@ async function storify(size: number, variant: string, title: string, className: 
 	const svelteFiles = (await readdir(svelteDir)).filter(file => file.endsWith('.svelte'))
 	for (const file of svelteFiles) {
 		const modulified = modulify(file)
-		const modulifiedSvelte = `${modulified}Svelte`
+		const namified = namify(file)
 
 		await writeFile(
-			join(storiesDir, `${file.replace('.svelte', '')}.stories.ts`),
-			`import type { Meta, StoryObj } from '@storybook/svelte'
-import { ${modulified} as ${modulifiedSvelte} } from '../../../lib/${size}/${variant}'
+			join(storiesDir, `${file.replace('.svelte', '')}.story.svelte`),
+			`<script lang="ts">
+	import type { Hst } from '@histoire/plugin-svelte'
+	import { ${modulified} } from '../../../lib/${size}/${variant}'
 
-const meta = {
-	title: 'Heroicons/${title}',
-	component: ${modulifiedSvelte},
-	args: { class: '${className}' },
-} satisfies Meta<${modulifiedSvelte}>
+	export let Hst: Hst
+	let className = '${className}'
+</script>
 
-export default meta
-type Story = StoryObj<typeof meta>
+<Hst.Story title="${title}/${modulified}" icon="heroicons:${namified}">
+	<svelte:fragment slot="controls">
+		<Hst.Text bind:value={className} title="Class" />
+	</svelte:fragment>
 
-export const ${modulified}: Story = {}
+	<Hst.Variant title="${modulified}" icon="heroicons:${namified}">
+		<${modulified} class={className} />
+	</Hst.Variant>
+</Hst.Story>
 `,
 		)
 	}
 
-	// Build Icon Gallery story
+	// Build grid story
 	await writeFile(
-		join(srcStories, `${title}.mdx`),
-		`import { Meta, Title, IconGallery, IconItem } from '@storybook/addon-docs'
-import {
-	${svelteFiles.map(modulify).join(',\n\t')},
-} from '../lib/${size.toString()}/${variant}'
+		join(srcStories, `${title}.story.svelte`),
+		`<script lang="ts">
+	import type { Hst } from '@histoire/plugin-svelte'
+	import { ${title} } from '../lib'
 
-<Meta title="Heroicons/${title}" />
+	export let Hst: Hst
+	let className = '${className}'
+</script>
 
-# ${title}
+<Hst.Story title="${title}/README" layout={{ type: 'grid' }} icon="octicon:book-16">
+	<svelte:fragment slot="controls">
+		<Hst.Text bind:value={className} title="Class" />
+	</svelte:fragment>
 
-<IconGallery>
-${svelteFiles
-	.map(
-		file => `	<IconItem name="${namify(file)}">
-		<${modulify(file)} />
-	</IconItem>`,
-	)
-	.join('\n')}
-</IconGallery>
+	${svelteFiles
+		.map(
+			file => `<Hst.Variant title="${modulify(file)}" icon="heroicons:${namify(file)}">
+		<${title}.${modulify(file)} class={className} />
+	</Hst.Variant>`,
+		)
+		.join('\n\t')}
+</Hst.Story>
 `,
 	)
 }
 
 console.log(`📕 Creating stories...`)
-await Promise.all([rm(srcStories20, rmOptions), rm(srcStories24, rmOptions)])
+await Promise.all([
+	cp('README.md', join(srcStories, 'README.story.md')),
+	cp('LICENSE.md', join(srcStories, 'LICENSE.story.md')),
+	rm(srcStories20, rmOptions),
+	rm(srcStories24, rmOptions),
+])
 await Promise.all([
 	storify(20, 'solid', 'Mini', 'w-5 h-5'),
 	storify(24, 'outline', 'Outline', 'w-6 h-6'),

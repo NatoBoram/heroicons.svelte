@@ -6,12 +6,12 @@ node_modules
 .env
 .env.*
 !.env.example
-/storybook-static
+/.histoire
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
-# Created by https://www.toptal.com/developers/gitignore/api/node,linux,macos,windows,storybookjs,visualstudiocode,svelte
-# Edit at https://www.toptal.com/developers/gitignore?templates=node,linux,macos,windows,storybookjs,visualstudiocode,svelte
+# Created by https://www.toptal.com/developers/gitignore/api/node,linux,macos,svelte,windows,storybookjs,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,linux,macos,svelte,windows,storybookjs,visualstudiocode
 
 ### Linux ###
 *~
@@ -258,4 +258,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/node,linux,macos,windows,storybookjs,visualstudiocode,svelte
+# End of https://www.toptal.com/developers/gitignore/api/node,linux,macos,svelte,windows,storybookjs,visualstudiocode
