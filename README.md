@@ -1,6 +1,6 @@
 # Heroicons.Svelte
 
-[![Node.js CI](https://github.com/NatoBoram/heroicons.svelte/actions/workflows/node-js.yaml/badge.svg)](https://github.com/NatoBoram/heroicons.svelte/actions/workflows/node-js.yaml) [![Heroicons](https://img.shields.io/github/package-json/dependency-version/NatoBoram/heroicons.svelte/dev/heroicons?color=8b5cf6)](https://github.com/tailwindlabs/heroicons)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/NatoBoram/heroicons.svelte/node-js.yaml?logo=github)](https://github.com/NatoBoram/heroicons.svelte/actions/workflows/node-js.yaml) [![npm](https://img.shields.io/npm/v/@natoboram/heroicons.svelte?color=CB3837&logo=npm)](https://www.npmjs.com/package/@natoboram/heroicons.svelte) [![Svelte](https://img.shields.io/npm/dependency-version/@natoboram/heroicons.svelte/dev/svelte?color=FF3E00&logo=svelte)](https://github.com/sveltejs/svelte) [![Heroicons](https://img.shields.io/npm/dependency-version/@natoboram/heroicons.svelte/dev/heroicons?color=8B5CF6)](https://github.com/tailwindlabs/heroicons) [![Maintainability](https://api.codeclimate.com/v1/badges/bf55494aef500e1de365/maintainability)](https://codeclimate.com/github/NatoBoram/heroicons.svelte/maintainability)
 
 Exports [Heroicons](https://github.com/tailwindlabs/heroicons) for usage with [Svelte](https://github.com/sveltejs/svelte).
 
