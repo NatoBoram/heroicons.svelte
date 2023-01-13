@@ -150,3 +150,5 @@ execSync('pnpm format')
 
 console.log(`📦 Packaging...`)
 execSync('pnpm package')
+
+console.log('🚀 Ready!')
