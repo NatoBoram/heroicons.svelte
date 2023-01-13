@@ -4,12 +4,12 @@ import colors from 'tailwindcss/colors'
 
 export default defineConfig({
 	plugins: [HstSvelte()],
-	setupFile: '/src/histoire.ts',
+	setupFile: './src/histoire.ts',
 	theme: {
 		title: 'heroicons.svelte',
 		logo: {
-			light: '/src/svg/logo-light.svg',
-			dark: '/src/svg/logo-dark.svg',
+			light: './src/svg/logo-light.svg',
+			dark: './src/svg/logo-dark.svg',
 		},
 		colors: {
 			primary: colors.violet,
