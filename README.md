@@ -35,6 +35,11 @@ Each icons can be imported individually as a Svelte component.
 
 	// Import `Heroicons`, which imports everything
 	import { Heroicons } from '@natoboram/heroicons.svelte'
+
+	// Use the Heroicon component with the icon's name
+	import { default as HeroiconMini } from '$lib/20/solid/Heroicon.svelte'
+	import { default as HeroiconOutline } from '$lib/24/outline/Heroicon.svelte'
+	import { default as HeroiconSolid } from '$lib/24/solid/Heroicon.svelte'
 </script>
 
 <!-- Import the component directly -->
@@ -61,6 +66,11 @@ Each icons can be imported individually as a Svelte component.
 <Heroicons.Mini.ArrowDown />
 <Heroicons.Outline.ArrowLeftCircle class="h-6 w-6" />
 <Heroicons.Solid.ArrowLeftOnRectangle />
+
+<!-- Use the Heroicon component with the icon's name -->
+<HeroiconMini icon="arrow-left" />
+<HeroiconOutline icon="arrow-long-down" />
+<HeroiconSolid icon="arrow-long-left" />
 ```
 
 You can send an arbitrary `class` to the components as if they were HTML elements. By default, they have a size set by the Tailwind classes `w-5 h-5` or `w-6 h-6`, but if you set another class, then these size classes are not applied.

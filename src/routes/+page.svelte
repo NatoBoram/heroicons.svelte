@@ -14,6 +14,10 @@
 	import { Mini, Outline, Solid } from '$lib'
 	// Import `Heroicons`, which imports everything
 	import { Heroicons } from '$lib'
+	// Use the Heroicon component with the icon's name
+	import { default as HeroiconMini } from '$lib/20/solid/Heroicon.svelte'
+	import { default as HeroiconOutline } from '$lib/24/outline/Heroicon.svelte'
+	import { default as HeroiconSolid } from '$lib/24/solid/Heroicon.svelte'
 </script>
 
 <!-- Import the component directly -->
@@ -40,3 +44,8 @@
 <Heroicons.Mini.ArrowDown />
 <Heroicons.Outline.ArrowLeftCircle class="h-6 w-6" />
 <Heroicons.Solid.ArrowLeftOnRectangle />
+
+<!-- Use the Heroicon component with the icon's name -->
+<HeroiconMini icon="arrow-left" />
+<HeroiconOutline icon="arrow-long-down" />
+<HeroiconSolid icon="arrow-long-left" />

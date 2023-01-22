@@ -45,7 +45,7 @@ async function sveltify(dir: string, className: string) {
 		const path = join(dir, file)
 
 		const svg = `<script lang="ts">
-	let className = '${className}'
+	let className: string | undefined = '${className}'
 	export { className as class }
 </script>
 
@@ -57,6 +57,9 @@ ${(await readFile(path, 'utf8')).replace('<svg', '<svg class={className} ')}`
 
 	// Router component
 	const router = `<script lang="ts">
+	let className: string | undefined = undefined
+	export { className as class }
+
 	export let icon: keyof typeof components
 
 	const components = {
@@ -65,7 +68,7 @@ ${(await readFile(path, 'utf8')).replace('<svg', '<svg class={className} ')}`
 </script>
 
 {#await components[icon] then imported}
-	<svelte:component this={imported.default} />
+	<svelte:component this={imported.default} class={className} />
 {/await}
 `
 	await writeFile(join(dir, 'Heroicon.svelte'), router)

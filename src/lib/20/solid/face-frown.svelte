@@ -1,5 +1,5 @@
 <script lang="ts">
-	let className = 'w-5 h-5'
+	let className: string | undefined = 'w-5 h-5'
 	export { className as class }
 </script>
 
