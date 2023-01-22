@@ -159,6 +159,16 @@ await Promise.all([
 	storify(24, 'solid', 'Solid', 'w-6 h-6'),
 ])
 
+console.log('📝 Copying `README.md`...')
+await writeFile(
+	join(srcStories, 'README.mdx'),
+	`import { Meta } from '@storybook/blocks'
+
+<Meta title="README" />
+
+${await readFile('README.md', 'utf8')}`,
+)
+
 console.log(`🎨 Formatting...`)
 execSync('pnpm format')
 
