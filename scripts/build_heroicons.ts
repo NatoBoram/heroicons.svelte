@@ -55,15 +55,10 @@ ${(await readFile(path, 'utf8')).replace('<svg', '<svg class={className} ')}`
 
 	// Index
 	const svelteFiles = await readdir(dir)
-	const imports = svelteFiles.map(file => `import ${modulify(file)} from './${file}'`).join('\n')
-	const exports = `export {
-	${svelteFiles.map(modulify).join(',\n\t')},
-}`
-	await writeFile(
-		join(dir, 'index.ts'),
-		`${imports}\n${exports}
-`,
-	)
+	const imports = svelteFiles
+		.map(file => `export { default as ${modulify(file)} } from './${file}'`)
+		.join('\n')
+	await writeFile(join(dir, 'index.ts'), `${imports}\n`)
 }
 
 console.log('🍷 Turning `.svg` into `.svelte`...')
