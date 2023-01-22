@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { CircleStack as CircleStackSvelte } from '../../../lib/24/solid'
+import CircleStackSvelte from '../../../lib/24/solid/circle-stack.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

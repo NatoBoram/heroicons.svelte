@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { ViewColumns as ViewColumnsSvelte } from '../../../lib/24/solid'
+import ViewColumnsSvelte from '../../../lib/24/solid/view-columns.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

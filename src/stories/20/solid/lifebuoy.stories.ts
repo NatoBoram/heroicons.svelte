@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Lifebuoy as LifebuoySvelte } from '../../../lib/20/solid'
+import LifebuoySvelte from '../../../lib/20/solid/lifebuoy.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

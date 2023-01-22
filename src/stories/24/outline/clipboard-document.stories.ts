@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { ClipboardDocument as ClipboardDocumentSvelte } from '../../../lib/24/outline'
+import ClipboardDocumentSvelte from '../../../lib/24/outline/clipboard-document.svelte'
 
 const meta = {
 	title: 'Heroicons/Outline',

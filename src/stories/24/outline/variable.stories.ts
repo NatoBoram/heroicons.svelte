@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Variable as VariableSvelte } from '../../../lib/24/outline'
+import VariableSvelte from '../../../lib/24/outline/variable.svelte'
 
 const meta = {
 	title: 'Heroicons/Outline',

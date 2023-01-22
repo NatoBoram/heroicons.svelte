@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { QrCode as QrCodeSvelte } from '../../../lib/24/outline'
+import QrCodeSvelte from '../../../lib/24/outline/qr-code.svelte'
 
 const meta = {
 	title: 'Heroicons/Outline',

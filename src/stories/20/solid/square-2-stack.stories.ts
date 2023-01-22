@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Square2Stack as Square2StackSvelte } from '../../../lib/20/solid'
+import Square2StackSvelte from '../../../lib/20/solid/square-2-stack.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

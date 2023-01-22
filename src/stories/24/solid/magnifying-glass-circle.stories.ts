@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { MagnifyingGlassCircle as MagnifyingGlassCircleSvelte } from '../../../lib/24/solid'
+import MagnifyingGlassCircleSvelte from '../../../lib/24/solid/magnifying-glass-circle.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

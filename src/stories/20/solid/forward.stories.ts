@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Forward as ForwardSvelte } from '../../../lib/20/solid'
+import ForwardSvelte from '../../../lib/20/solid/forward.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

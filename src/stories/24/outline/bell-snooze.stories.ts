@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { BellSnooze as BellSnoozeSvelte } from '../../../lib/24/outline'
+import BellSnoozeSvelte from '../../../lib/24/outline/bell-snooze.svelte'
 
 const meta = {
 	title: 'Heroicons/Outline',

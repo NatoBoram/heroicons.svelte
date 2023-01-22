@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { ArrowDownCircle as ArrowDownCircleSvelte } from '../../../lib/20/solid'
+import ArrowDownCircleSvelte from '../../../lib/20/solid/arrow-down-circle.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

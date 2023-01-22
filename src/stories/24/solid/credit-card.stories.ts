@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { CreditCard as CreditCardSvelte } from '../../../lib/24/solid'
+import CreditCardSvelte from '../../../lib/24/solid/credit-card.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

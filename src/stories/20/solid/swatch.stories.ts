@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Swatch as SwatchSvelte } from '../../../lib/20/solid'
+import SwatchSvelte from '../../../lib/20/solid/swatch.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

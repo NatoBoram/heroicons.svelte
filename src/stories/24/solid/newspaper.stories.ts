@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Newspaper as NewspaperSvelte } from '../../../lib/24/solid'
+import NewspaperSvelte from '../../../lib/24/solid/newspaper.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

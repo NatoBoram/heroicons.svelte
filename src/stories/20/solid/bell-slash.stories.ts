@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { BellSlash as BellSlashSvelte } from '../../../lib/20/solid'
+import BellSlashSvelte from '../../../lib/20/solid/bell-slash.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

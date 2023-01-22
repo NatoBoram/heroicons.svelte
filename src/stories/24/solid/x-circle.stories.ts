@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { XCircle as XCircleSvelte } from '../../../lib/24/solid'
+import XCircleSvelte from '../../../lib/24/solid/x-circle.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

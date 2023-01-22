@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { LockOpen as LockOpenSvelte } from '../../../lib/24/outline'
+import LockOpenSvelte from '../../../lib/24/outline/lock-open.svelte'
 
 const meta = {
 	title: 'Heroicons/Outline',

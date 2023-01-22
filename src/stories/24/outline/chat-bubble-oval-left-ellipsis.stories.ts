@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { ChatBubbleOvalLeftEllipsis as ChatBubbleOvalLeftEllipsisSvelte } from '../../../lib/24/outline'
+import ChatBubbleOvalLeftEllipsisSvelte from '../../../lib/24/outline/chat-bubble-oval-left-ellipsis.svelte'
 
 const meta = {
 	title: 'Heroicons/Outline',

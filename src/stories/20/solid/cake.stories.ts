@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Cake as CakeSvelte } from '../../../lib/20/solid'
+import CakeSvelte from '../../../lib/20/solid/cake.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

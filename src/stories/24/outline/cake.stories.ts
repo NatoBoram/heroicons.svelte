@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Cake as CakeSvelte } from '../../../lib/24/outline'
+import CakeSvelte from '../../../lib/24/outline/cake.svelte'
 
 const meta = {
 	title: 'Heroicons/Outline',

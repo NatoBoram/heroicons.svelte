@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { ServerStack as ServerStackSvelte } from '../../../lib/24/outline'
+import ServerStackSvelte from '../../../lib/24/outline/server-stack.svelte'
 
 const meta = {
 	title: 'Heroicons/Outline',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Briefcase as BriefcaseSvelte } from '../../../lib/20/solid'
+import BriefcaseSvelte from '../../../lib/20/solid/briefcase.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

@@ -53,8 +53,25 @@ ${(await readFile(path, 'utf8')).replace('<svg', '<svg class={className} ')}`
 		await Promise.all([writeFile(`${path.replace('.svg', '')}.svelte`, svg), rm(path)])
 	}
 
-	// Index
 	const svelteFiles = await readdir(dir)
+
+	// Router component
+	const router = `<script lang="ts">
+	export let icon: keyof typeof components
+
+	const components = {
+		${svelteFiles.map(file => `'${namify(file)}': import('./${file}'),`).join('\n\t\t')}
+	}
+</script>
+
+{#await components[icon] then imported}
+	<svelte:component this={imported.default} />
+{/await}
+`
+	await writeFile(join(dir, 'Heroicon.svelte'), router)
+	svelteFiles.push('Heroicon.svelte')
+
+	// Index
 	const imports = svelteFiles
 		.map(file => `export { default as ${modulify(file)} } from './${file}'`)
 		.join('\n')
@@ -83,7 +100,9 @@ async function storify(size: number, variant: string, title: string, className: 
 	await mkdir(storiesDir, { recursive: true })
 
 	// Build SVG story
-	const svelteFiles = (await readdir(svelteDir)).filter(file => file.endsWith('.svelte'))
+	const svelteFiles = (await readdir(svelteDir))
+		.filter(file => file.endsWith('.svelte'))
+		.filter(file => file != 'Heroicon.svelte')
 	for (const file of svelteFiles) {
 		const modulified = modulify(file)
 		const modulifiedSvelte = `${modulified}Svelte`
@@ -91,7 +110,7 @@ async function storify(size: number, variant: string, title: string, className: 
 		await writeFile(
 			join(storiesDir, `${file.replace('.svelte', '')}.stories.ts`),
 			`import type { Meta, StoryObj } from '@storybook/svelte'
-import { ${modulified} as ${modulifiedSvelte} } from '../../../lib/${size}/${variant}'
+import ${modulifiedSvelte} from '../../../lib/${size}/${variant}/${file}'
 
 const meta = {
 	title: 'Heroicons/${title}',

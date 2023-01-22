@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Window as WindowSvelte } from '../../../lib/20/solid'
+import WindowSvelte from '../../../lib/20/solid/window.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { EyeDropper as EyeDropperSvelte } from '../../../lib/20/solid'
+import EyeDropperSvelte from '../../../lib/20/solid/eye-dropper.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

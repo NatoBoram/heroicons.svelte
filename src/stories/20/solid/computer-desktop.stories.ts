@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { ComputerDesktop as ComputerDesktopSvelte } from '../../../lib/20/solid'
+import ComputerDesktopSvelte from '../../../lib/20/solid/computer-desktop.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

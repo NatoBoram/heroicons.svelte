@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { FolderOpen as FolderOpenSvelte } from '../../../lib/20/solid'
+import FolderOpenSvelte from '../../../lib/20/solid/folder-open.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Truck as TruckSvelte } from '../../../lib/20/solid'
+import TruckSvelte from '../../../lib/20/solid/truck.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

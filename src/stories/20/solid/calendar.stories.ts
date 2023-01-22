@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Calendar as CalendarSvelte } from '../../../lib/20/solid'
+import CalendarSvelte from '../../../lib/20/solid/calendar.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

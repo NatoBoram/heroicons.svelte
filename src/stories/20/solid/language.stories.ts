@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Language as LanguageSvelte } from '../../../lib/20/solid'
+import LanguageSvelte from '../../../lib/20/solid/language.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

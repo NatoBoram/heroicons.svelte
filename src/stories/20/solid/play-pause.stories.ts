@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { PlayPause as PlayPauseSvelte } from '../../../lib/20/solid'
+import PlayPauseSvelte from '../../../lib/20/solid/play-pause.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

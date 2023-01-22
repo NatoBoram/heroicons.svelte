@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { ShieldCheck as ShieldCheckSvelte } from '../../../lib/24/outline'
+import ShieldCheckSvelte from '../../../lib/24/outline/shield-check.svelte'
 
 const meta = {
 	title: 'Heroicons/Outline',

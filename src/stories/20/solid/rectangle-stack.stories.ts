@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { RectangleStack as RectangleStackSvelte } from '../../../lib/20/solid'
+import RectangleStackSvelte from '../../../lib/20/solid/rectangle-stack.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { BugAnt as BugAntSvelte } from '../../../lib/20/solid'
+import BugAntSvelte from '../../../lib/20/solid/bug-ant.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

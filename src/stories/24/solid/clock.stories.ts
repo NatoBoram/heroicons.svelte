@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Clock as ClockSvelte } from '../../../lib/24/solid'
+import ClockSvelte from '../../../lib/24/solid/clock.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Document as DocumentSvelte } from '../../../lib/24/outline'
+import DocumentSvelte from '../../../lib/24/outline/document.svelte'
 
 const meta = {
 	title: 'Heroicons/Outline',

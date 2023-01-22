@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { RectangleGroup as RectangleGroupSvelte } from '../../../lib/20/solid'
+import RectangleGroupSvelte from '../../../lib/20/solid/rectangle-group.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

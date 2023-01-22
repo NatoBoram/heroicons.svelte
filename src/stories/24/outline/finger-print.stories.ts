@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { FingerPrint as FingerPrintSvelte } from '../../../lib/24/outline'
+import FingerPrintSvelte from '../../../lib/24/outline/finger-print.svelte'
 
 const meta = {
 	title: 'Heroicons/Outline',

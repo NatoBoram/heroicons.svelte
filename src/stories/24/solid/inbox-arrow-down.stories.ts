@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { InboxArrowDown as InboxArrowDownSvelte } from '../../../lib/24/solid'
+import InboxArrowDownSvelte from '../../../lib/24/solid/inbox-arrow-down.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

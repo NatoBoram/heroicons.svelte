@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { MusicalNote as MusicalNoteSvelte } from '../../../lib/20/solid'
+import MusicalNoteSvelte from '../../../lib/20/solid/musical-note.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

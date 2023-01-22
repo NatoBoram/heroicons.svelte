@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { ReceiptRefund as ReceiptRefundSvelte } from '../../../lib/20/solid'
+import ReceiptRefundSvelte from '../../../lib/20/solid/receipt-refund.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

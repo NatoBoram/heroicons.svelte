@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Film as FilmSvelte } from '../../../lib/24/solid'
+import FilmSvelte from '../../../lib/24/solid/film.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

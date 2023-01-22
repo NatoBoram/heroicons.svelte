@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { BookmarkSlash as BookmarkSlashSvelte } from '../../../lib/24/solid'
+import BookmarkSlashSvelte from '../../../lib/24/solid/bookmark-slash.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

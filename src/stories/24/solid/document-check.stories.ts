@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { DocumentCheck as DocumentCheckSvelte } from '../../../lib/24/solid'
+import DocumentCheckSvelte from '../../../lib/24/solid/document-check.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

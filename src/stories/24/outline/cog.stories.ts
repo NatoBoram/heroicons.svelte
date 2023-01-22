@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Cog as CogSvelte } from '../../../lib/24/outline'
+import CogSvelte from '../../../lib/24/outline/cog.svelte'
 
 const meta = {
 	title: 'Heroicons/Outline',

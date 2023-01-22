@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { ListBullet as ListBulletSvelte } from '../../../lib/24/solid'
+import ListBulletSvelte from '../../../lib/24/solid/list-bullet.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

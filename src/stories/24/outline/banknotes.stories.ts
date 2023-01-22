@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Banknotes as BanknotesSvelte } from '../../../lib/24/outline'
+import BanknotesSvelte from '../../../lib/24/outline/banknotes.svelte'
 
 const meta = {
 	title: 'Heroicons/Outline',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { FolderPlus as FolderPlusSvelte } from '../../../lib/24/outline'
+import FolderPlusSvelte from '../../../lib/24/outline/folder-plus.svelte'
 
 const meta = {
 	title: 'Heroicons/Outline',

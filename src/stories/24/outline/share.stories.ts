@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Share as ShareSvelte } from '../../../lib/24/outline'
+import ShareSvelte from '../../../lib/24/outline/share.svelte'
 
 const meta = {
 	title: 'Heroicons/Outline',

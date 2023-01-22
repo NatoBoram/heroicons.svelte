@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Stop as StopSvelte } from '../../../lib/20/solid'
+import StopSvelte from '../../../lib/20/solid/stop.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { VideoCameraSlash as VideoCameraSlashSvelte } from '../../../lib/24/outline'
+import VideoCameraSlashSvelte from '../../../lib/24/outline/video-camera-slash.svelte'
 
 const meta = {
 	title: 'Heroicons/Outline',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { ShieldExclamation as ShieldExclamationSvelte } from '../../../lib/24/solid'
+import ShieldExclamationSvelte from '../../../lib/24/solid/shield-exclamation.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Funnel as FunnelSvelte } from '../../../lib/24/solid'
+import FunnelSvelte from '../../../lib/24/solid/funnel.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

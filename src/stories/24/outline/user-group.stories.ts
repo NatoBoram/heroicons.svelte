@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { UserGroup as UserGroupSvelte } from '../../../lib/24/outline'
+import UserGroupSvelte from '../../../lib/24/outline/user-group.svelte'
 
 const meta = {
 	title: 'Heroicons/Outline',

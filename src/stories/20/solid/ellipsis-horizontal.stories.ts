@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { EllipsisHorizontal as EllipsisHorizontalSvelte } from '../../../lib/20/solid'
+import EllipsisHorizontalSvelte from '../../../lib/20/solid/ellipsis-horizontal.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

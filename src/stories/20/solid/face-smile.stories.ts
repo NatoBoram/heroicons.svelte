@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { FaceSmile as FaceSmileSvelte } from '../../../lib/20/solid'
+import FaceSmileSvelte from '../../../lib/20/solid/face-smile.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

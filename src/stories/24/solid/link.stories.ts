@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Link as LinkSvelte } from '../../../lib/24/solid'
+import LinkSvelte from '../../../lib/24/solid/link.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

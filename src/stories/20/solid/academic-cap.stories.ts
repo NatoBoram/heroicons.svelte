@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { AcademicCap as AcademicCapSvelte } from '../../../lib/20/solid'
+import AcademicCapSvelte from '../../../lib/20/solid/academic-cap.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

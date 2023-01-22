@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { ArchiveBoxXMark as ArchiveBoxXMarkSvelte } from '../../../lib/24/outline'
+import ArchiveBoxXMarkSvelte from '../../../lib/24/outline/archive-box-x-mark.svelte'
 
 const meta = {
 	title: 'Heroicons/Outline',

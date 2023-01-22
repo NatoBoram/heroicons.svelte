@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { NoSymbol as NoSymbolSvelte } from '../../../lib/24/solid'
+import NoSymbolSvelte from '../../../lib/24/solid/no-symbol.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

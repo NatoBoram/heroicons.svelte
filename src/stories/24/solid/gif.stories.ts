@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Gif as GifSvelte } from '../../../lib/24/solid'
+import GifSvelte from '../../../lib/24/solid/gif.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

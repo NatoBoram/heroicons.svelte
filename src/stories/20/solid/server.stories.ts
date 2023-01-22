@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Server as ServerSvelte } from '../../../lib/20/solid'
+import ServerSvelte from '../../../lib/20/solid/server.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

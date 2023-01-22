@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { PaperClip as PaperClipSvelte } from '../../../lib/20/solid'
+import PaperClipSvelte from '../../../lib/20/solid/paper-clip.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

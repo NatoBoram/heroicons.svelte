@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { ExclamationTriangle as ExclamationTriangleSvelte } from '../../../lib/24/outline'
+import ExclamationTriangleSvelte from '../../../lib/24/outline/exclamation-triangle.svelte'
 
 const meta = {
 	title: 'Heroicons/Outline',

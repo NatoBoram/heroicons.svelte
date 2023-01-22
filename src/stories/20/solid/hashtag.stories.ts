@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Hashtag as HashtagSvelte } from '../../../lib/20/solid'
+import HashtagSvelte from '../../../lib/20/solid/hashtag.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

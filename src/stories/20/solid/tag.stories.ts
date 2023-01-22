@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Tag as TagSvelte } from '../../../lib/20/solid'
+import TagSvelte from '../../../lib/20/solid/tag.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Backspace as BackspaceSvelte } from '../../../lib/24/solid'
+import BackspaceSvelte from '../../../lib/24/solid/backspace.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { XMark as XMarkSvelte } from '../../../lib/24/solid'
+import XMarkSvelte from '../../../lib/24/solid/x-mark.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

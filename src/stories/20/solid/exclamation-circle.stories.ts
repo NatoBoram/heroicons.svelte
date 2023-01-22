@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { ExclamationCircle as ExclamationCircleSvelte } from '../../../lib/20/solid'
+import ExclamationCircleSvelte from '../../../lib/20/solid/exclamation-circle.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

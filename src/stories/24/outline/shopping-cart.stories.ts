@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { ShoppingCart as ShoppingCartSvelte } from '../../../lib/24/outline'
+import ShoppingCartSvelte from '../../../lib/24/outline/shopping-cart.svelte'
 
 const meta = {
 	title: 'Heroicons/Outline',

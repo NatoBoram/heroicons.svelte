@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Plus as PlusSvelte } from '../../../lib/20/solid'
+import PlusSvelte from '../../../lib/20/solid/plus.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { CursorArrowRays as CursorArrowRaysSvelte } from '../../../lib/24/solid'
+import CursorArrowRaysSvelte from '../../../lib/24/solid/cursor-arrow-rays.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { DocumentDuplicate as DocumentDuplicateSvelte } from '../../../lib/20/solid'
+import DocumentDuplicateSvelte from '../../../lib/20/solid/document-duplicate.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

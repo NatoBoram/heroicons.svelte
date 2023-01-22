@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { SpeakerWave as SpeakerWaveSvelte } from '../../../lib/24/solid'
+import SpeakerWaveSvelte from '../../../lib/24/solid/speaker-wave.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

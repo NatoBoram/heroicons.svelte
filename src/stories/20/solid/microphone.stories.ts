@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Microphone as MicrophoneSvelte } from '../../../lib/20/solid'
+import MicrophoneSvelte from '../../../lib/20/solid/microphone.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

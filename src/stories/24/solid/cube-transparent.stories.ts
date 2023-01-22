@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { CubeTransparent as CubeTransparentSvelte } from '../../../lib/24/solid'
+import CubeTransparentSvelte from '../../../lib/24/solid/cube-transparent.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

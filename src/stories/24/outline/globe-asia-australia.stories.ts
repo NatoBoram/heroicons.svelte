@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { GlobeAsiaAustralia as GlobeAsiaAustraliaSvelte } from '../../../lib/24/outline'
+import GlobeAsiaAustraliaSvelte from '../../../lib/24/outline/globe-asia-australia.svelte'
 
 const meta = {
 	title: 'Heroicons/Outline',

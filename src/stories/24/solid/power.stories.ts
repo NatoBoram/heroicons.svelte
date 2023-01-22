@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Power as PowerSvelte } from '../../../lib/24/solid'
+import PowerSvelte from '../../../lib/24/solid/power.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

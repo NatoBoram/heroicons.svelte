@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { AdjustmentsVertical as AdjustmentsVerticalSvelte } from '../../../lib/24/solid'
+import AdjustmentsVerticalSvelte from '../../../lib/24/solid/adjustments-vertical.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

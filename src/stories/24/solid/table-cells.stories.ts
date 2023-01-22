@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { TableCells as TableCellsSvelte } from '../../../lib/24/solid'
+import TableCellsSvelte from '../../../lib/24/solid/table-cells.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

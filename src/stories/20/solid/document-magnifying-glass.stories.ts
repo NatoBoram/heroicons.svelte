@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { DocumentMagnifyingGlass as DocumentMagnifyingGlassSvelte } from '../../../lib/20/solid'
+import DocumentMagnifyingGlassSvelte from '../../../lib/20/solid/document-magnifying-glass.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

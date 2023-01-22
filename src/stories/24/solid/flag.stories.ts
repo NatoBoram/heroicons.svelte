@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Flag as FlagSvelte } from '../../../lib/24/solid'
+import FlagSvelte from '../../../lib/24/solid/flag.svelte'
 
 const meta = {
 	title: 'Heroicons/Solid',

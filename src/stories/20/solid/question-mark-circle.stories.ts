@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { QuestionMarkCircle as QuestionMarkCircleSvelte } from '../../../lib/20/solid'
+import QuestionMarkCircleSvelte from '../../../lib/20/solid/question-mark-circle.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',

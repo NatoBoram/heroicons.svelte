@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { Tag as TagSvelte } from '../../../lib/24/outline'
+import TagSvelte from '../../../lib/24/outline/tag.svelte'
 
 const meta = {
 	title: 'Heroicons/Outline',

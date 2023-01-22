@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { ArrowSmallUp as ArrowSmallUpSvelte } from '../../../lib/24/outline'
+import ArrowSmallUpSvelte from '../../../lib/24/outline/arrow-small-up.svelte'
 
 const meta = {
 	title: 'Heroicons/Outline',

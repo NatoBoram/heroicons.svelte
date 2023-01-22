@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
-import { CpuChip as CpuChipSvelte } from '../../../lib/20/solid'
+import CpuChipSvelte from '../../../lib/20/solid/cpu-chip.svelte'
 
 const meta = {
 	title: 'Heroicons/Mini',
