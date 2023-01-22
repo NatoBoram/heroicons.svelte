@@ -18,10 +18,10 @@ jobs:
           node-version: 19
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm run build-storybook
+      - run: pnpm run story:build
       - uses: actions/upload-pages-artifact@v1
         with:
-          path: storybook-static
+          path: .histoire/dist
 
   deploy:
     needs: build

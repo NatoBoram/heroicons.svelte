@@ -8,7 +8,6 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended-requiring-type-checking',
 		'plugin:@typescript-eslint/strict',
 		'prettier',
-		'plugin:storybook/recommended',
 	],
 	plugins: ['svelte3', '@typescript-eslint'],
 	overrides: [
