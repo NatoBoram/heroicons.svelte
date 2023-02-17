@@ -17,24 +17,24 @@ Each icons can be imported individually as a Svelte component.
 ```svelte
 <script lang="ts">
 	// Import the component from its size and icon type
-	import { AcademicCap } from '$lib/20/solid'
-	import { AdjustmentsHorizontal } from '$lib/24/outline'
-	import { AdjustmentsVertical } from '$lib/24/solid'
+	import { AcademicCap } from '@natoboram/heroicons.svelte/20/solid'
+	import { AdjustmentsHorizontal } from '@natoboram/heroicons.svelte/24/outline'
+	import { AdjustmentsVertical } from '@natoboram/heroicons.svelte/24/solid'
 
 	// Import the icon type from its size
-	import { Solid as Solid20 } from '$lib/20'
-	import { Outline as Outline24, Solid as Solid24 } from '$lib/24'
+	import { Solid as Solid20 } from '@natoboram/heroicons.svelte/20'
+	import { Outline as Outline24, Solid as Solid24 } from '@natoboram/heroicons.svelte/24'
 
 	// Import the name of the icon type, which is effectively the same as the import above
-	import { Mini, Outline, Solid } from '$lib'
+	import { Mini, Outline, Solid } from '@natoboram/heroicons.svelte'
 
 	// Import `Heroicons`, which imports everything
-	import { Heroicons } from '$lib'
+	import { Heroicons } from '@natoboram/heroicons.svelte'
 
 	// Use the Heroicon component with the icon's name
-	import { Heroicon as HeroiconMini } from '$lib/20/solid'
-	import { Heroicon as HeroiconOutline } from '$lib/24/outline'
-	import { Heroicon as HeroiconSolid } from '$lib/24/solid'
+	import { Heroicon as HeroiconMini } from '@natoboram/heroicons.svelte/20/solid'
+	import { Heroicon as HeroiconOutline } from '@natoboram/heroicons.svelte/24/outline'
+	import { Heroicon as HeroiconSolid } from '@natoboram/heroicons.svelte/24/solid'
 </script>
 
 <!-- Import the component from its size and icon type -->
