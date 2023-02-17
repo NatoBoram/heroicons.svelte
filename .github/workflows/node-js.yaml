@@ -21,5 +21,6 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm run build-storybook
+      - run: pnpm run package
       - run: pnpm run check
       - run: pnpm run lint
