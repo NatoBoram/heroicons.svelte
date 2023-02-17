@@ -26,6 +26,41 @@
 			"url": "https://paypal.me/NatoBoram/5"
 		}
 	],
+	"files": [
+		"dist"
+	],
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"svelte": "./dist/index.js",
+			"default": "./dist/index.js"
+		},
+		"./20": {
+			"types": "./dist/20/index.d.ts",
+			"svelte": "./dist/20/index.js",
+			"default": "./dist/20/index.js"
+		},
+		"./20/solid": {
+			"types": "./dist/20/solid/index.d.ts",
+			"svelte": "./dist/20/solid/index.js",
+			"default": "./dist/20/solid/index.js"
+		},
+		"./24": {
+			"types": "./dist/24/index.d.ts",
+			"svelte": "./dist/24/index.js",
+			"default": "./dist/24/index.js"
+		},
+		"./24/outline": {
+			"types": "./dist/24/outline/index.d.ts",
+			"svelte": "./dist/24/outline/index.js",
+			"default": "./dist/24/outline/index.js"
+		},
+		"./24/solid": {
+			"types": "./dist/24/solid/index.d.ts",
+			"svelte": "./dist/24/solid/index.js",
+			"default": "./dist/24/solid/index.js"
+		}
+	},
 	"repository": "github:NatoBoram/heroicons.svelte",
 	"scripts": {
 		"dev": "vite dev",
@@ -45,7 +80,7 @@
 		"build-heroicons": "tsx ./scripts/build_heroicons.ts"
 	},
 	"devDependencies": {
-		"@playwright/test": "^1.29.2",
+		"@playwright/test": "^1.30.0",
 		"@storybook/addon-docs": "7.0.0-beta.49",
 		"@storybook/addon-essentials": "7.0.0-beta.49",
 		"@storybook/addon-interactions": "7.0.0-beta.49",
@@ -59,42 +94,45 @@
 		"@storybook/testing-library": "0.0.14-next.1",
 		"@storybook/types": "7.0.0-beta.49",
 		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/adapter-static": "^2.0.1",
 		"@sveltejs/kit": "^1.7.1",
-		"@sveltejs/package": "^1.0.2",
-		"@types/node": "^18.11.18",
-		"@typescript-eslint/eslint-plugin": "^5.48.2",
-		"@typescript-eslint/parser": "^5.48.2",
+		"@sveltejs/package": "^2.0.0",
+		"@types/node": "^18.13.0",
+		"@typescript-eslint/eslint-plugin": "^5.52.0",
+		"@typescript-eslint/parser": "^5.52.0",
 		"autoprefixer": "^10.4.13",
-		"eslint": "^8.32.0",
+		"eslint": "^8.34.0",
 		"eslint-config-prettier": "^8.6.0",
 		"eslint-plugin-storybook": "^0.6.10",
 		"eslint-plugin-svelte3": "^4.0.0",
-		"heroicons": "^2.0.13",
+		"heroicons": "^2.0.15",
 		"postcss": "^8.4.21",
-		"prettier": "^2.8.3",
+		"prettier": "^2.8.4",
 		"prettier-plugin-svelte": "^2.9.0",
-		"prettier-plugin-tailwindcss": "^0.2.1",
+		"prettier-plugin-tailwindcss": "^0.2.3",
 		"publint": "^0.1.9",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"storybook": "7.0.0-beta.49",
 		"svelte": "^3.55.1",
-		"svelte-check": "^3.0.2",
-		"tailwindcss": "^3.2.4",
-		"tslib": "^2.4.1",
-		"tsx": "^3.12.2",
-		"typescript": "^4.9.4",
-		"vite": "^4.0.4",
-		"vitest": "^0.25.8"
+		"svelte-check": "^3.0.3",
+		"tailwindcss": "^3.2.7",
+		"tslib": "^2.5.0",
+		"tsx": "^3.12.3",
+		"typescript": "^4.9.5",
+		"vite": "^4.1.1",
+		"vitest": "^0.28.5"
 	},
 	"peerDependencies": {
 		"svelte": "^3.55.1",
-		"tailwindcss": "^3.2.4"
+		"tailwindcss": "^3.2.7"
 	},
 	"peerDependenciesMeta": {
 		"tailwindcss": {
 			"optional": true
 		}
 	},
+	"svelte": "./dist/index.js",
+	"types": "./dist/index.d.ts",
 	"type": "module"
 }
