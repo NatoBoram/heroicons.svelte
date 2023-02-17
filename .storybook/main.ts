@@ -1,4 +1,4 @@
-import type { StorybookConfig } from '@storybook/types'
+import type { StorybookConfig } from '@storybook/sveltekit'
 
 const config: StorybookConfig = {
 	stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
@@ -15,6 +15,7 @@ const config: StorybookConfig = {
 	docs: {
 		autodocs: 'tag',
 	},
+	staticDirs: ['../static'],
 }
 
 export default config

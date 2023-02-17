@@ -61,13 +61,14 @@ ${(await readFile(path, 'utf8')).replace('<svg', '<svg class={className} ')}`
 	export { className as class }
 
 	export let icon: keyof typeof components
+	$: promise = components[icon]
 
 	const components = {
 		${svelteFiles.map(file => `'${namify(file)}': import('./${file}'),`).join('\n\t\t')}
 	}
 </script>
 
-{#await components[icon] then imported}
+{#await promise then imported}
 	<svelte:component this={imported.default} class={className} />
 {/await}
 `

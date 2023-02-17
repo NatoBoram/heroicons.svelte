@@ -3,6 +3,7 @@
 	export { className as class }
 
 	export let icon: keyof typeof components
+	$: promise = components[icon]
 
 	const components = {
 		'academic-cap': import('./academic-cap.svelte'),
@@ -300,6 +301,6 @@
 	}
 </script>
 
-{#await components[icon] then imported}
+{#await promise then imported}
 	<svelte:component this={imported.default} class={className} />
 {/await}
