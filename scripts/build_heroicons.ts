@@ -91,7 +91,9 @@ await Promise.all([
 
 async function indexify(dir: string) {
 	const folders = await readdir(dir)
-	const exports = folders.map(folder => `export * as ${modulify(folder)} from './${folder}'`)
+	const exports = folders.map(
+		folder => `export * as ${modulify(folder)} from './${folder}/index.js'`,
+	)
 	await writeFile(join(dir, 'index.ts'), `${exports.join('\n')}\n`)
 }
 

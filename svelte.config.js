@@ -11,6 +11,7 @@ function adapter() {
 const config = {
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 	preprocess: vitePreprocess(),
 
 	kit: {

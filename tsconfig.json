@@ -31,7 +31,7 @@
 		"useUnknownInCatchVariables": true,
 
 		// SvelteKit issues
-		"ignoreDeprecations": "5.0"
+		"moduleResolution": "nodenext"
 	}
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//
