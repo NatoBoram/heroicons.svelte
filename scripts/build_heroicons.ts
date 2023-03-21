@@ -135,7 +135,7 @@ export const ${modulified}: Story = {}
 	// Build Icon Gallery story
 	await writeFile(
 		join(srcStories, `${title}.mdx`),
-		`import { Meta, Title, IconGallery, IconItem } from '@storybook/addon-docs'
+		`import { Meta, Title, IconGallery, IconItem } from '@storybook/blocks'
 import {
 	${svelteFiles.map(modulify).join(',\n\t')},
 } from '../lib/${size.toString()}/${variant}'
