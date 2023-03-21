@@ -41,7 +41,6 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
 
       - run: |
-          pnpm pack @natoboram/heroicons.svelte
-          gh release create ${{github.ref_name}} --generate-notes --title ${{github.ref_name}} --verify-tag natoboram-heroicons.svelte-*.tgz
+          gh release create ${{github.ref_name}} --generate-notes --title ${{github.ref_name}} --verify-tag
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
