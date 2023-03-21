@@ -11,6 +11,7 @@
 		"ms-playwright.playwright",
 		"ms-vscode.vscode-typescript-next",
 		"svelte.svelte-vscode",
+		"unifiedjs.vscode-mdx",
 		"visualstudioexptteam.vscodeintellicode",
 		"zixuanchen.vitest-explorer"
 	]
