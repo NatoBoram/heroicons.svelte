@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: pnpm
-          node-version: 19
+          node-version: 20
       - run: pnpm install --frozen-lockfile
       - run: pnpm run package
 
