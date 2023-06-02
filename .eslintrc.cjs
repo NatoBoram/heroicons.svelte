@@ -1,35 +1,35 @@
 /** @type {import("eslint").Linter.BaseConfig} */
 module.exports = {
 	root: true,
-	parser: '@typescript-eslint/parser',
 	extends: [
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:@typescript-eslint/recommended-requiring-type-checking',
 		'plugin:@typescript-eslint/strict',
+		'plugin:svelte/recommended',
 		'prettier',
 		'plugin:storybook/recommended',
 	],
-	plugins: ['svelte3', '@typescript-eslint'],
-	overrides: [
-		{
-			files: ['*.svelte'],
-			processor: 'svelte3/svelte3',
-		},
-	],
-	settings: {
-		'svelte3/typescript': true,
-	},
+	parser: '@typescript-eslint/parser',
+	plugins: ['@typescript-eslint'],
 	parserOptions: {
 		sourceType: 'module',
 		ecmaVersion: 2020,
-		project: './tsconfig.eslint.json',
-		tsconfigRootDir: __dirname,
 		extraFileExtensions: ['.svelte'],
+		project: './tsconfig.eslint.json',
 	},
 	env: {
 		browser: true,
 		es2017: true,
 		node: true,
 	},
+	overrides: [
+		{
+			files: ['*.svelte'],
+			parser: 'svelte-eslint-parser',
+			parserOptions: {
+				parser: '@typescript-eslint/parser',
+			},
+		},
+	],
 }
