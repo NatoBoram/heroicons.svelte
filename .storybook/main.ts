@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/sveltekit'
+import remarkGfm from 'remark-gfm'
 
 const config: StorybookConfig = {
 	stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
@@ -6,8 +7,16 @@ const config: StorybookConfig = {
 		'@storybook/addon-links',
 		'@storybook/addon-essentials',
 		'@storybook/addon-interactions',
-		'@storybook/addon-docs',
-		'@storybook/addon-mdx-gfm',
+		{
+			name: '@storybook/addon-docs',
+			options: {
+				mdxPluginOptions: {
+					mdxCompileOptions: {
+						remarkPlugins: [remarkGfm],
+					},
+				},
+			},
+		},
 	],
 	framework: {
 		name: '@storybook/sveltekit',
