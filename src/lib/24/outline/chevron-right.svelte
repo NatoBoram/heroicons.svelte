@@ -11,6 +11,7 @@
 	stroke-width="1.5"
 	stroke="currentColor"
 	aria-hidden="true"
+	data-slot="icon"
 >
-	<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+	<path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
 </svg>

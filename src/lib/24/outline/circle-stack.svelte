@@ -11,6 +11,7 @@
 	stroke-width="1.5"
 	stroke="currentColor"
 	aria-hidden="true"
+	data-slot="icon"
 >
 	<path
 		stroke-linecap="round"
