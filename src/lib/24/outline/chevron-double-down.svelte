@@ -11,10 +11,11 @@
 	stroke-width="1.5"
 	stroke="currentColor"
 	aria-hidden="true"
+	data-slot="icon"
 >
 	<path
 		stroke-linecap="round"
 		stroke-linejoin="round"
-		d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
+		d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
 	/>
 </svg>
