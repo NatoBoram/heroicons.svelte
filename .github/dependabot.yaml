@@ -1,0 +1,41 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+      timezone: America/Toronto
+    commit-message:
+      prefix: '⬆️ '
+    groups:
+      patch:
+        update-types:
+          - patch
+      eslint:
+        patterns:
+          - '*eslint*'
+      tailwindcss:
+        patterns:
+          - '*heroicons*'
+          - '*tailwindcss*'
+          - autoprefixer
+          - postcss
+      prettier:
+        patterns:
+          - '*prettier*'
+      storybook:
+        patterns:
+          - '*react*'
+          - '*storybook*'
+          - 'remark-gfm'
+      svelte:
+        patterns:
+          - '*svelte*'
+      vite:
+        patterns:
+          - '*vitejs*'
+          - vite
+      typescript:
+        patterns:
+          - '*typescript*'
+          - tslib
