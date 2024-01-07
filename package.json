@@ -95,7 +95,7 @@
 		"@storybook/preview-api": "7.0.26",
 		"@storybook/svelte": "7.0.26",
 		"@storybook/sveltekit": "7.0.26",
-		"@storybook/testing-library": "0.2.0",
+		"@storybook/testing-library": "0.2.2",
 		"@storybook/types": "7.0.26",
 		"@sveltejs/adapter-auto": "^2.1.0",
 		"@sveltejs/adapter-static": "^2.0.2",
