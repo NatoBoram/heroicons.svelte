@@ -1,21 +1,18 @@
-import { cp, mkdir, readFile, readdir, rm, writeFile } from 'fs/promises'
+import { cp, rm } from 'fs/promises'
 import { execSync } from 'node:child_process'
-import { join } from 'path'
-
-const rmOptions = { recursive: true, force: true }
-
-// Paths
-const nodeModulesHeroicons20 = join('node_modules', 'heroicons', '20')
-const nodeModulesHeroicons24 = join('node_modules', 'heroicons', '24')
-const srcLib = join('src', 'lib')
-const srcLib20 = join('src', 'lib', '20')
-const srcLib24 = join('src', 'lib', '24')
-const srcLib20Solid = join('src', 'lib', '20', 'solid')
-const srcLib24Outline = join('src', 'lib', '24', 'outline')
-const srcLib24Solid = join('src', 'lib', '24', 'solid')
-const srcStories = join('src', 'stories')
-const srcStories20 = join('src', 'stories', '20')
-const srcStories24 = join('src', 'stories', '24')
+import {
+	nodeModulesHeroicons20,
+	nodeModulesHeroicons24,
+	rmOptions,
+	srcLib20,
+	srcLib20Solid,
+	srcLib24,
+	srcLib24Outline,
+	srcLib24Solid,
+	srcStories20,
+	srcStories24,
+} from './consts.js'
+import { copyReadme, indexify, storify, sveltify } from './utils.js'
 
 console.log(`🚚 Copying Heroicons to \`${srcLib20}\` and \`${srcLib24}\`...`)
 await Promise.all([await rm(srcLib20, rmOptions), await rm(srcLib24, rmOptions)])
@@ -24,64 +21,6 @@ await Promise.all([
 	cp(nodeModulesHeroicons24, srcLib24, rmOptions),
 ])
 
-function modulify(file: string): string {
-	return file
-		.replace('.svg', '')
-		.replace('.svelte', '')
-		.toLowerCase()
-		.replace(/(?:^|\b)./g, m => m.toUpperCase())
-		.replaceAll('-', '')
-}
-
-function namify(file: string): string {
-	return file.replace('.svg', '').replace('.svelte', '')
-}
-
-async function sveltify(dir: string, className: string) {
-	const svgFiles = await readdir(dir)
-
-	// SVG to Svelte
-	for (const file of svgFiles) {
-		const path = join(dir, file)
-
-		const svg = `<script lang="ts">
-	let className: string | undefined = '${className}'
-	export { className as class }
-</script>
-
-${(await readFile(path, 'utf8')).replace('<svg', '<svg class={className} ')}`
-		await Promise.all([writeFile(`${path.replace('.svg', '')}.svelte`, svg), rm(path)])
-	}
-
-	const svelteFiles = await readdir(dir)
-
-	// Router component
-	const router = `<script lang="ts">
-	let className: string | undefined = undefined
-	export { className as class }
-
-	export let icon: keyof typeof components
-	$: promise = components[icon]
-
-	const components = {
-		${svelteFiles.map(file => `'${namify(file)}': import('./${file}'),`).join('\n\t\t')}
-	}
-</script>
-
-{#await promise then imported}
-	<svelte:component this={imported.default} class={className} />
-{/await}
-`
-	await writeFile(join(dir, 'Heroicon.svelte'), router)
-	svelteFiles.push('Heroicon.svelte')
-
-	// Index
-	const imports = svelteFiles
-		.map(file => `export { default as ${modulify(file)} } from './${file}'`)
-		.join('\n')
-	await writeFile(join(dir, 'index.ts'), `${imports}\n`)
-}
-
 console.log('🍷 Turning `.svg` into `.svelte`...')
 await Promise.all([
 	sveltify(srcLib20Solid, 'w-5 h-5'),
@@ -89,49 +28,8 @@ await Promise.all([
 	sveltify(srcLib24Solid, 'w-6 h-6'),
 ])
 
-async function indexify(dir: string) {
-	const folders = await readdir(dir)
-	const exports = folders.map(
-		folder => `export * as ${modulify(folder)} from './${folder}/index.js'`,
-	)
-	await writeFile(join(dir, 'index.ts'), `${exports.join('\n')}\n`)
-}
-
 console.log(`📇 Adding indexes to \`${srcLib20}\` and \`${srcLib24}\`...`)
 await Promise.all([indexify(srcLib20), indexify(srcLib24)])
-
-async function storify(size: number, variant: string, title: string, className: string) {
-	const svelteDir = join(srcLib, size.toString(), variant)
-	const storiesDir = join(srcStories, size.toString(), variant)
-	await mkdir(storiesDir, { recursive: true })
-
-	// Build SVG story
-	const svelteFiles = (await readdir(svelteDir))
-		.filter(file => file.endsWith('.svelte'))
-		.filter(file => file != 'Heroicon.svelte')
-	for (const file of svelteFiles) {
-		const modulified = modulify(file)
-		const modulifiedSvelte = `${modulified}Svelte`
-
-		await writeFile(
-			join(storiesDir, `${file.replace('.svelte', '')}.stories.ts`),
-			`import type { Meta, StoryObj } from '@storybook/svelte'
-import ${modulifiedSvelte} from '../../../lib/${size}/${variant}/${file}'
-
-const meta = {
-	title: 'Heroicons/${title}',
-	component: ${modulifiedSvelte},
-	args: { class: '${className}' },
-} satisfies Meta<${modulifiedSvelte}>
-
-export default meta
-type Story = StoryObj<typeof meta>
-
-export const ${modulified}: Story = {}
-`,
-		)
-	}
-}
 
 console.log(`📕 Creating stories...`)
 await Promise.all([rm(srcStories20, rmOptions), rm(srcStories24, rmOptions)])
@@ -142,14 +40,7 @@ await Promise.all([
 ])
 
 console.log('📝 Copying `README.md`...')
-await writeFile(
-	join(srcStories, 'README.mdx'),
-	`import { Meta } from '@storybook/blocks'
-
-<Meta title="README" />
-
-${await readFile('README.md', 'utf8')}`,
-)
+await copyReadme()
 
 console.log(`🎨 Formatting...`)
 execSync('pnpm format')
