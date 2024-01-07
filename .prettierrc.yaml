@@ -6,8 +6,6 @@ overrides:
 plugins:
   - prettier-plugin-svelte
   - prettier-plugin-tailwindcss
-pluginSearchDirs:
-  - '.'
 printWidth: 100
 semi: false
 singleQuote: true
