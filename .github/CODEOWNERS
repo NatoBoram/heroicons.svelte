@@ -1,0 +1,3 @@
+*.* @NatoBoram
+src/lib/**/*.svelte @tailwindlabs
+static/favicon-*.png @tailwindlabs
