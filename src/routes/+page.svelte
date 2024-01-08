@@ -28,4 +28,4 @@
 <Heroicons.Micro.ShieldCheck />
 
 <!-- Use the Heroicon component with the icon's name -->
-<Heroicon icon="shield-check" class="h-6 w-6" />
+<Heroicon icon="shield-check" />
