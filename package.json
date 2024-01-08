@@ -1,6 +1,6 @@
 {
 	"name": "@natoboram/heroicons.svelte",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "Exports Heroicons for usage with Svelte.",
 	"keywords": [
 		"Heroicons",
