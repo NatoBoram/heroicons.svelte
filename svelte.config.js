@@ -1,6 +1,6 @@
 import adapterAuto from '@sveltejs/adapter-auto'
 import adapterStatic from '@sveltejs/adapter-static'
-import { vitePreprocess } from '@sveltejs/kit/vite'
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 
 function adapter() {
 	if (process.env.GITHUB_ACTIONS) return adapterStatic({ fallback: '404.html' })
@@ -9,10 +9,7 @@ function adapter() {
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
-	// for more information about preprocessors
-	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-	preprocess: vitePreprocess(),
+	preprocess: [vitePreprocess()],
 
 	kit: {
 		adapter: adapter(),
