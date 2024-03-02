@@ -3,7 +3,7 @@ import adapterStatic from '@sveltejs/adapter-static'
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 
 function adapter() {
-	if (process.env.GITHUB_ACTIONS) return adapterStatic({ fallback: '404.html' })
+	if (process.env['GITHUB_ACTIONS']) return adapterStatic({ fallback: '404.html' })
 	return adapterAuto()
 }
 
