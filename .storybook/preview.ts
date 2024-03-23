@@ -5,7 +5,7 @@ const parameters: Parameters = {
 	backgrounds: {
 		default: 'light',
 	},
-	actions: { argTypesRegex: '^on[A-Z].*' },
+	actions: {},
 	controls: {
 		matchers: {
 			color: /(background|color)$/i,
