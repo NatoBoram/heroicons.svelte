@@ -99,8 +99,8 @@ devDependencies:
     specifier: ^0.5.11
     version: 0.5.12(prettier-plugin-svelte@3.2.2)(prettier@3.2.5)
   publint:
-    specifier: ^0.1.16
-    version: 0.1.16
+    specifier: ^0.2.7
+    version: 0.2.7
   remark-gfm:
     specifier: ^4.0.0
     version: 4.0.0
@@ -7525,8 +7525,8 @@ packages:
       ipaddr.js: 1.9.1
     dev: true
 
-  /publint@0.1.16:
-    resolution: {integrity: sha512-wJgk7HnXDT5Ap0DjFYbGz78kPkN44iQvDiaq8P63IEEyNU9mYXvaMd2cAyIM6OgqXM/IA3CK6XWIsRq+wjNpgw==}
+  /publint@0.2.7:
+    resolution: {integrity: sha512-tLU4ee3110BxWfAmCZggJmCUnYWgPTr0QLnx08sqpLYa8JHRiOudd+CgzdpfU5x5eOaW2WMkpmOrFshRFYK7Mw==}
     engines: {node: '>=16'}
     hasBin: true
     dependencies:
