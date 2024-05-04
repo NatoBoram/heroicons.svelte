@@ -56,7 +56,7 @@ export async function storify(size: number, variant: string, title: string, clas
 		await writeFile(
 			join(storiesDir, `${file.replace('.svelte', '')}.stories.ts`),
 			`import type { Meta, StoryObj } from '@storybook/svelte'
-import ${modulifiedSvelte} from '../../../lib/${size}/${variant}/${file}'
+import ${modulifiedSvelte} from '../../../lib/${size.toString()}/${variant}/${file}'
 
 const meta = {
 	title: 'Heroicons/${title}',
