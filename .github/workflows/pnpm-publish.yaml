@@ -23,7 +23,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           cache: pnpm
-          node-version: 21
+          node-version: 22
       - run: pnpm install
 
       - uses: actions/setup-node@v4
@@ -51,7 +51,7 @@ jobs:
           echo '${{ vars.DEPLOY_KEY_PUBLIC }}' > '${{ runner.temp }}/DEPLOY_KEY_PUBLIC.pub'
 
           ssh-keygen -Y sign -f '${{ runner.temp }}/DEPLOY_KEY_PUBLIC.pub' -n file natoboram-heroicons.svelte-*.tgz
-          ssh-keygen -Y verify -f ./.github/allowed_signers.txt -I '41898282+github-actions[bot]@users.noreply.github.com' -n file -s natoboram-heroicons.svelte-*.tgz.sig < natoboram-heroicons.svelte-*.tgz
+          ssh-keygen -Y verify -f ./.github/authorized_keys -I '41898282+github-actions[bot]@users.noreply.github.com' -n file -s natoboram-heroicons.svelte-*.tgz.sig < natoboram-heroicons.svelte-*.tgz
 
       - run: gh release upload ${{ github.ref_name }} natoboram-heroicons.svelte-*.tgz natoboram-heroicons.svelte-*.tgz.sig
         env:

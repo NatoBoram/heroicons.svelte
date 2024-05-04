@@ -9,5 +9,6 @@
 	"[svelte]": {
 		"editor.defaultFormatter": "svelte.svelte-vscode"
 	},
+	"eslint.useFlatConfig": true,
 	"typescript.tsdk": "node_modules/typescript/lib"
 }
