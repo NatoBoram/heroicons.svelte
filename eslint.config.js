@@ -1,5 +1,6 @@
 import eslint from '@eslint/js'
 import prettier from 'eslint-config-prettier'
+import storybook from 'eslint-plugin-storybook'
 import svelte from 'eslint-plugin-svelte'
 import globals from 'globals'
 import svelteParser from 'svelte-eslint-parser'
@@ -10,7 +11,7 @@ import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
 	{
-		files: ['*.js', '*.mjs', '*.svelte', '*.ts', '**/*.js', '**/*.mjs', '**/*.svelte', '**/*.ts'],
+		files: ['.js', '.mjs', '.mts', '.svelte', '.ts'].flatMap(e => [`**/*${e}`, `*${e}`]),
 		extends: [
 			eslint.configs.recommended,
 			...tseslint.configs.strictTypeChecked,
@@ -26,12 +27,18 @@ export default tseslint.config(
 
 	{
 		extends: [...svelte.configs['flat/recommended'], ...svelte.configs['flat/prettier']],
-		files: ['*.svelte', '**/*.svelte'],
+		files: ['.svelte'].flatMap(e => [`**/*${e}`, `*${e}`]),
 		languageOptions: {
 			globals: globals.browser,
 			parser: svelteParser,
 			parserOptions: { parser: tseslint.parser, project: './tsconfig.eslint.json' },
 		},
+	},
+
+	{
+		// eslint-disable-next-line @typescript-eslint/no-unsafe-call
+		extends: storybook.configs.recommended.overrides.map(o => ({ files: o.files, rules: o.rules })),
+		plugins: { storybook },
 	},
 
 	{
