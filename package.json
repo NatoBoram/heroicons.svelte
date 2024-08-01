@@ -115,7 +115,7 @@
 		"@sveltejs/package": "^2.2.5",
 		"@sveltejs/vite-plugin-svelte": "^3.0.2",
 		"@types/eslint": "^8.56.10",
-		"@types/node": "^20.10.7",
+		"@types/node": "^22.0.2",
 		"autoprefixer": "^10.4.16",
 		"eslint": "^9.2.0",
 		"eslint-config-prettier": "^9.1.0",
