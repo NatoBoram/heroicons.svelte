@@ -113,7 +113,7 @@
 		"@sveltejs/adapter-static": "^3.0.1",
 		"@sveltejs/kit": "^2.5.0",
 		"@sveltejs/package": "^2.2.5",
-		"@sveltejs/vite-plugin-svelte": "^3.0.2",
+		"@sveltejs/vite-plugin-svelte": "^4.0.0",
 		"@types/eslint": "^9.6.0",
 		"@types/node": "^22.0.2",
 		"autoprefixer": "^10.4.16",
@@ -130,7 +130,7 @@
 		"publint": "^0.2.7",
 		"remark-gfm": "^4.0.0",
 		"storybook": "^8.0.4",
-		"svelte": "^4.2.8",
+		"svelte": "^5.1.9",
 		"svelte-check": "^4.0.4",
 		"tailwindcss": "^3.4.1",
 		"tslib": "^2.6.2",
@@ -141,7 +141,7 @@
 		"vitest": "^2.0.3"
 	},
 	"peerDependencies": {
-		"svelte": "^4.2.8",
+		"svelte": "^5.1.9",
 		"tailwindcss": "^3.4.1"
 	},
 	"peerDependenciesMeta": {
