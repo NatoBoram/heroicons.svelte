@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { cp, rm } from 'fs/promises'
 import { execSync } from 'node:child_process'
 import {
@@ -17,8 +18,10 @@ import {
 } from './consts.js'
 import { copyReadme, indexify, storify, sveltify } from './utils.js'
 
-console.log(`🚚 Copying Heroicons to \`${srcLib16}\`, \`${srcLib20}\` and \`${srcLib24}\`...`)
+console.log('🔥 Removing previous build...')
 await Promise.all([rm(srcLib16, rmOptions), rm(srcLib20, rmOptions), rm(srcLib24, rmOptions)])
+
+console.log(`🚚 Copying Heroicons to \`${srcLib16}\`, \`${srcLib20}\` and \`${srcLib24}\`...`)
 await Promise.all([
 	cp(nodeModulesHeroicons20, srcLib16, rmOptions),
 	cp(nodeModulesHeroicons20, srcLib20, rmOptions),

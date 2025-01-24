@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { mkdir, readFile, readdir, rm, writeFile } from 'fs/promises'
 import { join } from 'path'
 import { srcLib, srcStories } from './consts.js'
@@ -82,11 +83,12 @@ export async function sveltify(dir: string, className: string) {
 		const path = join(dir, file)
 
 		const svg = `<script lang="ts">
-	let className: string | undefined = '${className}'
-	export { className as class }
+	import type { SVGAttributes } from 'svelte/elements'
+	interface Props extends SVGAttributes<SVGSVGElement> {}
+	const { class: className = '${className}', ...rest }: Props = $props()
 </script>
 
-${(await readFile(path, 'utf8')).replace('<svg', '<svg class={className} ')}`
+${(await readFile(path, 'utf8')).replace('<svg', '<svg {...rest} class={className} ')}`
 		await Promise.all([writeFile(`${path.replace('.svg', '')}.svelte`, svg), rm(path)])
 	}
 
@@ -94,19 +96,23 @@ ${(await readFile(path, 'utf8')).replace('<svg', '<svg class={className} ')}`
 
 	/** Router component */
 	const router = `<script lang="ts">
-	let className: string | undefined = undefined
-	export { className as class }
+	import type { SVGAttributes } from 'svelte/elements'
 
-	export let icon: keyof typeof components
-	$: promise = components[icon]
+	interface Props extends SVGAttributes<SVGSVGElement> {
+		readonly icon: keyof typeof components
+	}
+
+	const { class: className = undefined, icon, ...rest }: Props = $props()
 
 	const components = {
 		${svelteFiles.map(file => `'${namify(file)}': import('./${file}'),`).join('\n\t\t')}
 	}
+
+	const promise = $derived(components[icon])
 </script>
 
 {#await promise then imported}
-	<svelte:component this={imported.default} class={className} />
+	<imported.default class={className} {...rest} />
 {/await}
 `
 	await writeFile(join(dir, 'Heroicon.svelte'), router)
