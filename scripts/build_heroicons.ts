@@ -15,7 +15,7 @@ import {
 	srcStories20,
 	srcStories24,
 } from './consts.ts'
-import { copyReadme, indexify, storify, sveltify } from './utils.ts'
+import { copyMarkdown, indexify, storify, sveltify } from './utils.ts'
 
 console.log('🔥 Removing previous build...')
 await Promise.all([rm(srcLib16, rmOptions), rm(srcLib20, rmOptions), rm(srcLib24, rmOptions)])
@@ -51,8 +51,8 @@ await Promise.all([
 	storify(24, 'solid', 'Solid', 'w-6 h-6'),
 ])
 
-console.log('📝 Copying `README.md`...')
-await copyReadme()
+console.log('📝 Copying `README.md` and `LICENSE.md`...')
+await copyMarkdown()
 
 console.log(`🎨 Formatting...`)
 execSync('pnpm format')

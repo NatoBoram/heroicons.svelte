@@ -4,15 +4,17 @@ import { srcLib, srcStories } from './consts.ts'
 import type { Name, Size, Variant } from './enums.ts'
 
 /** Copies the `README.md` to the `stories` folder. */
-export async function copyReadme() {
-	return writeFile(
-		join(srcStories, 'README.mdx'),
-		`import { Meta } from '@storybook/blocks'
-
-<Meta title="README" />
-
-${await readFile('README.md', 'utf8')}`,
+export async function copyMarkdown() {
+	const readme = await markdownify('README.md', 'README')
+	const license = (await markdownify('LICENSE.md', 'LICENSE')).replaceAll(
+		'<https://fsf.org/>',
+		'[https://fsf.org](https://fsf.org)',
 	)
+
+	return Promise.all([
+		writeFile(join(srcStories, 'README.mdx'), readme),
+		writeFile(join(srcStories, 'LICENSE.mdx'), license),
+	])
 }
 
 /** Adds an index file to a directory. */
@@ -22,6 +24,15 @@ export async function indexify(dir: string) {
 		folder => `export * as ${modulify(folder)} from './${folder}/index.ts'`,
 	)
 	await writeFile(join(dir, 'index.ts'), `${exports.join('\n')}\n`)
+}
+
+async function markdownify(path: string, title: string) {
+	const file = await readFile(path, 'utf8')
+	return `import { Meta } from '@storybook/blocks'
+
+<Meta title="${title}" />
+
+${file}`
 }
 
 /** Turns a filename into a module name. For example, `at-symbol.svg` becomes `AtSymbol`. */
