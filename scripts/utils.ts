@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { mkdir, readFile, readdir, rm, writeFile } from 'fs/promises'
 import { join } from 'path'
 import { srcLib, srcStories } from './consts.js'
@@ -84,7 +83,7 @@ export async function sveltify(dir: string, className: string) {
 
 		const svg = `<script lang="ts">
 	import type { SVGAttributes } from 'svelte/elements'
-	interface Props extends SVGAttributes<SVGSVGElement> {}
+	type Props = SVGAttributes<SVGSVGElement>
 	const { class: className = '${className}', ...rest }: Props = $props()
 </script>
 
