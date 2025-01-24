@@ -14,11 +14,13 @@ import {
 	srcStories16,
 	srcStories20,
 	srcStories24,
-} from './consts.js'
-import { copyReadme, indexify, storify, sveltify } from './utils.js'
+} from './consts.ts'
+import { copyMarkdown, indexify, storify, sveltify } from './utils.ts'
+
+console.log('🔥 Removing previous build...')
+await Promise.all([rm(srcLib16, rmOptions), rm(srcLib20, rmOptions), rm(srcLib24, rmOptions)])
 
 console.log(`🚚 Copying Heroicons to \`${srcLib16}\`, \`${srcLib20}\` and \`${srcLib24}\`...`)
-await Promise.all([rm(srcLib16, rmOptions), rm(srcLib20, rmOptions), rm(srcLib24, rmOptions)])
 await Promise.all([
 	cp(nodeModulesHeroicons20, srcLib16, rmOptions),
 	cp(nodeModulesHeroicons20, srcLib20, rmOptions),
@@ -27,10 +29,10 @@ await Promise.all([
 
 console.log('🍷 Turning `.svg` into `.svelte`...')
 await Promise.all([
-	sveltify(srcLib16Solid, 'w-4 h-4'),
-	sveltify(srcLib20Solid, 'w-5 h-5'),
-	sveltify(srcLib24Outline, 'w-6 h-6'),
-	sveltify(srcLib24Solid, 'w-6 h-6'),
+	sveltify(srcLib16Solid, 'w-4 h-4', 'solid'),
+	sveltify(srcLib20Solid, 'w-5 h-5', 'solid'),
+	sveltify(srcLib24Outline, 'w-6 h-6', 'outline'),
+	sveltify(srcLib24Solid, 'w-6 h-6', 'solid'),
 ])
 
 console.log(`📇 Adding indexes to \`${srcLib16}\`, \`${srcLib20}\` and \`${srcLib24}\`...`)
@@ -49,8 +51,8 @@ await Promise.all([
 	storify(24, 'solid', 'Solid', 'w-6 h-6'),
 ])
 
-console.log('📝 Copying `README.md`...')
-await copyReadme()
+console.log('📝 Copying `README.md` and `LICENSE.md`...')
+await copyMarkdown()
 
 console.log(`🎨 Formatting...`)
 execSync('pnpm format')

@@ -9,33 +9,34 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
 
-		// Type Checking
-		"allowUnreachableCode": false,
-		"allowUnusedLabels": false,
-		"alwaysStrict": true,
-		"exactOptionalPropertyTypes": true,
-		"noFallthroughCasesInSwitch": true,
+		/* Language and Environment */
+		"useDefineForClassFields": true,
+		"moduleDetection": "force",
+
+		/* Modules */
+		"rewriteRelativeImportExtensions": true,
+
+		/* Type Checking */
 		"noImplicitAny": true,
-		"noImplicitOverride": true,
-		"noImplicitReturns": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"strictBindCallApply": true,
+		"strictPropertyInitialization": true,
 		"noImplicitThis": true,
-		"noPropertyAccessFromIndexSignature": true,
-		"noUncheckedIndexedAccess": true,
+		"useUnknownInCatchVariables": true,
+		"alwaysStrict": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"strictBindCallApply": true,
-		"strictFunctionTypes": true,
-		"strictNullChecks": true,
-		"strictPropertyInitialization": true,
-		"useUnknownInCatchVariables": true,
-
-		// SvelteKit issues
-		"module": "NodeNext",
-		"moduleResolution": "NodeNext"
+		"exactOptionalPropertyTypes": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitOverride": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"allowUnusedLabels": false,
+		"allowUnreachableCode": false
 	}
-	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
-	//
-	// If you want to overwrite includes/excludes, make sure to copy over the relevant includes/excludes
-	// from the referenced tsconfig.json - TypeScript does not merge them in
 }

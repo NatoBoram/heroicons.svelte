@@ -12,6 +12,13 @@ const parameters: Parameters = {
 			date: /Date$/,
 		},
 	},
+	parameters: {
+		options: {
+			storySort: {
+				order: ['README'],
+			},
+		},
+	},
 }
 
 export default parameters

@@ -1,1 +1,1 @@
-export * as Solid from './solid/index.js'
+export * as Solid from './solid/index.ts'

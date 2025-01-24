@@ -2,6 +2,7 @@
 .DS_Store
 .env.*.local
 .env.local
+*storybook.log
 /.pnpm-store
 /.svelte-kit
 /build
@@ -12,8 +13,8 @@
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
-# Created by https://www.toptal.com/developers/gitignore/api/node,linux,macos,svelte,windows,storybookjs,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=node,linux,macos,svelte,windows,storybookjs,visualstudiocode
+# Created by https://www.toptal.com/developers/gitignore/api/node,linux,macos,svelte,windows,visualstudiocode,storybookjs
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,linux,macos,svelte,windows,visualstudiocode,storybookjs
 
 ### Linux ###
 *~
@@ -138,8 +139,10 @@ web_modules/
 .yarn-integrity
 
 # dotenv environment variable files
-!.env
-.env.*.local
+.env
+.env.development.local
+.env.test.local
+.env.production.local
 .env.local
 
 # parcel-bundler cache (https://parceljs.org/)
@@ -258,4 +261,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/node,linux,macos,svelte,windows,storybookjs,visualstudiocode
+# End of https://www.toptal.com/developers/gitignore/api/node,linux,macos,svelte,windows,visualstudiocode,storybookjs
+
+!.env
+!.env.*
+.env.local
+.env.*.local

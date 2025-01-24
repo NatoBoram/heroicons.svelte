@@ -1,9 +1,13 @@
 <script lang="ts">
-	let className: string | undefined = undefined
-	export { className as class }
+	import type { SVGAttributes } from 'svelte/elements'
 
-	export let icon: keyof typeof components
-	$: promise = components[icon]
+	interface Props extends SVGAttributes<SVGSVGElement> {
+		/** The name of the icon to render.
+		 * @see https://heroicons.com/outline */
+		readonly icon: keyof typeof components
+	}
+
+	const { class: className = 'w-6 h-6', icon, ...rest }: Props = $props()
 
 	const components = {
 		'academic-cap': import('./academic-cap.svelte'),
@@ -42,6 +46,14 @@
 		'arrow-top-right-on-square': import('./arrow-top-right-on-square.svelte'),
 		'arrow-trending-down': import('./arrow-trending-down.svelte'),
 		'arrow-trending-up': import('./arrow-trending-up.svelte'),
+		'arrow-turn-down-left': import('./arrow-turn-down-left.svelte'),
+		'arrow-turn-down-right': import('./arrow-turn-down-right.svelte'),
+		'arrow-turn-left-down': import('./arrow-turn-left-down.svelte'),
+		'arrow-turn-left-up': import('./arrow-turn-left-up.svelte'),
+		'arrow-turn-right-down': import('./arrow-turn-right-down.svelte'),
+		'arrow-turn-right-up': import('./arrow-turn-right-up.svelte'),
+		'arrow-turn-up-left': import('./arrow-turn-up-left.svelte'),
+		'arrow-turn-up-right': import('./arrow-turn-up-right.svelte'),
 		'arrow-up-circle': import('./arrow-up-circle.svelte'),
 		'arrow-up-left': import('./arrow-up-left.svelte'),
 		'arrow-up-on-square-stack': import('./arrow-up-on-square-stack.svelte'),
@@ -77,6 +89,7 @@
 		'bell-slash': import('./bell-slash.svelte'),
 		'bell-snooze': import('./bell-snooze.svelte'),
 		bell: import('./bell.svelte'),
+		bold: import('./bold.svelte'),
 		'bolt-slash': import('./bolt-slash.svelte'),
 		bolt: import('./bolt.svelte'),
 		'book-open': import('./book-open.svelte'),
@@ -91,6 +104,7 @@
 		'building-storefront': import('./building-storefront.svelte'),
 		cake: import('./cake.svelte'),
 		calculator: import('./calculator.svelte'),
+		'calendar-date-range': import('./calendar-date-range.svelte'),
 		'calendar-days': import('./calendar-days.svelte'),
 		calendar: import('./calendar.svelte'),
 		camera: import('./camera.svelte'),
@@ -146,10 +160,17 @@
 		'cursor-arrow-ripple': import('./cursor-arrow-ripple.svelte'),
 		'device-phone-mobile': import('./device-phone-mobile.svelte'),
 		'device-tablet': import('./device-tablet.svelte'),
+		divide: import('./divide.svelte'),
 		'document-arrow-down': import('./document-arrow-down.svelte'),
 		'document-arrow-up': import('./document-arrow-up.svelte'),
 		'document-chart-bar': import('./document-chart-bar.svelte'),
 		'document-check': import('./document-check.svelte'),
+		'document-currency-bangladeshi': import('./document-currency-bangladeshi.svelte'),
+		'document-currency-dollar': import('./document-currency-dollar.svelte'),
+		'document-currency-euro': import('./document-currency-euro.svelte'),
+		'document-currency-pound': import('./document-currency-pound.svelte'),
+		'document-currency-rupee': import('./document-currency-rupee.svelte'),
+		'document-currency-yen': import('./document-currency-yen.svelte'),
 		'document-duplicate': import('./document-duplicate.svelte'),
 		'document-magnifying-glass': import('./document-magnifying-glass.svelte'),
 		'document-minus': import('./document-minus.svelte'),
@@ -161,6 +182,7 @@
 		'ellipsis-vertical': import('./ellipsis-vertical.svelte'),
 		'envelope-open': import('./envelope-open.svelte'),
 		envelope: import('./envelope.svelte'),
+		equals: import('./equals.svelte'),
 		'exclamation-circle': import('./exclamation-circle.svelte'),
 		'exclamation-triangle': import('./exclamation-triangle.svelte'),
 		'eye-dropper': import('./eye-dropper.svelte'),
@@ -186,6 +208,9 @@
 		'globe-americas': import('./globe-americas.svelte'),
 		'globe-asia-australia': import('./globe-asia-australia.svelte'),
 		'globe-europe-africa': import('./globe-europe-africa.svelte'),
+		h1: import('./h1.svelte'),
+		h2: import('./h2.svelte'),
+		h3: import('./h3.svelte'),
 		'hand-raised': import('./hand-raised.svelte'),
 		'hand-thumb-down': import('./hand-thumb-down.svelte'),
 		'hand-thumb-up': import('./hand-thumb-up.svelte'),
@@ -198,10 +223,12 @@
 		'inbox-stack': import('./inbox-stack.svelte'),
 		inbox: import('./inbox.svelte'),
 		'information-circle': import('./information-circle.svelte'),
+		italic: import('./italic.svelte'),
 		key: import('./key.svelte'),
 		language: import('./language.svelte'),
 		lifebuoy: import('./lifebuoy.svelte'),
 		'light-bulb': import('./light-bulb.svelte'),
+		'link-slash': import('./link-slash.svelte'),
 		link: import('./link.svelte'),
 		'list-bullet': import('./list-bullet.svelte'),
 		'lock-closed': import('./lock-closed.svelte'),
@@ -221,6 +248,7 @@
 		'musical-note': import('./musical-note.svelte'),
 		newspaper: import('./newspaper.svelte'),
 		'no-symbol': import('./no-symbol.svelte'),
+		'numbered-list': import('./numbered-list.svelte'),
 		'paint-brush': import('./paint-brush.svelte'),
 		'paper-airplane': import('./paper-airplane.svelte'),
 		'paper-clip': import('./paper-clip.svelte'),
@@ -228,6 +256,7 @@
 		pause: import('./pause.svelte'),
 		'pencil-square': import('./pencil-square.svelte'),
 		pencil: import('./pencil.svelte'),
+		'percent-badge': import('./percent-badge.svelte'),
 		'phone-arrow-down-left': import('./phone-arrow-down-left.svelte'),
 		'phone-arrow-up-right': import('./phone-arrow-up-right.svelte'),
 		'phone-x-mark': import('./phone-x-mark.svelte'),
@@ -265,6 +294,7 @@
 		'shopping-cart': import('./shopping-cart.svelte'),
 		'signal-slash': import('./signal-slash.svelte'),
 		signal: import('./signal.svelte'),
+		slash: import('./slash.svelte'),
 		sparkles: import('./sparkles.svelte'),
 		'speaker-wave': import('./speaker-wave.svelte'),
 		'speaker-x-mark': import('./speaker-x-mark.svelte'),
@@ -275,6 +305,7 @@
 		star: import('./star.svelte'),
 		'stop-circle': import('./stop-circle.svelte'),
 		stop: import('./stop.svelte'),
+		strikethrough: import('./strikethrough.svelte'),
 		sun: import('./sun.svelte'),
 		swatch: import('./swatch.svelte'),
 		'table-cells': import('./table-cells.svelte'),
@@ -284,6 +315,7 @@
 		trophy: import('./trophy.svelte'),
 		truck: import('./truck.svelte'),
 		tv: import('./tv.svelte'),
+		underline: import('./underline.svelte'),
 		'user-circle': import('./user-circle.svelte'),
 		'user-group': import('./user-group.svelte'),
 		'user-minus': import('./user-minus.svelte'),
@@ -303,8 +335,10 @@
 		'x-circle': import('./x-circle.svelte'),
 		'x-mark': import('./x-mark.svelte'),
 	}
+
+	const promise = $derived(components[icon])
 </script>
 
 {#await promise then imported}
-	<svelte:component this={imported.default} class={className} />
+	<imported.default class={className} {...rest} />
 {/await}

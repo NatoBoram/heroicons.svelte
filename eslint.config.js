@@ -6,8 +6,7 @@ import globals from 'globals'
 import svelteParser from 'svelte-eslint-parser'
 import tseslint from 'typescript-eslint'
 
-/* eslint-disable @typescript-eslint/no-unsafe-member-access,
-@typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
 export default tseslint.config(
 	{
@@ -36,8 +35,7 @@ export default tseslint.config(
 	},
 
 	{
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-call
-		extends: storybook.configs.recommended.overrides.map(o => ({ files: o.files, rules: o.rules })),
+		extends: storybook.configs.recommended.overrides.map(({ files, rules }) => ({ files, rules })),
 		plugins: { storybook },
 	},
 

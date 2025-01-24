@@ -1,4 +1,4 @@
-import { CopyOptions, RmOptions } from 'fs'
+import type { CopyOptions, RmOptions } from 'fs'
 import { join } from 'path'
 
 export const rmOptions: CopyOptions | RmOptions = { recursive: true, force: true }

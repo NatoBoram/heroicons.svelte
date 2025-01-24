@@ -4,11 +4,11 @@
 		".storybook",
 		"eslint.config.js",
 		"playwright.config.ts",
-		"postcss.config.cjs",
+		"postcss.config.js",
 		"scripts",
 		"src",
 		"svelte.config.js",
-		"tailwind.config.cjs",
+		"tailwind.config.ts",
 		"tests",
 		"vite.config.ts"
 	]
