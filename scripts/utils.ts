@@ -1,6 +1,7 @@
 import { mkdir, readFile, readdir, rm, writeFile } from 'fs/promises'
 import { join } from 'path'
 import { srcLib, srcStories } from './consts.js'
+import type { Name, Size, Variant } from './enums.js'
 
 /** Copies the `README.md` to the `stories` folder. */
 export async function copyReadme() {
@@ -40,10 +41,27 @@ export function namify(file: string): string {
 }
 
 /** Creates a story for each Svelte component in a directory. */
-export async function storify(size: number, variant: string, title: string, className: string) {
+export async function storify(size: Size, variant: Variant, title: Name, className: string) {
 	const svelteDir = join(srcLib, size.toString(), variant)
 	const storiesDir = join(srcStories, size.toString(), variant)
 	await mkdir(storiesDir, { recursive: true })
+
+	const router = `<script module lang="ts">
+	import { defineMeta } from '@storybook/addon-svelte-csf'
+	import Heroicon from '../../../lib/${size.toString()}/${variant}/Heroicon.svelte'
+
+	const { Story } = defineMeta({
+		title: 'Heroicons/${title}',
+		component: Heroicon,
+		tags: ['autodocs'],
+		args: { class: '${className}', icon: 'academic-cap' },
+	})
+</script>
+
+<Story name="${title} Heroicon" />
+`
+
+	await writeFile(join(storiesDir, 'Heroicon.stories.svelte'), router)
 
 	const svelteFiles = (await readdir(svelteDir))
 		.filter(file => file.endsWith('.svelte'))
@@ -53,28 +71,26 @@ export async function storify(size: number, variant: string, title: string, clas
 		const modulified = modulify(file)
 		const modulifiedSvelte = `${modulified}Svelte`
 
-		await writeFile(
-			join(storiesDir, `${file.replace('.svelte', '')}.stories.ts`),
-			`import type { Meta, StoryObj } from '@storybook/svelte'
-import ${modulifiedSvelte} from '../../../lib/${size.toString()}/${variant}/${file}'
+		const data = `<script module lang="ts">
+	import { defineMeta } from '@storybook/addon-svelte-csf'
+	import ${modulifiedSvelte} from '../../../lib/${size.toString()}/${variant}/${file}'
 
-const meta = {
-	title: 'Heroicons/${title}',
-	component: ${modulifiedSvelte},
-	args: { class: '${className}' },
-} satisfies Meta<${modulifiedSvelte}>
+	const { Story } = defineMeta({
+		title: 'Heroicons/${title}',
+		component: ${modulifiedSvelte},
+		args: { class: '${className}' },
+	})
+</script>
 
-export default meta
-type Story = StoryObj<typeof meta>
+<Story name="${modulified}" />
+`
 
-export const ${modulified}: Story = {}
-`,
-		)
+		await writeFile(join(storiesDir, `${file.replace('.svelte', '')}.stories.svelte`), data)
 	}
 }
 
 /** Turns a directory of SVG files into Svelte components. */
-export async function sveltify(dir: string, className: string) {
+export async function sveltify(dir: string, className: string, variant: Variant) {
 	const svgFiles = await readdir(dir)
 
 	// SVG to Svelte
@@ -98,10 +114,12 @@ ${(await readFile(path, 'utf8')).replace('<svg', '<svg {...rest} class={classNam
 	import type { SVGAttributes } from 'svelte/elements'
 
 	interface Props extends SVGAttributes<SVGSVGElement> {
+		/** The name of the icon to render.
+		 * @see https://heroicons.com/${variant} */
 		readonly icon: keyof typeof components
 	}
 
-	const { class: className = undefined, icon, ...rest }: Props = $props()
+	const { class: className = '${className}', icon, ...rest }: Props = $props()
 
 	const components = {
 		${svelteFiles.map(file => `'${namify(file)}': import('./${file}'),`).join('\n\t\t')}

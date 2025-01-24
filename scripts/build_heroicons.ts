@@ -29,10 +29,10 @@ await Promise.all([
 
 console.log('🍷 Turning `.svg` into `.svelte`...')
 await Promise.all([
-	sveltify(srcLib16Solid, 'w-4 h-4'),
-	sveltify(srcLib20Solid, 'w-5 h-5'),
-	sveltify(srcLib24Outline, 'w-6 h-6'),
-	sveltify(srcLib24Solid, 'w-6 h-6'),
+	sveltify(srcLib16Solid, 'w-4 h-4', 'solid'),
+	sveltify(srcLib20Solid, 'w-5 h-5', 'solid'),
+	sveltify(srcLib24Outline, 'w-6 h-6', 'outline'),
+	sveltify(srcLib24Solid, 'w-6 h-6', 'solid'),
 ])
 
 console.log(`📇 Adding indexes to \`${srcLib16}\`, \`${srcLib20}\` and \`${srcLib24}\`...`)

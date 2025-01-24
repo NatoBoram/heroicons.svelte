@@ -2,10 +2,12 @@
 	import type { SVGAttributes } from 'svelte/elements'
 
 	interface Props extends SVGAttributes<SVGSVGElement> {
+		/** The name of the icon to render.
+		 * @see https://heroicons.com/solid */
 		readonly icon: keyof typeof components
 	}
 
-	const { class: className = undefined, icon, ...rest }: Props = $props()
+	const { class: className = 'w-5 h-5', icon, ...rest }: Props = $props()
 
 	const components = {
 		'academic-cap': import('./academic-cap.svelte'),
