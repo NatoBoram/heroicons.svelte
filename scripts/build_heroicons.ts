@@ -14,8 +14,8 @@ import {
 	srcStories16,
 	srcStories20,
 	srcStories24,
-} from './consts.js'
-import { copyReadme, indexify, storify, sveltify } from './utils.js'
+} from './consts.ts'
+import { copyReadme, indexify, storify, sveltify } from './utils.ts'
 
 console.log('🔥 Removing previous build...')
 await Promise.all([rm(srcLib16, rmOptions), rm(srcLib20, rmOptions), rm(srcLib24, rmOptions)])

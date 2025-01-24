@@ -1,7 +1,7 @@
 import { mkdir, readFile, readdir, rm, writeFile } from 'fs/promises'
 import { join } from 'path'
-import { srcLib, srcStories } from './consts.js'
-import type { Name, Size, Variant } from './enums.js'
+import { srcLib, srcStories } from './consts.ts'
+import type { Name, Size, Variant } from './enums.ts'
 
 /** Copies the `README.md` to the `stories` folder. */
 export async function copyReadme() {
@@ -19,7 +19,7 @@ ${await readFile('README.md', 'utf8')}`,
 export async function indexify(dir: string) {
 	const folders = await readdir(dir)
 	const exports = folders.map(
-		folder => `export * as ${modulify(folder)} from './${folder}/index.js'`,
+		folder => `export * as ${modulify(folder)} from './${folder}/index.ts'`,
 	)
 	await writeFile(join(dir, 'index.ts'), `${exports.join('\n')}\n`)
 }

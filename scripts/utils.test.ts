@@ -1,5 +1,5 @@
 import { test } from 'vitest'
-import { modulify, namify } from './utils.js'
+import { modulify, namify } from './utils.ts'
 
 test('modulify', ({ expect }) => {
 	const result = modulify('at-symbol.svg')
