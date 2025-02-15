@@ -16,4 +16,5 @@ type Solid = typeof Solid
 
 const Heroicons: Heroicons = { Mini, Outline, Solid, Micro }
 
+export { default as Spinner } from './Spinner.svelte'
 export { Heroicons, Micro, Mini, Outline, Solid }

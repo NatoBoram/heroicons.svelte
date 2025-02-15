@@ -22,7 +22,7 @@ Each icons can be imported individually as a Svelte component.
 	// Import the icon type from its size
 	import { Solid } from '@natoboram/heroicons.svelte/16'
 
-	// Import the name of the icon type, which is effectively the same as the import above
+	// Import the name of the icon type
 	import { Micro } from '@natoboram/heroicons.svelte'
 
 	// Import `Heroicons`, which imports everything
@@ -38,7 +38,7 @@ Each icons can be imported individually as a Svelte component.
 <!-- Import the icon type from its size -->
 <Solid.ShieldCheck />
 
-<!-- Import the name of the icon type, which is effectively the same as the import above -->
+<!-- Import the name of the icon type -->
 <Micro.ShieldCheck />
 
 <!-- Import `Heroicons`, which imports everything -->
@@ -49,6 +49,8 @@ Each icons can be imported individually as a Svelte component.
 ```
 
 You can send an arbitrary `class` to the components as if they were HTML elements. By default, they have a size set by the Tailwind classes `w-5 h-5` or `w-6 h-6`, but if you set another class, then these size classes are not applied.
+
+The `Heroicon` components are there for when you need to dynamically set the icon. They will display a loading spinner until the icon is loaded. To avoid this spinner, directly import the appropriate component instead.
 
 ## Developing
 
