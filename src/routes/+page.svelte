@@ -1,18 +1,7 @@
 <script lang="ts">
-	// Import the component from its size and icon type
-	import { ShieldCheck } from '../lib/16/solid/index.ts'
-
-	// Import the icon type from its size
-	import { Solid } from '../lib/16/index.ts'
-
-	// Import the name of the icon type, which is effectively the same as the import above
-	import { Micro } from '../lib/index.ts'
-
-	// Import `Heroicons`, which imports everything
-	import { Heroicons } from '../lib/index.ts'
-
-	// Use the Heroicon component with the icon's name
-	import { Heroicon } from '../lib/16/solid/index.ts'
+	import { Solid } from '$lib/16/index.js'
+	import { Heroicon, ShieldCheck } from '$lib/16/solid/index.js'
+	import { Heroicons, Micro } from '$lib/index.js'
 </script>
 
 <!-- Import the component from its size and icon type -->
@@ -21,7 +10,7 @@
 <!-- Import the icon type from its size -->
 <Solid.ShieldCheck />
 
-<!-- Import the name of the icon type, which is effectively the same as the import above -->
+<!-- Import the name of the icon type -->
 <Micro.ShieldCheck />
 
 <!-- Import `Heroicons`, which imports everything -->

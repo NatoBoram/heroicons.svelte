@@ -122,6 +122,7 @@ ${(await readFile(path, 'utf8')).replace('<svg', '<svg {...rest} class={classNam
 
 	/** Router component */
 	const router = `<script lang="ts">
+	import Spinner from '$lib/Spinner.svelte'
 	import type { SVGAttributes } from 'svelte/elements'
 
 	interface Props extends SVGAttributes<SVGSVGElement> {
@@ -133,14 +134,16 @@ ${(await readFile(path, 'utf8')).replace('<svg', '<svg {...rest} class={classNam
 	const { class: className = '${className}', icon, ...rest }: Props = $props()
 
 	const components = {
-		${svelteFiles.map(file => `'${namify(file)}': import('./${file}'),`).join('\n\t\t')}
+		${svelteFiles.map(file => `'${namify(file)}': () => import('./${file}'),`).join('\n\t\t')}
 	}
 
-	const promise = $derived(components[icon])
+	const promise = $derived(components[icon]())
 </script>
 
-{#await promise then imported}
-	<imported.default class={className} {...rest} />
+{#await promise}
+	<Spinner class={className} {...rest} />
+{:then { default: Heroicon }}
+	<Heroicon class={className} {...rest} />
 {/await}
 `
 	await writeFile(join(dir, 'Heroicon.svelte'), router)

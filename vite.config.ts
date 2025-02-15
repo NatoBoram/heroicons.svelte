@@ -1,9 +1,11 @@
 import { sveltekit } from '@sveltejs/kit/vite'
+import type { UserConfig } from 'vite'
 import { defineConfig } from 'vitest/config'
 
-export default defineConfig({
+const config: UserConfig = defineConfig({
+	build: { chunkSizeWarningLimit: 1_600 },
 	plugins: [sveltekit()],
-	test: {
-		include: ['src/**/*.{test,spec}.{js,ts}', 'scripts/**/*.{test,spec}.{js,ts}'],
-	},
+	test: { include: ['src/**/*.{test,spec}.{js,ts}', 'scripts/**/*.{test,spec}.{js,ts}'] },
 })
+
+export default config
