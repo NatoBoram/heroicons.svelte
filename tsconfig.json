@@ -1,25 +1,36 @@
 {
 	"extends": "./.svelte-kit/tsconfig.json",
 	"compilerOptions": {
-		"allowJs": true,
-		"checkJs": true,
-		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
-		"resolveJsonModule": true,
-		"skipLibCheck": true,
-		"sourceMap": true,
-		"strict": true,
-		"module": "NodeNext",
-		"moduleResolution": "NodeNext",
+		/* Projects */
+		"incremental": true,
+		"composite": true,
 
 		/* Language and Environment */
 		"useDefineForClassFields": true,
 		"moduleDetection": "force",
 
 		/* Modules */
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
 		"rewriteRelativeImportExtensions": true,
+		"resolvePackageJsonExports": true,
+		"resolvePackageJsonImports": true,
+		"resolveJsonModule": true,
+
+		/* JavaScript Support */
+
+		/* Emit */
+		"declaration": true,
+		"declarationMap": true,
+		"sourceMap": true,
+
+		/* Interop Constraints */
+		"isolatedDeclarations": true,
+		"erasableSyntaxOnly": true,
+		"forceConsistentCasingInFileNames": true,
 
 		/* Type Checking */
+		"strict": true,
 		"noImplicitAny": true,
 		"strictNullChecks": true,
 		"strictFunctionTypes": true,
@@ -37,6 +48,10 @@
 		"noImplicitOverride": true,
 		"noPropertyAccessFromIndexSignature": true,
 		"allowUnusedLabels": false,
-		"allowUnreachableCode": false
+		"allowUnreachableCode": false,
+
+		/* Completeness */
+		"skipDefaultLibCheck": true,
+		"skipLibCheck": true
 	}
 }
