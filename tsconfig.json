@@ -13,8 +13,8 @@
 		"module": "NodeNext",
 		"moduleResolution": "NodeNext",
 		"rewriteRelativeImportExtensions": true,
-		"resolvePackageJsonExports": true,
-		"resolvePackageJsonImports": true,
+		// "resolvePackageJsonExports": true,
+		// "resolvePackageJsonImports": true,
 		"resolveJsonModule": true,
 
 		/* JavaScript Support */
@@ -25,7 +25,7 @@
 		"sourceMap": true,
 
 		/* Interop Constraints */
-		"isolatedDeclarations": true,
+		// "isolatedDeclarations": true,
 		"erasableSyntaxOnly": true,
 		"forceConsistentCasingInFileNames": true,
 
