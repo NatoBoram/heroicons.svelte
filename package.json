@@ -83,18 +83,20 @@
 		"package": "svelte-kit sync && svelte-package && publint",
 		"package:watch": "svelte-kit sync && svelte-package -w",
 		"prepublishOnly": "pnpm run package",
-		"test": "pnpm run test:integration && pnpm run test:unit",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
 		"lint:fix": "eslint --fix .; prettier --list-different --write .",
 		"format": "prettier --write .",
+		"test": "pnpm run test:integration && pnpm run test:unit",
 		"test:integration": "playwright test",
-		"test:unit": "vitest",
+		"test:unit": "vitest run",
+		"test:unit:watch": "vitest",
 		"storybook": "storybook dev -p 6006",
 		"prebuild-storybook": "svelte-kit sync",
 		"build-storybook": "storybook build",
-		"build-heroicons": "node ./scripts/build_heroicons.ts"
+		"build-heroicons": "node ./scripts/build_heroicons.ts",
+		"sync": "svelte-kit sync"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.18.0",
