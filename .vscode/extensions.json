@@ -1,7 +1,6 @@
 {
 	"recommendations": [
 		"bradlc.vscode-tailwindcss",
-		"csstools.postcss",
 		"davidanson.vscode-markdownlint",
 		"dbaeumer.vscode-eslint",
 		"editorconfig.editorconfig",

@@ -1,5 +1,5 @@
 import type { Parameters } from '@storybook/types'
-import '../src/app.postcss'
+import '../src/app.css'
 
 const parameters: Parameters = {
 	backgrounds: {

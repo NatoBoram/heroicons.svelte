@@ -1,5 +1,5 @@
-import adapterAuto from '@sveltejs/adapter-auto'
-import adapterStatic from '@sveltejs/adapter-static'
+import { default as adapterAuto } from '@sveltejs/adapter-auto'
+import { default as adapterStatic } from '@sveltejs/adapter-static'
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 
 function adapter() {
