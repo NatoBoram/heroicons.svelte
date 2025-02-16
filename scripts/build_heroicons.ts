@@ -15,7 +15,7 @@ import {
 	srcStories20,
 	srcStories24,
 } from './consts.ts'
-import { copyMarkdown, indexify, storify, sveltify } from './utils.ts'
+import { copyMarkdown, storify, sveltify } from './utils.ts'
 
 console.log('🔥 Removing previous build...')
 await Promise.all([rm(srcLib16, rmOptions), rm(srcLib20, rmOptions), rm(srcLib24, rmOptions)])
@@ -34,9 +34,6 @@ await Promise.all([
 	sveltify(srcLib24Outline, 'w-6 h-6', 'outline'),
 	sveltify(srcLib24Solid, 'w-6 h-6', 'solid'),
 ])
-
-console.log(`📇 Adding indexes to \`${srcLib16}\`, \`${srcLib20}\` and \`${srcLib24}\`...`)
-await Promise.all([indexify(srcLib16), indexify(srcLib20), indexify(srcLib24)])
 
 console.log(`📕 Creating stories...`)
 await Promise.all([
