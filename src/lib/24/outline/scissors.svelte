@@ -6,7 +6,7 @@
 
 <svg
 	{...rest}
-	class={className}
+	class="scissors {className}"
 	xmlns="http://www.w3.org/2000/svg"
 	fill="none"
 	viewBox="0 0 24 24"

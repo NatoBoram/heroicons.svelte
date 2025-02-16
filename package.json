@@ -75,7 +75,7 @@
 	},
 	"repository": "github:NatoBoram/heroicons.svelte",
 	"scripts": {
-		"clean": "rm -rf .svelte-kit dist node_modules storybook-static",
+		"clean": "rm -rf .svelte-kit build dist node_modules storybook-static tsconfig.tsbuildinfo",
 		"dev": "vite dev",
 		"build": "vite build",
 		"build:watch": "vite build -w",
@@ -103,7 +103,7 @@
 		"@playwright/test": "^1.50.0",
 		"@storybook/addon-essentials": "^8.5.6",
 		"@storybook/addon-interactions": "^8.5.6",
-		"@storybook/addon-svelte-csf": "^5.0.0-next.23",
+		"@storybook/addon-svelte-csf": "5.0.0-next.23",
 		"@storybook/blocks": "^8.5.6",
 		"@storybook/svelte": "^8.5.6",
 		"@storybook/sveltekit": "^8.5.6",
@@ -113,6 +113,7 @@
 		"@sveltejs/kit": "^2.16.1",
 		"@sveltejs/package": "^2.3.9",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
+		"@tailwindcss/vite": "^4.0.0",
 		"@types/node": "^22.10.10",
 		"autoprefixer": "^10.4.20",
 		"eslint": "^9.18.0",
@@ -123,13 +124,13 @@
 		"heroicons": "^2.2.0",
 		"prettier": "^3.4.2",
 		"prettier-plugin-svelte": "^3.3.3",
-		"prettier-plugin-tailwindcss": "^0.6.10",
+		"prettier-plugin-tailwindcss": "^0.6.11",
 		"publint": "^0.3.2",
 		"storybook": "^8.5.6",
 		"svelte": "^5.19.2",
 		"svelte-check": "^4.1.4",
 		"svelte-eslint-parser": "^0.43.0",
-		"tailwindcss": "^3.4.17",
+		"tailwindcss": "^4.0.0",
 		"tslib": "^2.8.1",
 		"typescript": "^5.8.1-rc",
 		"typescript-eslint": "^8.21.0",
@@ -138,7 +139,7 @@
 	},
 	"peerDependencies": {
 		"svelte": "^5.19.2",
-		"tailwindcss": "^3.4.17"
+		"tailwindcss": "^4.0.0"
 	},
 	"peerDependenciesMeta": {
 		"tailwindcss": {
@@ -151,6 +152,9 @@
 	"pnpm": {
 		"overrides": {
 			"typescript": "^5.8.1-rc"
-		}
+		},
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
 	}
 }

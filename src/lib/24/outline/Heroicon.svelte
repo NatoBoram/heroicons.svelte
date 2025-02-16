@@ -342,6 +342,6 @@
 
 {#await promise}
 	<Spinner class={className} {...rest} />
-{:then { default: Heroicon }}
-	<Heroicon class={className} {...rest} />
+{:then { default: Icon }}
+	<Icon class={className} {...rest} />
 {/await}

@@ -114,7 +114,7 @@ export async function sveltify(dir: string, className: string, variant: Variant)
 	const { class: className = '${className}', ...rest }: Props = $props()
 </script>
 
-${(await readFile(path, 'utf8')).replace('<svg', '<svg {...rest} class={className} ')}`
+${(await readFile(path, 'utf8')).replace('<svg', `<svg {...rest} class="${namify(file)} {className}" `)}`
 		await Promise.all([writeFile(`${path.replace('.svg', '')}.svelte`, svg), rm(path)])
 	}
 
@@ -142,8 +142,8 @@ ${(await readFile(path, 'utf8')).replace('<svg', '<svg {...rest} class={classNam
 
 {#await promise}
 	<Spinner class={className} {...rest} />
-{:then { default: Heroicon }}
-	<Heroicon class={className} {...rest} />
+{:then { default: Icon }}
+	<Icon class={className} {...rest} />
 {/await}
 `
 	await writeFile(join(dir, 'Heroicon.svelte'), router)

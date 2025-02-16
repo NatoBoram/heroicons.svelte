@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte'
-	import '../app.postcss'
+	import '../app.css'
 
 	interface Props {
 		readonly children?: Snippet
