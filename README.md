@@ -16,33 +16,11 @@ Each icons can be imported individually as a Svelte component.
 
 ```svelte
 <script lang="ts">
-	// Import the component from its size and icon type
-	import { ShieldCheck } from '@natoboram/heroicons.svelte/16/solid'
-
-	// Import the icon type from its size
-	import { Solid } from '@natoboram/heroicons.svelte/16'
-
-	// Import the name of the icon type
-	import { Micro } from '@natoboram/heroicons.svelte'
-
-	// Import `Heroicons`, which imports everything
-	import { Heroicons } from '@natoboram/heroicons.svelte'
-
-	// Use the Heroicon component with the icon's name
-	import { Heroicon } from '@natoboram/heroicons.svelte/16/solid'
+	import { Heroicon, ShieldCheck } from '@natoboram/heroicons.svelte/24/solid'
 </script>
 
 <!-- Import the component from its size and icon type -->
 <ShieldCheck />
-
-<!-- Import the icon type from its size -->
-<Solid.ShieldCheck />
-
-<!-- Import the name of the icon type -->
-<Micro.ShieldCheck />
-
-<!-- Import `Heroicons`, which imports everything -->
-<Heroicons.Micro.ShieldCheck />
 
 <!-- Use the Heroicon component with the icon's name -->
 <Heroicon icon="shield-check" />
