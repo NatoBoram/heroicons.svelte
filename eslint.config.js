@@ -45,6 +45,7 @@ export default tseslint.config(
 			'.storybook',
 			'.svelte-kit',
 			'build',
+			'coverage',
 			'dist',
 			'node_modules',
 			'package',
