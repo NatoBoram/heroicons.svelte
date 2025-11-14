@@ -17,15 +17,6 @@ export async function copyMarkdown() {
 	])
 }
 
-/** Adds an index file to a directory. */
-export async function indexify(dir: string) {
-	const folders = await readdir(dir)
-	const exports = folders.map(
-		folder => `export * as ${modulify(folder)} from './${folder}/index.ts'`,
-	)
-	await writeFile(join(dir, 'index.ts'), `${exports.join('\n')}\n`)
-}
-
 async function markdownify(path: string, title: string) {
 	const file = await readFile(path, 'utf8')
 	return `import { Meta } from '@storybook/blocks'
@@ -154,4 +145,14 @@ ${(await readFile(path, 'utf8')).replace('<svg', `<svg {...rest} class="${namify
 		.map(file => `export { default as ${modulify(file)} } from './${file}'`)
 		.join('\n')
 	await writeFile(join(dir, 'index.ts'), `${imports}\n`)
+
+	// Sanity test
+	const test = `import { test } from 'vitest'
+import * as index from './index.ts'
+
+test('index', ({ expect }) => {
+	expect(index).toBeDefined()
+})
+`
+	await writeFile(join(dir, 'index.test.ts'), test)
 }
