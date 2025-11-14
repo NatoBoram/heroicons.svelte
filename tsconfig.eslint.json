@@ -10,5 +10,6 @@
 		"tailwind.config.ts",
 		"tests",
 		"vite.config.ts"
-	]
+	],
+	"exclude": ["coverage", "dist", "storybook-static", "test-results"]
 }
