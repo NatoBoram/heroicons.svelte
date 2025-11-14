@@ -145,4 +145,14 @@ ${(await readFile(path, 'utf8')).replace('<svg', `<svg {...rest} class="${namify
 		.map(file => `export { default as ${modulify(file)} } from './${file}'`)
 		.join('\n')
 	await writeFile(join(dir, 'index.ts'), `${imports}\n`)
+
+	// Sanity test
+	const test = `import { test } from 'vitest'
+import * as index from './index.ts'
+
+test('index', ({ expect }) => {
+	expect(index).toBeDefined()
+})
+`
+	await writeFile(join(dir, 'index.test.ts'), test)
 }
