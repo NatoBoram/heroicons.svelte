@@ -5,11 +5,11 @@ import type { Name, Size, Variant } from './enums.ts'
 
 /** Copies the `README.md` to the `stories` folder. */
 export async function copyMarkdown() {
-	const readme = await markdownify('README.md', 'README')
-	const license = (await markdownify('LICENSE.md', 'LICENSE')).replaceAll(
-		'<https://fsf.org/>',
-		'[https://fsf.org](https://fsf.org)',
+	const readme = (await markdownify('README.md', 'README')).replaceAll(
+		'<https://mozilla.org/MPL/2.0>',
+		'[https://mozilla.org/MPL/2.0](https://mozilla.org/MPL/2.0)',
 	)
+	const license = await markdownify('LICENSE.txt', 'LICENSE')
 
 	return Promise.all([
 		writeFile(join(srcStories, 'README.mdx'), readme),

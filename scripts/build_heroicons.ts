@@ -48,7 +48,7 @@ await Promise.all([
 	storify(24, 'solid', 'Solid', 'w-6 h-6'),
 ])
 
-console.log('📝 Copying `README.md` and `LICENSE.md`...')
+console.log('📝 Copying `README.md` and `LICENSE.txt`...')
 await copyMarkdown()
 
 console.log(`🎨 Formatting...`)
