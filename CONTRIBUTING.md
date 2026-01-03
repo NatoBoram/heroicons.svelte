@@ -8,7 +8,7 @@ Start by updating the version number:
 git checkout main
 git pull --autostash --prune --rebase
 
-VERSION=$(pnpm version patch --no-git-tag-version)
+VERSION=$(pnpm version minor --no-git-tag-version)
 pnpm run format
 
 git checkout -b "release/$VERSION"
