@@ -1,4 +1,4 @@
-import type { Parameters } from '@storybook/types'
+import type { Parameters } from 'storybook/internal/types'
 import '../src/app.css'
 
 const parameters: Parameters = {

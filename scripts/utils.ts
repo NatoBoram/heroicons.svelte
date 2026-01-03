@@ -19,7 +19,7 @@ export async function copyMarkdown() {
 
 async function markdownify(path: string, title: string) {
 	const file = await readFile(path, 'utf8')
-	return `import { Meta } from '@storybook/blocks'
+	return `import { Meta } from '@storybook/addon-docs/blocks'
 
 <Meta title="${title}" />
 
