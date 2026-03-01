@@ -88,7 +88,7 @@
 		"@eslint/js": "^9.18.0",
 		"@playwright/test": "^1.50.0",
 		"@storybook/addon-docs": "^10.1.11",
-		"@storybook/addon-svelte-csf": "5.0.10",
+		"@storybook/addon-svelte-csf": "5.0.11",
 		"@storybook/svelte": "^10.1.11",
 		"@storybook/sveltekit": "^10.1.11",
 		"@sveltejs/adapter-auto": "^4.0.0",
