@@ -132,13 +132,5 @@
 	},
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
-	"type": "module",
-	"pnpm": {
-		"overrides": {
-			"typescript": "^5.8.1-rc"
-		},
-		"onlyBuiltDependencies": [
-			"esbuild"
-		]
-	}
+	"type": "module"
 }
