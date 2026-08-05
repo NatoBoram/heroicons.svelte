@@ -5,7 +5,7 @@
 	const { Story } = defineMeta({
 		title: 'Heroicons/Solid',
 		component: GlobeEuropeAfricaSvelte,
-		args: { class: 'w-6 h-6' },
+		args: { class: '' },
 	})
 </script>
 

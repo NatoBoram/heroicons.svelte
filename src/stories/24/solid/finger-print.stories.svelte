@@ -5,7 +5,7 @@
 	const { Story } = defineMeta({
 		title: 'Heroicons/Solid',
 		component: FingerPrintSvelte,
-		args: { class: 'w-6 h-6' },
+		args: { class: '' },
 	})
 </script>
 

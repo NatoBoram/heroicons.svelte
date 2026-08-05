@@ -5,7 +5,7 @@
 	const { Story } = defineMeta({
 		title: 'Heroicons/Mini',
 		component: ClipboardDocumentCheckSvelte,
-		args: { class: 'w-5 h-5' },
+		args: { class: '' },
 	})
 </script>
 

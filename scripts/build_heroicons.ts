@@ -29,10 +29,10 @@ await Promise.all([
 
 console.log('🍷 Turning `.svg` into `.svelte`...')
 await Promise.all([
-	sveltify(srcLib16Solid, 'w-4 h-4', 'solid'),
-	sveltify(srcLib20Solid, 'w-5 h-5', 'solid'),
-	sveltify(srcLib24Outline, 'w-6 h-6', 'outline'),
-	sveltify(srcLib24Solid, 'w-6 h-6', 'solid'),
+	sveltify(srcLib16Solid, '1rem', 'solid'),
+	sveltify(srcLib20Solid, '1.25rem', 'solid'),
+	sveltify(srcLib24Outline, '1.5rem', 'outline'),
+	sveltify(srcLib24Solid, '1.5rem', 'solid'),
 ])
 
 console.log(`📕 Creating stories...`)
@@ -42,10 +42,10 @@ await Promise.all([
 	rm(srcStories24, rmOptions),
 ])
 await Promise.all([
-	storify(16, 'solid', 'Micro', 'w-4 h-4'),
-	storify(20, 'solid', 'Mini', 'w-5 h-5'),
-	storify(24, 'outline', 'Outline', 'w-6 h-6'),
-	storify(24, 'solid', 'Solid', 'w-6 h-6'),
+	storify(16, 'solid', 'Micro', ''),
+	storify(20, 'solid', 'Mini', ''),
+	storify(24, 'outline', 'Outline', ''),
+	storify(24, 'solid', 'Solid', ''),
 ])
 
 console.log('📝 Copying `README.md` and `LICENSE.txt`...')

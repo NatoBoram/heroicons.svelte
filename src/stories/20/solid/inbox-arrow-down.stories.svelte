@@ -5,7 +5,7 @@
 	const { Story } = defineMeta({
 		title: 'Heroicons/Mini',
 		component: InboxArrowDownSvelte,
-		args: { class: 'w-5 h-5' },
+		args: { class: '' },
 	})
 </script>
 

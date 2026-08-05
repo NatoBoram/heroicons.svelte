@@ -5,7 +5,7 @@
 	const { Story } = defineMeta({
 		title: 'Heroicons/Micro',
 		component: MagnifyingGlassPlusSvelte,
-		args: { class: 'w-4 h-4' },
+		args: { class: '' },
 	})
 </script>
 

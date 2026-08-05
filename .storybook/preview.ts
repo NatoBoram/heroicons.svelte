@@ -1,24 +1,21 @@
-import type { Parameters } from 'storybook/internal/types'
-import '../src/app.css'
+import type { Preview } from '@storybook/sveltekit'
 
-const parameters: Parameters = {
-	backgrounds: {
-		default: 'light',
-	},
-	actions: {},
-	controls: {
-		matchers: {
-			color: /(background|color)$/i,
-			date: /Date$/,
-		},
-	},
+const preview: Preview = {
 	parameters: {
-		options: {
-			storySort: {
-				order: ['README'],
+		controls: {
+			matchers: {
+				color: /(background|color)$/i,
+				date: /Date$/i,
 			},
+		},
+
+		a11y: {
+			// 'todo' - show a11y violations in the test UI only
+			// 'error' - fail CI on a11y violations
+			// 'off' - skip a11y checks entirely
+			test: 'todo',
 		},
 	},
 }
 
-export default parameters
+export default preview

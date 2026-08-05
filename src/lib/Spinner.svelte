@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { SVGAttributes } from 'svelte/elements'
 	type Props = SVGAttributes<SVGSVGElement>
-	const { class: className = 'h-5 w-5', ...rest }: Props = $props()
+	const { class: className, ...rest }: Props = $props()
 </script>
 
 <!--
@@ -25,7 +25,10 @@ This spinner was copied from the official Tailwind documentation.
 
 <svg
 	{...rest}
-	class="animate-spin motion-reduce:hidden {className}"
+	class="animate-spin {className}"
+	height="1.25rem"
+	width="1.25rem"
+	xmlns="http://www.w3.org/2000/svg"
 	fill="none"
 	viewBox="0 0 24 24"
 >
@@ -36,3 +39,22 @@ This spinner was copied from the official Tailwind documentation.
 		d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
 	/>
 </svg>
+
+<style>
+	.animate-spin {
+		animation: spin 1s linear infinite;
+	}
+	@keyframes spin {
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	.opacity-75 {
+		opacity: 75%;
+	}
+
+	.opacity-25 {
+		opacity: 25%;
+	}
+</style>

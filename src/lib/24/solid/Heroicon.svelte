@@ -5,12 +5,12 @@
 	interface Props extends SVGAttributes<SVGSVGElement> {
 		/** The name of the icon to render.
 		 * @see https://heroicons.com/solid */
-		readonly icon: keyof typeof components
+		readonly icon: keyof typeof icons
 	}
 
-	const { class: className = 'w-6 h-6', icon, ...rest }: Props = $props()
+	const { class: className, icon, ...rest }: Props = $props()
 
-	const components = {
+	const icons = {
 		'academic-cap': () => import('./academic-cap.svelte'),
 		'adjustments-horizontal': () => import('./adjustments-horizontal.svelte'),
 		'adjustments-vertical': () => import('./adjustments-vertical.svelte'),
@@ -337,7 +337,7 @@
 		'x-mark': () => import('./x-mark.svelte'),
 	}
 
-	const promise = $derived(components[icon]())
+	const promise = $derived(icons[icon]())
 </script>
 
 {#await promise}
