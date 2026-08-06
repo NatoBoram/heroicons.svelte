@@ -93,7 +93,7 @@
 		"@sveltejs/kit": "^2.63.0",
 		"@sveltejs/package": "^2.5.8",
 		"@sveltejs/vite-plugin-svelte": "^7.1.2",
-		"@types/node": "^24.9.2",
+		"@types/node": "^26.1.2",
 		"@vitest/browser-playwright": "^4.1.8",
 		"@vitest/coverage-v8": "^4.1.8",
 		"eslint": "^10.8.0",
