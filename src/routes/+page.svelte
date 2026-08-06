@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Heroicon, ShieldCheck } from '@natoboram/heroicons.svelte/24/solid'
+	import { Heroicon, ShieldCheck } from '$lib/24/solid/index.js'
 </script>
 
 <!-- Import the component from its size and icon type -->

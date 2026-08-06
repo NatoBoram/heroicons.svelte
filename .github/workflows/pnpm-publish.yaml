@@ -20,9 +20,8 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           cache: pnpm
-          node-version: 23
+          node-version: latest
       - run: pnpm install
-      - run: pnpm run package
       - run: pnpm pack --pack-gzip-level 9
 
       - uses: actions/upload-artifact@v6
@@ -30,7 +29,27 @@ jobs:
         with:
           name: natoboram-heroicons.svelte-${{ github.ref_name }}.tgz
           path: natoboram-heroicons.svelte-*.tgz
+          compression-level: 9
           if-no-files-found: error
+
+  attest:
+    permissions:
+      artifact-metadata: write
+      attestations: write
+      id-token: write
+
+    needs: build
+    if: github.actor != 'nektos/act'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: natoboram-heroicons.svelte-${{ github.ref_name }}.tgz
+
+      - uses: actions/attest@v4
+        with:
+          subject-path: natoboram-heroicons.svelte-*.tgz
 
   publish-npm:
     permissions:
@@ -58,8 +77,6 @@ jobs:
           name: natoboram-heroicons.svelte-${{ github.ref_name }}.tgz
 
       - run: pnpm publish natoboram-heroicons.svelte-*.tgz --access public --no-git-checks --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
 
       - id: url
         run: echo "url=https://www.npmjs.com/package/@natoboram/heroicons.svelte/v/${VERSION#v}" >> "$GITHUB_OUTPUT"

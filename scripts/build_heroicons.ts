@@ -52,9 +52,9 @@ console.log('📝 Copying `README.md` and `LICENSE.txt`...')
 await copyMarkdown()
 
 console.log(`🎨 Formatting...`)
-execSync('pnpm format')
+execSync('pnpm run format')
 
 console.log(`📦 Packaging...`)
-execSync('pnpm package')
+execSync('pnpm run prepack')
 
 console.log('🚀 Ready!')
