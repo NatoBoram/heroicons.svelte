@@ -13,18 +13,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: pnpm/action-setup@v6
         with:
           version: latest
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           cache: pnpm
           node-version: latest
       - run: pnpm install
       - run: pnpm pack --pack-gzip-level 9
 
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v7
         if: github.actor != 'nektos/act'
         with:
           name: natoboram-heroicons.svelte-${{ github.ref_name }}.tgz
@@ -67,12 +67,12 @@ jobs:
       - uses: pnpm/action-setup@v6
         with:
           version: latest
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           registry-url: https://registry.npmjs.org
           scope: '@natoboram'
 
-      - uses: actions/download-artifact@v7
+      - uses: actions/download-artifact@v8
         with:
           name: natoboram-heroicons.svelte-${{ github.ref_name }}.tgz
 
@@ -100,12 +100,12 @@ jobs:
       - uses: pnpm/action-setup@v6
         with:
           version: latest
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           registry-url: https://npm.pkg.github.com
           scope: '@natoboram'
 
-      - uses: actions/download-artifact@v7
+      - uses: actions/download-artifact@v8
         with:
           name: natoboram-heroicons.svelte-${{ github.ref_name }}.tgz
 
@@ -134,7 +134,7 @@ jobs:
       url: ${{ github.server_url }}/${{ github.repository }}/releases/tag/${{ github.ref_name }}
 
     steps:
-      - uses: actions/download-artifact@v7
+      - uses: actions/download-artifact@v8
         with:
           name: natoboram-heroicons.svelte-${{ github.ref_name }}.tgz
 
