@@ -127,9 +127,9 @@ ${(await readFile(path, 'utf8')).replace('<svg', `<svg {...rest} class="${namify
 
 	const icons = {
 		${svelteFiles.map(file => `'${namify(file)}': () => import('./${file}'),`).join('\n\t\t')}
-	}
+	} as const
 
-	const promise = $derived(icons[icon]())
+	const promise: ReturnType<(typeof icons)[typeof icon]> = $derived(icons[icon]())
 </script>
 
 {#await promise}

@@ -335,9 +335,9 @@
 		wrench: () => import('./wrench.svelte'),
 		'x-circle': () => import('./x-circle.svelte'),
 		'x-mark': () => import('./x-mark.svelte'),
-	}
+	} as const
 
-	const promise = $derived(icons[icon]())
+	const promise: ReturnType<(typeof icons)[typeof icon]> = $derived(icons[icon]())
 </script>
 
 {#await promise}
