@@ -6,31 +6,28 @@
 		"composite": true,
 
 		/* Language and Environment */
+		"target": "ESNext",
+		"lib": ["DOM", "ESNext"],
 		"useDefineForClassFields": true,
 		"moduleDetection": "force",
 
 		/* Modules */
-		"module": "NodeNext",
-		"moduleResolution": "NodeNext",
-		"rewriteRelativeImportExtensions": true,
-		// "resolvePackageJsonExports": true,
-		// "resolvePackageJsonImports": true,
-		"resolveJsonModule": true,
+		"types": ["node"],
+		"resolvePackageJsonExports": true,
+		"resolvePackageJsonImports": true,
 
 		/* JavaScript Support */
 
 		/* Emit */
 		"declaration": true,
 		"declarationMap": true,
-		"sourceMap": true,
 
 		/* Interop Constraints */
-		// "isolatedDeclarations": true,
+		"isolatedModules": true,
+		"verbatimModuleSyntax": true,
 		"erasableSyntaxOnly": true,
-		"forceConsistentCasingInFileNames": true,
 
 		/* Type Checking */
-		"strict": true,
 		"noImplicitAny": true,
 		"strictNullChecks": true,
 		"strictFunctionTypes": true,
@@ -52,7 +49,18 @@
 
 		/* Completeness */
 		"skipDefaultLibCheck": true,
-		"skipLibCheck": true
+
+		/* Svelte */
+		"rewriteRelativeImportExtensions": true,
+		"allowJs": false,
+		"checkJs": false,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": true,
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext"
 	},
 	"exclude": ["coverage", "dist", "storybook-static", "test-results"]
 }

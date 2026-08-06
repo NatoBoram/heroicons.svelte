@@ -10,49 +10,57 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   test:
+    permissions:
+      contents: read
+
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v6
-      - uses: pnpm/action-setup@v4
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@v6
         with:
           version: latest
       - uses: actions/setup-node@v6
         with:
-          node-version: 23
           cache: pnpm
+          node-version: latest
+
       - run: pnpm install --frozen-lockfile --strict-peer-dependencies
+      - run: pnpm run build
       - run: pnpm run build-storybook
-      - run: pnpm run package
+      - run: pnpm run prepack
       - run: pnpm run check
       - run: pnpm run lint
-      - run: pnpm run test:unit
+
+      - run: pnpm exec playwright install
+      - run: pnpm run test
 
   fix:
-    runs-on: ubuntu-latest
-
     permissions:
       contents: write
 
-    needs:
-      - test
-
+    needs: test
     if: failure() && github.event_name != 'merge_group' && github.actor != 'github-actions[bot]' && github.actor != 'nektos/act'
+    runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
-          ref: ${{ github.ref }}
-      - uses: pnpm/action-setup@v4
+          persist-credentials: true
+          ref: ${{ github.head_ref || github.ref }}
+      - uses: pnpm/action-setup@v6
         with:
           version: latest
       - uses: actions/setup-node@v6
         with:
           cache: pnpm
-          node-version: 23
+          node-version: latest
 
       - run: |
           pnpm install --fix-lockfile --no-frozen-lockfile
@@ -62,6 +70,18 @@ jobs:
         with:
           message: |
             📌 pnpm install --fix-lockfile
+
+            [dependabot skip]
+          skip-empty: true
+
+      - run: |
+          pnpm dlx ts-autofix --project tsconfig.json
+          git add .
+      - id: commit-ts-autofix
+        uses: qoomon/actions--create-commit@v1
+        with:
+          message: |
+            💚 ts-autofix --project tsconfig.json
 
             [dependabot skip]
           skip-empty: true
@@ -91,5 +111,17 @@ jobs:
             [dependabot skip]
           skip-empty: true
 
-      - if: steps.commit-lockfile.outputs.commit || steps.commit-format.outputs.commit || steps.commit-lint.outputs.commit
+      - run: |
+          pnpm run build-heroicons
+          git add .
+      - id: commit-heroicons
+        uses: qoomon/actions--create-commit@v1
+        with:
+          message: |
+            🍱 pnpm run build-heroicons
+
+            [dependabot skip]
+          skip-empty: true
+
+      - if: steps.commit-lockfile.outputs.commit || steps.commit-ts-autofix.outputs.commit || steps.commit-format.outputs.commit || steps.commit-lint.outputs.commit || steps.commit-heroicons.outputs.commit
         run: git push

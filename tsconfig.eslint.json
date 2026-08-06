@@ -1,15 +1,15 @@
 {
 	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"isolatedDeclarations": true
+	},
 	"include": [
-		".storybook",
-		"eslint.config.js",
-		"playwright.config.ts",
-		"scripts",
-		"src",
-		"svelte.config.js",
-		"tailwind.config.ts",
-		"tests",
-		"vite.config.ts"
+		".storybook/**/*",
+		"eslint.config.ts",
+		"scripts/**/*",
+		"src/**/*",
+		"vite.config.ts",
+		"vitest.shims.d.ts"
 	],
 	"exclude": ["coverage", "dist", "storybook-static", "test-results"]
 }

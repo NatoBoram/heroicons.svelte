@@ -6,7 +6,7 @@
 		title: 'Heroicons/Mini',
 		component: Heroicon,
 		tags: ['autodocs'],
-		args: { class: 'w-5 h-5', icon: 'academic-cap' },
+		args: { class: '', icon: 'academic-cap' },
 	})
 </script>
 

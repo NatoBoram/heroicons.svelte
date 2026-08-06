@@ -1,12 +1,14 @@
 <script lang="ts">
 	import type { SVGAttributes } from 'svelte/elements'
 	type Props = SVGAttributes<SVGSVGElement>
-	const { class: className = 'w-4 h-4', ...rest }: Props = $props()
+	const { class: className, ...rest }: Props = $props()
 </script>
 
 <svg
 	{...rest}
 	class="cog-8-tooth {className}"
+	height="1rem"
+	width="1rem"
 	xmlns="http://www.w3.org/2000/svg"
 	viewBox="0 0 20 20"
 	fill="currentColor"

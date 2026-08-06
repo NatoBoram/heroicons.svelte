@@ -92,7 +92,7 @@ export async function storify(size: Size, variant: Variant, title: Name, classNa
 }
 
 /** Turns a directory of SVG files into Svelte components. */
-export async function sveltify(dir: string, className: string, variant: Variant) {
+export async function sveltify(dir: string, size: string, variant: Variant) {
 	const svgFiles = await readdir(dir)
 
 	// SVG to Svelte
@@ -102,10 +102,11 @@ export async function sveltify(dir: string, className: string, variant: Variant)
 		const svg = `<script lang="ts">
 	import type { SVGAttributes } from 'svelte/elements'
 	type Props = SVGAttributes<SVGSVGElement>
-	const { class: className = '${className}', ...rest }: Props = $props()
+	const { class: className, ...rest }: Props = $props()
 </script>
 
-${(await readFile(path, 'utf8')).replace('<svg', `<svg {...rest} class="${namify(file)} {className}" `)}`
+${(await readFile(path, 'utf8')).replace('<svg', `<svg {...rest} class="${namify(file)} {className}" height="${size}" width="${size}" `)}`
+
 		await Promise.all([writeFile(`${path.replace('.svg', '')}.svelte`, svg), rm(path)])
 	}
 
@@ -119,16 +120,16 @@ ${(await readFile(path, 'utf8')).replace('<svg', `<svg {...rest} class="${namify
 	interface Props extends SVGAttributes<SVGSVGElement> {
 		/** The name of the icon to render.
 		 * @see https://heroicons.com/${variant} */
-		readonly icon: keyof typeof components
+		readonly icon: keyof typeof icons
 	}
 
-	const { class: className = '${className}', icon, ...rest }: Props = $props()
+	const { class: className, icon, ...rest }: Props = $props()
 
-	const components = {
+	const icons = {
 		${svelteFiles.map(file => `'${namify(file)}': () => import('./${file}'),`).join('\n\t\t')}
 	}
 
-	const promise = $derived(components[icon]())
+	const promise = $derived(icons[icon]())
 </script>
 
 {#await promise}
