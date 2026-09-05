@@ -2,20 +2,23 @@
 
 ## Publishing
 
+This repository has a GitHub Workflow to automatically publish a version to NPM, GitHub Packages and GitHub Releases on the push of a tag.
+
 Start by updating the version number:
 
 ```sh
 git checkout main
 git pull --autostash --prune --rebase
 
-VERSION=$(pnpm version patch --no-git-tag-version)
+VERSION=$(pnpm version patch --json --no-git-tag-version | jq --raw-output '.[0].newVersion')
+TAG="v$VERSION"
 pnpm run format
 
-git checkout -b "release/$VERSION"
-git commit --all --message "🔖 $VERSION"
-git push --set-upstream origin "release/$VERSION"
+git checkout -b "release/$TAG"
+git commit --all --message "🔖 $TAG"
+git push --set-upstream origin "release/$TAG"
 
-gh pr create --assignee @me --base main --draft --fill-verbose --head "release/$VERSION" --title "🔖 $VERSION"
+gh pr create --assignee @me --base main --draft --fill-verbose --head "release/$TAG" --title "🔖 $TAG"
 ```
 
 Once the CI passes, merge the pull request, wait for the CI to pass again then push a new tag:
@@ -23,6 +26,6 @@ Once the CI passes, merge the pull request, wait for the CI to pass again then p
 ```sh
 git checkout main
 git pull --autostash --prune --rebase
-git tag "$VERSION" --annotate --message "🔖 $VERSION" --sign
+git tag "$TAG" --annotate --message "🔖 $TAG" --sign
 git push --tags
 ```
